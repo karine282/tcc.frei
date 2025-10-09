@@ -1,0 +1,44 @@
+.hero.lazer-hero {
+    background-image: url('/img/lazer-bg.jpg'); // ou use uma URL direta do Unsplash
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    color: white;
+    position: relative;
+  
+    .overlay {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      background-color: rgba(0,0,0,0.5); // opcional
+      padding: 2rem;
+      border-radius: 10px;
+    }
+  
+    .actions {
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+  
+      .btn, .btn-outline {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        text-decoration: none;
+      }
+  
+      .btn {
+        background-color: #00d084;
+        color: white;
+      }
+  
+      .btn-outline {
+        background-color: transparent;
+        border: 2px solid white;
+        color: white;
+      }
+    }
+  }
+  
