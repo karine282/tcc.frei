@@ -5,6 +5,7 @@ import Sobre from './pages/Sobre/Sobre.jsx';
 import Cultura from './pages/Cultura/Cultura.jsx';
 import Login from './pages/Login/Login.jsx';
 import Lazer from './pages/Lazer/Lazer.jsx';
+import Esporte from './pages/Esporte/Esporte.jsx';
 
 export default function Navegador() {
   return (
@@ -16,7 +17,7 @@ export default function Navegador() {
         <Route path="/Cultura" element={<Cultura />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Lazer" element={<Lazer />} />
-
+        <Route path="/Esporte" element={<Esporte />} />
       </Routes>
     </BrowserRouter>
   );
