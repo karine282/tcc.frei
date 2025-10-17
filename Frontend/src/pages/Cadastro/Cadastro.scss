@@ -1,0 +1,90 @@
+.container-cadastro {
+    display: flex;
+    height: 100vh;
+    background: linear-gradient(90deg, #0b3b36 0%, #09786b 100%);
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .cadastro-esquerda {
+    background: linear-gradient(180deg, #13695f 0%, #0f544c 100%);
+    padding: 40px;
+    border-radius: 10px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin-left: 100px;
+  }
+  
+  .cadastro-direita {
+    color: white;
+    flex: 1;
+    text-align: center;
+  }
+  
+  .cadastro-direita h1 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  .cadastro-direita p {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #cfeae6;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .logo span {
+    color: #b6ffbf;
+  }
+  
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .input-cadastro {
+    width: 100%;
+    max-width: 280px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    margin: 0 auto;
+  }
+  
+  button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  button:hover {
+    background-color: #222;
+  }
+  
+  .link {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  .link a {
+    color: #b6ffbf;
+    text-decoration: none;
+  }
+  
