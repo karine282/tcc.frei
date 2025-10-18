@@ -33,7 +33,7 @@ function Inicio() {
 
         <section className="feature container">
           <div className="feature-left">
-            <img src="https://i.pinimg.com/736x/77/56/5a/77565a1458bba2eab3fe341a12ef349f.jpg" alt="feature" />
+            <img src="/assets/images/sub.jpg" alt="feature" />
           </div>
           <div className="feature-right">
             <p>
@@ -47,33 +47,40 @@ function Inicio() {
               <li>Esporte para todas as idades</li>
             </ul>
             <p>A cidade é sua. Aproveite!</p>
-            <a className="btn btn-segundo" href="#">Saiba mais</a>
+             <Link to='/Sobre'>
+         <button className='sobre'>sobre nos</button>
+         </Link>
           </div>
         </section>
 
-        <section className="parques container">
+        <section className="parques">
           <h2>Parques</h2>
           <p className="lead">Espaços verdes ideais para relaxar, se exercitar ou curtir momentos ao ar livre.</p>
 
-          <div className="cards">
-            <article className="card">
+          <div className="cartoes">
+            <article className="cartao">
               <img src="https://i.pinimg.com/736x/b1/58/46/b1584660ec016e5fbad337b0061b9b39.jpg" alt="Parque 1" />
-              <h3>Parque Aclimação</h3>
+              <h3>Parque do Ibirapuera</h3>
               <p>Ótimo para caminhadas e piqueniques. Entrada gratuita.</p>
             </article>
 
-            <article className="card">
+            <article className="cartao">
               <img src="https://i.pinimg.com/1200x/bc/6b/11/bc6b1167e29bbf927e5a380c8a4113b0.jpg" alt="Parque 2" />
-              <h3>Parque do Ibirapuera</h3>
+              <h3>Parque do Indepencia</h3>
               <p>Eventos culturais, exposições e muito espaço para atividades.</p>
             </article>
 
-            <article className="card">
+            <article className="cartao">
               <img src="https://i.pinimg.com/1200x/17/7a/bc/177abc0fd9ecac38ac42937f7d2dbb29.jpg" alt="Parque 3" />
               <h3>Parque Villa-Lobos</h3>
               <p>Área esportiva e pistas de corrida — ideal para famílias.</p>
             </article>
 
+            <article className="cartao">
+               <img src="https://www.parqueecologicodotiete.com.br/content-wp/uploads/2017/08/parque-ecologico-tiete-peda.jpg" alt="Parque 4" />
+               <h3>parque ecologico tiete</h3>
+              <p>  Trilhas, ciclovia, quadras, campos, pedalinho, playgrounds, lanchonetes, CRAS e museu .</p>
+            </article>
             
           </div>
         </section>
@@ -89,15 +96,39 @@ function Inicio() {
         </div>
         <div className="p3">
           <img src="https://educacaoeterritorio.org.br/wp-content/uploads/portal_aprendiz/2015/08/ceu5.jpg" alt="CEU" />
-          <a className="btn btn-segundo" href="#">Saiba mais</a>
+          <a className="btn btn-segundo" href="https://ceu.sme.prefeitura.sp.gov.br/programacao/">Saiba mais</a>
         </div>
       </section>
+
+ <h1>Categorias</h1>
+  <p class="subtitulo">veja o que você está procurando no momento</p>
+
+  <div class="categorias">
+    <div class="categoria">
+      <img src="https://images.unsplash.com/photo-1611858262284-f3e9cf02bb7a?fit=crop&w=400&h=400" />
+      <p>esportes</p>
+    </div>
+
+    <div class="categoria">
+      <img src="https://images.unsplash.com/photo-1561488113-6a1dd37c02b5?fit=crop&w=400&h=400" />
+      <p>espaços<br />culturais</p>
+    </div>
+
+    <div class="categoria">
+      <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?fit=crop&w=400&h=400" />
+      <p>lazer</p>
+    </div>
+  </div>
+
 
       <footer className="rodape">
         <div className="container">
         <div className="logo">Localiza<span>LivreSP</span></div>
         <h4>Descubra cultura, lazer e esportes gratuitos em São Paulo</h4>
-        
+        <img src="/assets/images/instagram.png" alt="" />
+         <Link to='/Desenvolvedores'>
+         <button className='col'>Colaboradores</button>
+         </Link>
           <p>© LocalizaLivreSP — Conectando a cidade.</p>
         </div>
       </footer>

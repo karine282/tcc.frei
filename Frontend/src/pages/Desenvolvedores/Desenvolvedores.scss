@@ -1,0 +1,69 @@
+.sobre-container {
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  background-color: #f9f9f9;
+  padding: 40px;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.sobre-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.empresa-logo {
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+.empresa-nome {
+  font-size: 2rem;
+  color: #0077ff;
+}
+
+.sobre-conteudo {
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.sobre-conteudo h2 {
+  color: #0077ff;
+  margin-bottom: 10px;
+}
+
+.sobre-conteudo p {
+  line-height: 1.6;
+}
+
+.informacoes {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.informacoes h2 {
+  color: #0077ff;
+  margin-bottom: 10px;
+}
+
+.informacoes ul {
+  list-style: none;
+  padding: 0;
+}
+
+.informacoes li {
+  margin-bottom: 8px;
+}
+
+.sobre-footer {
+  margin-top: 50px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
