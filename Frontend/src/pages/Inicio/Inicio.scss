@@ -283,6 +283,7 @@ Link{
   color: white;
   font-weight:700;
   width: 98%;
+  height: 450px;
   margin-left: 1%;
   font-family: poppins,sans-serif;
 
@@ -294,7 +295,7 @@ Link{
   overflow:hidden;
 }
 .p3 img{
-  width:80%;
+  width:90%;
   height: 350px;
   object-fit:cover;
   display:block;
@@ -322,6 +323,8 @@ Link{
   color: #0e2f1c;
   font-weight: bolder;
   margin-top: 60px;
+  border-radius: 15px;
+  text-align: center;
 }
 
 
@@ -346,20 +349,35 @@ Link{
       flex-wrap: wrap;
       padding: 0 20px 60px;
     }
-
+    
     .categoria {
       width: 220px;
+      text-align: center;
+      transition: transform 0.3s ease;
     }
-
+    
+   
+    .categoria:hover {
+      transform: translateY(-10px); 
+    }
+    
     .categoria img {
       width: 200px;
       height: 200px;
       border-radius: 50%;
       object-fit: cover;
+      image-rendering: auto;
       border: 4px solid #ffffff;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
+    
+   
+    .categoria:hover img {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+    
     .categoria p {
       font-weight: bold;
       font-size: 1.1em;
@@ -367,15 +385,66 @@ Link{
       text-align: center;
     }
 
-.rodape{
-  background:rgba(9, 35, 39, 1);
-  color:rgba(255, 249, 249, 0.43);
-  padding:18px 0;
-  text-align:center;
-  margin-top:30px;
-  height: 200px;
-}
-
+    .rodape {
+      background-color:rgba(9, 35, 39, 1);
+      color: #fff;
+      text-align: center;
+      padding: 2rem 0;
+    
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+    
+        span {
+          color:#0a7737;     
+           }
+      }
+    
+      h4 {
+        margin: 1rem 0;
+        font-weight: 400;
+      }
+    
+      .redes {
+        margin: 1rem 0;
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+    
+        .icones {
+          color: #fff;
+          font-size: 1.8rem;
+          transition: 0.3s;
+    
+          &:hover {
+            color:#0a7737;     
+            transform: scale(1.1);
+          }
+        }
+      }
+    
+      .col {
+        background: #ffffff;
+        color:#0a7737;     
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.3s;
+    
+        &:hover {
+          background: #fff;
+          color: #111;
+        }
+      }
+    
+      p {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        opacity: 0.8;
+      }
+    }
+    
 
 @media (max-width:900px){
   .feature{

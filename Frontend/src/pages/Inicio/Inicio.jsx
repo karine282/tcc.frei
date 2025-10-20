@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './Inicio.scss'
 import { Link } from "react-router-dom";
+import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
 
 function Inicio() {
   return (
@@ -105,33 +106,64 @@ function Inicio() {
 
   <div class="categorias">
     <div class="categoria">
-      <img src="https://images.unsplash.com/photo-1611858262284-f3e9cf02bb7a?fit=crop&w=400&h=400" />
+      <img src="/assets/images/esportes.jpg" />
       <p>esportes</p>
     </div>
 
     <div class="categoria">
-      <img src="https://images.unsplash.com/photo-1561488113-6a1dd37c02b5?fit=crop&w=400&h=400" />
+      <img src="/assets/images/cultu.jpg" />
       <p>espaços<br />culturais</p>
     </div>
 
     <div class="categoria">
-      <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?fit=crop&w=400&h=400" />
+      <img src="/assets/images/lazer.jpg" />
       <p>lazer</p>
     </div>
   </div>
 
 
-      <footer className="rodape">
-        <div className="container">
-        <div className="logo">Localiza<span>LivreSP</span></div>
-        <h4>Descubra cultura, lazer e esportes gratuitos em São Paulo</h4>
-        <img src="/assets/images/instagram.png" alt="" />
-         <Link to='/Desenvolvedores'>
-         <button className='col'>Colaboradores</button>
-         </Link>
-          <p>© LocalizaLivreSP — Conectando a cidade.</p>
+  <footer className="rodape">
+      <div className="container">
+        <div className="logo">
+          Localiza<span>LivreSP</span>
         </div>
-      </footer>
+
+        <h4>Descubra cultura, lazer e esportes gratuitos em São Paulo</h4>
+
+        <div className="redes">
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="icones"
+          >
+            <FaInstagram />
+          </a>
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="icones"
+          >
+            <FaFacebook />
+          </a>
+          <a
+            href="https://www.tiktok.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="icones"
+          >
+            <FaTiktok />
+          </a>
+        </div>
+
+        <Link to="/Desenvolvedores">
+          <button className="col">Colaboradores</button>
+        </Link>
+
+        <p>© LocalizaLivreSP — Conectando a cidade.</p>
+      </div>
+    </footer>
     </>
   )
 }
