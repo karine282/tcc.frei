@@ -122,6 +122,32 @@ function Inicio() {
   </div>
 
 
+  <section className="parcerias">
+    <h2>Nossas Parcerias</h2>
+    <p className="lead">Empresas e organizações que apoiam nossa missão de conectar a comunidade a eventos gratuitos em São Paulo.</p>
+    <div className="carousel">
+      <div className="carousel-inner">
+        <div className="parceria-item">
+          <img src="/assets/images/clube.png" alt="Parceria 1" />
+          <h3>Clube de Esportes</h3>
+        </div>
+        <div className="parceria-item">
+          <img src="/assets/images/tenis.png" alt="Parceria 2" />
+          <h3>Tenis Clube</h3>
+        </div>
+        <div className="parceria-item">
+          <img src="/assets/images/voleiesporte.png" alt="Parceria 3" />
+          <h3>Vôlei Esporte</h3>
+        </div>
+        <div className="parceria-item">
+          <img src="/assets/images/instagram.png" alt="Parceria 4" />
+          <h3>Instagram</h3>
+        </div>
+        {/* Add more parceria-items as needed */}
+      </div>
+    </div>
+  </section>
+
   <footer className="rodape">
       <div className="container">
         <div className="logo">

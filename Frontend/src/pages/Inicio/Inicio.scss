@@ -385,59 +385,120 @@ Link{
       text-align: center;
     }
 
+    .parcerias {
+      padding: 60px 20px;
+      background-color: #f9f9f9;
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+
+      h2 {
+        color: #00695c;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+      }
+
+      .lead {
+        color: #333;
+        font-size: 1.1em;
+        max-width: 700px;
+        margin: 0 auto 50px;
+        font-weight: 500;
+      }
+
+      .carousel {
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+
+        .carousel-inner {
+          display: flex;
+          transition: transform 0.5s ease;
+          width: calc(200px * 4); /* Adjust based on number of items */
+        }
+
+        .parceria-item {
+          min-width: 200px;
+          margin: 0 10px;
+          text-align: center;
+          background-color: #fff;
+          border-radius: 10px;
+          padding: 20px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease;
+
+          &:hover {
+            transform: translateY(-5px);
+          }
+
+          img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: 10px;
+          }
+
+          h3 {
+            font-size: 1.2em;
+            color: #00695c;
+            margin: 0;
+          }
+        }
+      }
+    }
+
     .rodape {
       background-color:rgba(9, 35, 39, 1);
       color: #fff;
       text-align: center;
       padding: 2rem 0;
-    
+
       .logo {
         font-size: 1.5rem;
         font-weight: bold;
-    
+
         span {
-          color:#0a7737;     
+          color:#0a7737;
            }
       }
-    
+
       h4 {
         margin: 1rem 0;
         font-weight: 400;
       }
-    
+
       .redes {
         margin: 1rem 0;
         display: flex;
         justify-content: center;
         gap: 1.5rem;
-    
+
         .icones {
           color: #fff;
           font-size: 1.8rem;
           transition: 0.3s;
-    
+
           &:hover {
-            color:#0a7737;     
+            color:#0a7737;
             transform: scale(1.1);
           }
         }
       }
-    
+
       .col {
         background: #ffffff;
-        color:#0a7737;     
+        color:#0a7737;
         border: none;
         padding: 0.5rem 1rem;
         border-radius: 6px;
         cursor: pointer;
         transition: 0.3s;
-    
+
         &:hover {
           background: #fff;
           color: #111;
         }
       }
-    
+
       p {
         margin-top: 1rem;
         font-size: 0.9rem;
