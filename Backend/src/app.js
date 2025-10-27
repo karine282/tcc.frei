@@ -1,17 +1,21 @@
 import "./utils/global.js";
 import "dotenv/config.js";
+import dotenv from 'dotenv';
+
 import express from 'express';
 import cors from 'cors';
-import adicionarRotas from "./Rotas.js";
 import con from "./Repository/Conection.js";
-import { loginController } from "./controller/LoginController.js";
+import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
+import adicionarRotas from "./Rotas.js";
 
 
 const servidor = express();
 servidor.use(cors());
 servidor.use(express.json());
+dotenv.config();
 
-//configura os controllers
+
 adicionarRotas(servidor);
 
 

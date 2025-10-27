@@ -1,0 +1,28 @@
+create database Tcc;
+use Tcc;
+drop database Tcc;
+create table tb_cadastro(
+id_usuario INT PRIMARY KEY AUTO_INCREMENT,
+nm_usuario varchar(200),
+email_usuario varchar(200),
+ds_genero varchar(50),
+ds_cep varchar(9),
+senha varchar(500)
+);
+
+select * from tb_cadastro;
+
+ALTER TABLE tb_cadastro MODIFY senha VARCHAR(255);
+
+
+.env
+
+PORTA=5010
+
+MYSQL_HOST=localhost
+MYSQL_USER=root
+MYSQL_PWD=abc123
+MYSQL_DB=Tcc
+JWT_SECRET=senhasecretadagegeo
+
+
