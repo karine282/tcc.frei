@@ -27,36 +27,37 @@ export default function Cadastro() {
                 <h2 className="logo">Localiza<span>LivreSP</span></h2>
 
                 <form onSubmit={handleCadastro}>
-                    <input 
-                        type="text" 
+                    <input
+                        type="text"
                         className="input-cadastro"
                         placeholder="usuário"
                         value={usuario}
                         onChange={(e) => setUsuario(e.target.value)}
                     />
-                    <input 
-                        type="email" 
+                    <input
+                        type="email"
                         className="input-cadastro"
                         placeholder="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     />
-                    <input 
-                        type="text" 
-                        className="input-cadastro"
-                        placeholder="gênero"
-                        value={genero}
-                        onChange={(e) => setGenero(e.target.value)}
-                    />
-                    <input 
-                        type="text" 
+
+                    <select className="input-cadastro"  value={genero} onChange={(e) => setGenero(e.target.value)}>
+                        <option value="">Selecione o genero</option>
+                        <option value="feminino">Feminino</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="outro">outro</option>
+                    </select>
+
+                    <input
+                        type="text"
                         className="input-cadastro"
                         placeholder="CEP"
                         value={cep}
                         onChange={(e) => setCep(e.target.value)}
                     />
-                    <input 
-                        type="password" 
+                    <input
+                        type="password"
                         className="input-cadastro"
                         placeholder="senha"
                         value={senha}

@@ -1,0 +1,40 @@
+# ========================
+# GERAL
+# ========================
+node_modules/
+dist/
+.env
+.env.local
+*.log
+*.tmp
+*.bak
+
+# ========================
+# SISTEMAS OPERACIONAIS
+# ========================
+.DS_Store
+Thumbs.db
+
+# ========================
+# DEPLOY / BUILD
+# ========================
+build/
+.cache/
+.vscode/
+.idea/
+*.lock
+
+# ========================
+# REACT / VITE
+# ========================
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+
+# ========================
+# BACKEND / EXPRESS
+# ========================
+backend/node_modules/
+backend/.env
+backend/.env.local
