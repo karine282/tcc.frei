@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import './Cadastro.scss';
 
 export default function Cadastro() {
+    /*
     const [usuario, setUsuario] = useState("");
     const [email, setEmail] = useState("");
     const [genero, setGenero] = useState("");
     const [cep, setCep] = useState("");
     const [senha, setSenha] = useState("");
-
+    
     const handleCadastro = (e) => {
         e.preventDefault();
         console.log({
@@ -19,6 +20,42 @@ export default function Cadastro() {
             senha
         });
     };
+    */
+
+    const handleCadastro = async (e) => {
+    e.preventDefault();
+
+    const novoUsuario = {
+        usuario,
+        email,
+        genero,
+        cep,
+        senha
+    };
+
+    try {
+        const response = await fetch('http://localhost:5010/cadastro', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(novoUsuario)
+        });
+
+        const data = await response.json();
+        console.log('Resposta do servidor:', data);
+
+        alert(data.message);
+        
+        // Se quiser, pode redirecionar:
+        // navigate('/login');
+        
+    } catch (error) {
+        console.error('Erro ao cadastrar:', error);
+        alert('Erro ao cadastrar usuário!');
+    }
+};
+
 
     return (
         <div className="container-cadastro">
