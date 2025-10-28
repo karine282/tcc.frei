@@ -1,60 +1,38 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import './Cadastro.scss';
+import api from "../../api";
 
 export default function Cadastro() {
-    /*
-    const [usuario, setUsuario] = useState("");
+
+    const [nome, setNome] = useState("");
     const [email, setEmail] = useState("");
     const [genero, setGenero] = useState("");
     const [cep, setCep] = useState("");
     const [senha, setSenha] = useState("");
-    
-    const handleCadastro = (e) => {
-        e.preventDefault();
-        console.log({
-            usuario,
-            email,
-            genero,
-            cep,
-            senha
-        });
-    };
-    */
+    const [mensagem, setMensagem] = useState("");
 
     const handleCadastro = async (e) => {
-    e.preventDefault();
+        e.preventDefault();
 
-    const novoUsuario = {
-        usuario,
-        email,
-        genero,
-        cep,
-        senha
+        try {
+            const resposta = await api.post("/cadastro", {
+                nome,
+                email,
+                genero,
+                cep,
+                senha
+            });
+
+            alert(" Cadastro realizado com sucesso!");
+            console.log("Resposta da API:", resposta.data);
+        } catch (erro) {
+            console.error("Erro ao cadastrar:", erro.response?.data || erro.message);
+            alert(erro.response?.data?.erro || "Erro ao cadastrar. Tente novamente.");
+        }
+
     };
 
-    try {
-        const response = await fetch('http://localhost:5010/cadastro', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(novoUsuario)
-        });
-
-        const data = await response.json();
-        console.log('Resposta do servidor:', data);
-
-        alert(data.message);
-        
-        // Se quiser, pode redirecionar:
-        // navigate('/login');
-        
-    } catch (error) {
-        console.error('Erro ao cadastrar:', error);
-        alert('Erro ao cadastrar usuário!');
-    }
-};
 
 
     return (
@@ -64,13 +42,15 @@ export default function Cadastro() {
                 <h2 className="logo">Localiza<span>LivreSP</span></h2>
 
                 <form onSubmit={handleCadastro}>
+                <i class="fa-regular fa-user"></i>
                     <input
                         type="text"
                         className="input-cadastro"
                         placeholder="usuário"
-                        value={usuario}
-                        onChange={(e) => setUsuario(e.target.value)}
+                        value={nome}
+                        onChange={(e) => setNome(e.target.value)}
                     />
+
                     <input
                         type="email"
                         className="input-cadastro"
@@ -79,7 +59,7 @@ export default function Cadastro() {
                         onChange={(e) => setEmail(e.target.value)}
                     />
 
-                    <select className="input-cadastro"  value={genero} onChange={(e) => setGenero(e.target.value)}>
+                    <select className="input-cadastro" value={genero} onChange={(e) => setGenero(e.target.value)}>
                         <option value="">Selecione o genero</option>
                         <option value="feminino">Feminino</option>
                         <option value="masculino">Masculino</option>
@@ -102,6 +82,7 @@ export default function Cadastro() {
                     />
 
                     <button type="submit">Criar</button>
+                    {mensagem && <p className="mensagem">{mensagem}</p>}
 
                     <p className="link">
                         já tem uma conta? <Link to="/login">Entrar</Link>

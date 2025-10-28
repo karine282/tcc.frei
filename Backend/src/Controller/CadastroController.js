@@ -1,61 +1,59 @@
 import express from 'express';
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import con from "../Repository/Conection.js";
-/*
-import salvarCadastroService from '../service/cadastro/salvarCadastroService.js';
-import consultarUsuarioService from '../service/cadastro/consultarCadastroService.js';
-*/
+import con from "../Repository/Conection.js"
+import { validarNovoCadastro, validarUsuarioDuplicado, validarCamposObrigatorios } from '../validation/cadastro/cadastroValidation.js'
 
 const servidor = express();
 
-
 servidor.post("/cadastro", async (req, res) => {
     try {
+      console.log(" Dados recebidos:", req.body);
+  
+      const { nome, email, genero, cep, senha } = req.body;
 
-        
-        const { nome, email, genero, cep, senha } = req.body;
+// Valida campos obrigatórios
+validarCamposObrigatorios({ nome, email, genero, cep, senha });
 
-        if (!nome || !email || !genero || !cep || !senha)
-            return res.status(400).json({ erro: "Preencha todos os campos" });
+//  Valida campos específicos
+validarNovoCadastro({ nome, email, genero, cep });
 
-        const [usuarioExiste] = await con.query(`
-        SELECT * FROM tb_cadastro 
-             WHERE email_usuario = ?
-         `, [email]);
+ //  Verifica se já existe usuário com o mesmo email
+ await validarUsuarioDuplicado(con, email);
 
-        if (usuarioExiste.length > 0)
-            return res.status(400).json({ erro: "Email já cadastrado" });
+     //  Criptografa a senha
 
-        const senhaHash = await bcrypt.hash(senha, 10);
-        await con.query("INSERT INTO tb_cadastro (nm_usuario, email_usuario, ds_genero, ds_cep, senha) VALUES (?, ?, ?, ?, ?)", [nome, email, genero, cep, senhaHash]);
+ const senhaHash = await bcrypt.hash(senha, 10);
+ console.log(" Senha criptografada gerada com sucesso");
 
-        res.status(201).json({ mensagem: "Usuário cadastrado com sucesso!" });
+
+     //  Insere no banco
+
+      await con.query(`
+        INSERT INTO tb_cadastro (nm_usuario, email_usuario, ds_genero, ds_cep, senha)
+        VALUES (?, ?, ?, ?, ?)
+      `, [nome, email, genero, cep, senhaHash]);
+  
+      console.log("Usuário inserido com sucesso");
+      res.status(201).json({ mensagem: "Usuário cadastrado com sucesso!" });
+  
     } catch (err) {
-        console.error(err);
+        console.error(" Erro no cadastro:", err.message);
+    
+        if (
+          err.message === "Preencha todos os campos" ||
+          err.message === "nome de usuario obrigatorio" ||
+          err.message === "email obrigatorio" ||
+          err.message === "genero obrigatorio" ||
+          err.message === "cep obrigatorio" ||
+          err.message === "Email já cadastrado"
+        ) {
+          return res.status(400).json({ erro: err.message });
+        }
+    
         res.status(500).json({ erro: "Erro ao cadastrar usuário" });
-    }
-});
-
-    /*
-    endPoints.post('/filme', async (req, resp) => {
-    try {
-        let filmeObj = req.body;
-
-        let id = await salvarFilmeService(filmeObj)
-        resp.send({
-            id: id
-        })
-    } 
-    catch (err) {
-        logErro(err);
-        resp.status(400).send(criarErro(err))
-
-    }
-
-
-})
-    */
+      }
+    });
 
 
 export default servidor;

@@ -1,7 +1,6 @@
 import "./utils/global.js";
 import "dotenv/config.js";
 import dotenv from 'dotenv';
-
 import express from 'express';
 import cors from 'cors';
 import con from "./Repository/Conection.js";
