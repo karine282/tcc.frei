@@ -1,7 +1,7 @@
 .container-cadastro {
   display: flex;
   height: 100vh;
-  background: linear-gradient(90deg, #339289 0%, #8ebbb6 100%);
+  background: linear-gradient(90deg, #0b3b36 0%, #09786b 100%);
   align-items: center;
   justify-content: center;
   font-family: "Montserrat", sans-serif;
@@ -23,7 +23,7 @@
     color: white;
     flex: 1;
     text-align: center;
-    text-shadow: 2px 2px 4px #3a3a3a;
+    text-shadow: 2px 2px 4px #000000;
   }
 
   .cadastro-direita h1 {
