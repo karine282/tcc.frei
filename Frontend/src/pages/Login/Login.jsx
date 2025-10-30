@@ -21,10 +21,10 @@ export default function Login() {
       // Exibe mensagem de sucesso
       setMensagem(resposta.data.mensagem);
 
-      // Salva token no localStorage (ou cookies)
+      // Salva token no localStorage 
       localStorage.setItem("token", resposta.data.token);
 
-      // Redireciona para página inicial (ou dashboard)
+      // Redireciona para página inicial 
       navigate("/"); 
 
     } catch (erro) {

@@ -8,6 +8,10 @@ import Lazer from './pages/Lazer/Lazer.jsx';
 import Esporte from './pages/Esporte/Esporte.jsx';
 import Desenvolvedores from './pages/Desenvolvedores/Desenvolvedores.jsx';
 import Senha from './pages/senha/senha.jsx';
+import RecuperarSenha from "./pages/senha/recuperarSenha.jsx";
+import ResetarSenha from "./pages/senha/resetarSenha.jsx";
+import ContaUsuario from './pages/conta/conta.jsx';
+
 
 export default function Navegador() {
   return (
@@ -22,6 +26,11 @@ export default function Navegador() {
         <Route path="/Esporte" element={<Esporte />} />
         <Route path="/Desenvolvedores" element={<Desenvolvedores />} />
         <Route path="/TrocarSenha" element={<Senha />} />
+        <Route path="/recuperar-senha" element={<RecuperarSenha />} />
+        <Route path="/resetar-senha" element={<ResetarSenha />} />
+        <Route path="/conta" element={<ContaUsuario />} />
+
+
       </Routes>
     </BrowserRouter>
   );

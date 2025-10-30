@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import './Esporte.scss';
 import { Link } from "react-router-dom";
+import { CiSearch } from "react-icons/ci";
+
 
 export default function Esporte() {
   const [pesquisa, setPesquisa] = useState('');
@@ -21,6 +23,7 @@ export default function Esporte() {
           <Link to="/lazer">Lazer</Link>
           <Link to="/esportes" className="active">Esportes</Link>
           <Link to="/login">Login</Link>
+          <Link to='/'>Inicio</Link>
         </nav>
       </header>
 
@@ -55,8 +58,10 @@ export default function Esporte() {
               onChange={handleInputChange}
               className="searchInput"
             />
-            <button type="submit" className="searchButton" />
-          </form>
+
+            <button type="submit" className="searchButton">
+              <i className="fa-solid fa-magnifying-glass icone-pesquisar"></i>
+            </button>          </form>
         </section>
       </div>
 
