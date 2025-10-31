@@ -22,8 +22,7 @@ export default function Esporte() {
           <Link to="/cultura">Cultura</Link>
           <Link to="/lazer">Lazer</Link>
           <Link to="/esportes" className="active">Esportes</Link>
-          <Link to="/login">Login</Link>
-          <Link to='/'>Inicio</Link>
+          <Link to='/'><i class="fa-solid fa-house"></i></Link>
         </nav>
       </header>
 
@@ -33,6 +32,7 @@ export default function Esporte() {
         style={{ backgroundImage: `url(/assets/images/tenis.png)` }}
       >
         <h1>Esportes</h1>
+        
       </section>
 
       {/* Descrição do esporte */}

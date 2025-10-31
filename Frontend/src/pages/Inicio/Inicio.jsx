@@ -12,7 +12,8 @@ function Inicio() {
           <nav className="nave">
             <Link to="/Cultura">Cultura</Link>
             <Link to="/Esporte">Esporte</Link>
-           <Link to="/Lazer">Lazer</Link>
+            <Link to="/Lazer">Lazer</Link>
+            <Link to='/conta'><i class="fa-solid fa-circle-user"></i></Link>
           </nav>
         </div>
       </header>
@@ -25,9 +26,13 @@ function Inicio() {
             <p className="hero-sub">Aqui você encontra atividades gratuitas e acessíveis para toda a família.</p>
             <nav className="hero-actions">
               <h3 className='pri'>
-              <Link to="/Login">entrar</Link></h3>
-              <h3 className='seg'><Link to="/Cadastro">cadastre-se</Link></h3>
-              <i className="fa-solid fa-house"></i>
+              <i class="fa-solid fa-user"></i>
+                <Link to="/Login">entrar</Link>
+              </h3>
+              <h3 className='seg'>
+                <i class="fa-solid fa-file-pen icon-inicio"></i>
+                <Link to="/Cadastro">cadastre-se</Link></h3>
+
             </nav>
           </div>
         </section>
@@ -48,9 +53,9 @@ function Inicio() {
               <li>Esporte para todas as idades</li>
             </ul>
             <p>A cidade é sua. Aproveite!</p>
-             <Link to='/Sobre'>
-         <button className='sobre'>sobre nos</button>
-         </Link>
+            <Link to='/Sobre'>
+              <button className='sobre'>sobre nos</button>
+            </Link>
           </div>
         </section>
 
@@ -78,11 +83,11 @@ function Inicio() {
             </article>
 
             <article className="cartao">
-               <img src="https://www.parqueecologicodotiete.com.br/content-wp/uploads/2017/08/parque-ecologico-tiete-peda.jpg" alt="Parque 4" />
-               <h3>parque ecologico tiete</h3>
+              <img src="https://www.parqueecologicodotiete.com.br/content-wp/uploads/2017/08/parque-ecologico-tiete-peda.jpg" alt="Parque 4" />
+              <h3>parque ecologico tiete</h3>
               <p>  Trilhas, ciclovia, quadras, campos, pedalinho, playgrounds, lanchonetes, CRAS e museu .</p>
             </article>
-            
+
           </div>
         </section>
       </main>
@@ -101,95 +106,95 @@ function Inicio() {
         </div>
       </section>
 
- <h1>Categorias</h1>
-  <p class="subtitulo">veja o que você está procurando no momento</p>
+      <h1>Categorias</h1>
+      <p class="subtitulo">veja o que você está procurando no momento</p>
 
-  <div class="categorias">
-    <div class="categoria">
-      <img src="/assets/images/esportes.jpg" />
-      <p>esportes</p>
-    </div>
-
-    <div class="categoria">
-      <img src="/assets/images/cultu.jpg" />
-      <p>espaços<br />culturais</p>
-    </div>
-
-    <div class="categoria">
-      <img src="/assets/images/lazer.jpg" />
-      <p>lazer</p>
-    </div>
-  </div>
-
-
-  <section className="parcerias">
-    <h2>Nossas Parcerias</h2>
-    <p className="lead">Empresas e organizações que apoiam nossa missão de conectar a comunidade a eventos gratuitos em São Paulo.</p>
-    <div className="carousel">
-      <div className="carousel-inner">
-        <div className="parceria-item">
-          <img src="/assets/images/clube.png" alt="Parceria 1" />
-          <h3>Clube de Esportes</h3>
+      <div class="categorias">
+        <div class="categoria">
+          <img src="/assets/images/esportes.jpg" />
+          <p>esportes</p>
         </div>
-        <div className="parceria-item">
-          <img src="/assets/images/tenis.png" alt="Parceria 2" />
-          <h3>Tenis Clube</h3>
+
+        <div class="categoria">
+          <img src="/assets/images/cultu.jpg" />
+          <p>espaços<br />culturais</p>
         </div>
-        <div className="parceria-item">
-          <img src="/assets/images/voleiesporte.png" alt="Parceria 3" />
-          <h3>Vôlei Esporte</h3>
+
+        <div class="categoria">
+          <img src="/assets/images/lazer.jpg" />
+          <p>lazer</p>
         </div>
-        <div className="parceria-item">
-          <img src="/assets/images/instagram.png" alt="Parceria 4" />
-          <h3>Instagram</h3>
-        </div>
-        {/* Add more parceria-items as needed */}
       </div>
-    </div>
-  </section>
 
-  <footer className="rodape">
-      <div className="container">
-        <div className="logo">
-          Localiza<span>LivreSP</span>
+
+      <section className="parcerias">
+        <h2>Nossas Parcerias</h2>
+        <p className="lead">Empresas e organizações que apoiam nossa missão de conectar a comunidade a eventos gratuitos em São Paulo.</p>
+        <div className="carousel">
+          <div className="carousel-inner">
+            <div className="parceria-item">
+              <img src="/assets/images/clube.png" alt="Parceria 1" />
+              <h3>Clube de Esportes</h3>
+            </div>
+            <div className="parceria-item">
+              <img src="/assets/images/tenis.png" alt="Parceria 2" />
+              <h3>Tenis Clube</h3>
+            </div>
+            <div className="parceria-item">
+              <img src="/assets/images/voleiesporte.png" alt="Parceria 3" />
+              <h3>Vôlei Esporte</h3>
+            </div>
+            <div className="parceria-item">
+              <img src="/assets/images/instagram.png" alt="Parceria 4" />
+              <h3>Instagram</h3>
+            </div>
+            {/* Add more parceria-items as needed */}
+          </div>
         </div>
+      </section>
 
-        <h4>Descubra cultura, lazer e esportes gratuitos em São Paulo</h4>
+      <footer className="rodape">
+        <div className="container">
+          <div className="logo">
+            Localiza<span>LivreSP</span>
+          </div>
 
-        <div className="redes">
-          <a
-            href="https://www.instagram.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="icones"
-          >
-            <FaInstagram />
-          </a>
-          <a
-            href="https://www.facebook.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="icones"
-          >
-            <FaFacebook />
-          </a>
-          <a
-            href="https://www.tiktok.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="icones"
-          >
-            <FaTiktok />
-          </a>
+          <h4>Descubra cultura, lazer e esportes gratuitos em São Paulo</h4>
+
+          <div className="redes">
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icones"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icones"
+            >
+              <FaFacebook />
+            </a>
+            <a
+              href="https://www.tiktok.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icones"
+            >
+              <FaTiktok />
+            </a>
+          </div>
+
+          <Link to="/Desenvolvedores">
+            <button className="col">Colaboradores</button>
+          </Link>
+
+          <p>© LocalizaLivreSP — Conectando a cidade.</p>
         </div>
-
-        <Link to="/Desenvolvedores">
-          <button className="col">Colaboradores</button>
-        </Link>
-
-        <p>© LocalizaLivreSP — Conectando a cidade.</p>
-      </div>
-    </footer>
+      </footer>
     </>
   )
 }

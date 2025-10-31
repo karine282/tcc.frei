@@ -4,17 +4,17 @@ import "./Cultura.scss";
 function Cultura() {
   return (
     <>
-      <header>
-        <div className="logo">
-          Localiza<span>LivreSP</span>
-        </div>
+      
+        <header className="topo">
+        <div className="logo">Localiza<span>LivreSP</span></div>
         <nav>
-          <Link to="/" className="active">Cultura</Link>
+          <Link to="/cultura">Cultura</Link>
           <Link to="/lazer">Lazer</Link>
-          <Link to="/esportes">Esportes</Link>
-          <Link to="/login">Login</Link>
+          <Link to="/esportes" className="active">Esportes</Link>
+          <Link to='/'><i class="fa-solid fa-house"></i></Link>
         </nav>
       </header>
+     
 
       <main>
         <section className="hero">
