@@ -14,14 +14,15 @@ export default function Esporte() {
   };
 
   return (
-    <>
+    
+    <div className='conatiner.esporte'>
+
       {/* Topo */}
       <header className="topo">
         <div className="logo">Localiza<span>LivreSP</span></div>
         <nav>
           <Link to="/cultura">Cultura</Link>
           <Link to="/lazer">Lazer</Link>
-          <Link to="/esportes" className="active">Esportes</Link>
           <Link to='/'><i class="fa-solid fa-house"></i></Link>
         </nav>
       </header>
@@ -38,8 +39,7 @@ export default function Esporte() {
       {/* Descrição do esporte */}
       <section className="desc-esporte">
         <p>
-          Encontre quadras públicas, centros esportivos, projetos sociais, parques e ONGs que oferecem atividades físicas e esportivas gratuitas. São aulas, treinos, jogos e eventos para todas as idades e níveis. Descubra locais perto de você e movimente-se de forma acessível, saudável e inclusiva!
-        </p>
+        Encontre quadras públicas, centros esportivos, projetos sociais, parques e ONGs que oferecem atividades físicas e esportivas gratuitas. São aulas, treinos, jogos e eventos para todas as idades e níveis. Descubra locais perto de você e movimente-se de forma acessível, saudável e inclusiva!</p>
         <img
           src="/assets/images/descricaoEsporte.png"
           alt="Descrição esporte"
@@ -83,7 +83,7 @@ export default function Esporte() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="destaqueEndereco"
-              >
+                >
                 Capital São Paulo
               </a>
             </p>
@@ -143,7 +143,7 @@ export default function Esporte() {
                   value={pesquisa}
                   onChange={handleInputChange}
                   className="searchInput"
-                />
+                  />
                 <button type="submit" className="searchButton" />
               </form>
             </section>
@@ -155,7 +155,7 @@ export default function Esporte() {
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
-          ></iframe>
+            ></iframe>
         </section>
       </main>
 
@@ -167,6 +167,7 @@ export default function Esporte() {
           <p>© LocalizaLivreSP — Conectando a cidade.</p>
         </div>
       </footer>
-    </>
+            </div>
+    
   );
 }

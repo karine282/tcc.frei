@@ -111,10 +111,10 @@ export default function Desenvolvedores() {
       <h3>Informações</h3>
       <br />
       <ul>
-        <li><img src="/assets/images/loca.png"/>Localização: São Paulo, SP - Brasil</li>
-        <li><img src="/assets/images/gmail.png"/>E-mail:DevPaulista@gmail.com</li>
-        <li><img src="/assets/images/rede.png"/> Site: www.DevPaulista.com</li>
-        <li><img src="/assets/images/telefone.png"/>Telefone: (11) 99999-9999</li>
+        <li><i class="fa-solid fa-location-dot icon-desenvolvedores"></i>Localização: São Paulo, SP - Brasil</li>
+        <li><i class="fa-regular fa-envelope icon-desenvolvedores"></i>E-mail:DevPaulista@gmail.com</li>
+        <li><i class="fa-solid fa-globe icon-desenvolvedores"></i> Site: www.DevPaulista.com</li>
+        <li><i class="fa-solid fa-phone icon-desenvolvedores"></i>Telefone: (11) 99999-9999</li>
       </ul>
       <br />
     </div>

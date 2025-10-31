@@ -12,7 +12,8 @@ import RecuperarSenha from "./pages/senha/recuperarSenha.jsx";
 import ResetarSenha from "./pages/senha/resetarSenha.jsx";
 import ContaUsuario from './pages/conta/conta.jsx';
 import NaoEncontrado from './pages/notfound/notfound.jsx';
-
+import Administracao from './pages/administradores/administradores.jsx';
+import LoginAdministracao from './pages/administradores/loginAdministracao.jsx';
 
 export default function Navegador() {
   return (
@@ -30,6 +31,9 @@ export default function Navegador() {
         <Route path="/recuperar-senha" element={<RecuperarSenha />} />
         <Route path="/resetar-senha" element={<ResetarSenha />} />
         <Route path="/conta" element={<ContaUsuario />} />
+        <Route path="/painel-administrativo" element={<Administracao />} />
+        <Route path="/login-administrativo" element={<LoginAdministracao />} />
+
         <Route path="/*" element={<NaoEncontrado />} />
       </Routes>
     </BrowserRouter>

@@ -20,7 +20,6 @@ export default function Lazer() {
         <div className="logo">Localiza<span>LivreSP</span></div>
         <nav>
           <Link to="/cultura">Cultura</Link>
-          <Link to="/lazer">Lazer</Link>
           <Link to="/Esporte" className="active">Esportes</Link>
           <Link to='/'><i class="fa-solid fa-house"></i></Link>
         </nav>

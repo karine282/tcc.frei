@@ -26,12 +26,12 @@ function Inicio() {
             <p className="hero-sub">Aqui você encontra atividades gratuitas e acessíveis para toda a família.</p>
             <nav className="hero-actions">
               <h3 className='pri'>
-              <i class="fa-solid fa-user"></i>
-                <Link to="/Login">entrar</Link>
+                <i class="fa-solid fa-user"></i>
+                <Link to="/Login" className='link'>entrar</Link>
               </h3>
               <h3 className='seg'>
                 <i class="fa-solid fa-file-pen icon-inicio"></i>
-                <Link to="/Cadastro">cadastre-se</Link></h3>
+                <Link to="/Cadastro" className='link'>cadastre-se</Link></h3>
 
             </nav>
           </div>
@@ -188,9 +188,18 @@ function Inicio() {
             </a>
           </div>
 
-          <Link to="/Desenvolvedores">
-            <button className="col">Colaboradores</button>
-          </Link>
+
+          <div className="button-container">
+            <Link to="/login-administrativo">
+              <button className="col">Painel administrativo</button>
+            </Link>
+
+            <Link to="/Desenvolvedores">
+              <button className="col">Colaboradores</button>
+            </Link>
+          </div>
+
+
 
           <p>© LocalizaLivreSP — Conectando a cidade.</p>
         </div>
