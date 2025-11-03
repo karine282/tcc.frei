@@ -27,6 +27,8 @@ export default function ContaUsuario() {
                 <p>048415</p>
                 <h3>Genero <i class="fa-regular fa-pen-to-square icon-editar"></i> </h3>
                 <p>feminino</p>
+                <h3>Email <i class="fa-regular fa-pen-to-square icon-editar"></i></h3>
+                <p>teste.usuario@gmail.com</p>
                 <h3></h3>
             </div>
             <div className='sair-conta'>

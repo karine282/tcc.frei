@@ -132,7 +132,7 @@ export default function Esporte() {
 
       {/* Mapa */}
       <main>
-        <section className="mapa">
+        <section className="containerPesquisaMapa">
           <h2>Veja locais próximos de você</h2>
           <div className='containerPesquisaMapa'>
             <section className="pesquisaEsporteMapa">
@@ -166,6 +166,16 @@ export default function Esporte() {
           <h4>Descubra cultura, lazer e esportes gratuitos em São Paulo</h4>
           <p>© LocalizaLivreSP — Conectando a cidade.</p>
         </div>
+
+        <div className="button-container">
+            <Link to="/login-administrativo">
+              <button className="col">Painel administrativo</button>
+            </Link>
+
+            <Link to="/Desenvolvedores">
+              <button className="col">Colaboradores</button>
+            </Link>
+          </div>
       </footer>
             </div>
     

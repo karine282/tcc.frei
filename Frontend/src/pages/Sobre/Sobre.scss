@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Bebas+Neue&family=Fira+Code:wght@300..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Patua+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rock+Salt&family=Shafarik&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 90%;
+  max-width: 1800px;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.sobre-header .logo {
+  color: white;
+  font-weight: 800;
+  padding: 6px 10px;
+  border-radius: 6px;
+
+}
+
+.sobre-header span {
+  color: #0a7737;
+  font-weight: 1000;
+}
+
+.sobre-header .nave a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.sobre-main {
+  margin-top: 80px; 
+}
+
+.sobre-hero {
+  height: 300px;
+  background-image: url('/assets/images/sub.jpg');
+  margin-top: -80px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.sobre-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(48, 48, 48, 0.35) 10%, rgba(43, 43, 43, 0.6) 70%);
+}
+
+.sobre-hero .container {
+  position: relative;
+  text-align: center;
+}
+
+.sobre-hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.sobre-hero p {
+  font-size: 1.2em;
+  opacity: 0.95;
+}
+
+.sobre-content {
+  padding: 60px 20px;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.sobre-content h2 {
+  color: #055353;
+  font-size: 2em;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.sobre-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: #085750;
+  border-radius: 2px;
+}
+
+.sobre-content p {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #333;
+}
+
+.sobre-content ul {
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  text-align: left;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sobre-content li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  color: #333333;
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.sobre-content li:last-child {
+  border-bottom: none;
+}
+
+.sobre-content li strong {
+  color: #00695c;
+}
+
+.sobre-content .section {
+  margin-bottom: 40px;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sobre-content .section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.sobre-content .section h2 {
+  margin-bottom: 15px;
+}
+
+.sobre-content .section p {
+  margin-bottom: 0;
+}
+
+.sobre {
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0;
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    span {
+      color: #0a7737;
+    }
+  }
+
+  h4 {
+    margin: 1rem 0;
+    font-weight: 400;
+  }
+
+  .redes {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+
+    .icones {
+      color: #fff;
+      font-size: 1.8rem;
+      transition: 0.3s;
+
+      &:hover {
+        color: #0a7737;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+
+  .cola {
+    background: #ffffff;
+    color: #0a7737;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 80%;
+
+    &:hover {
+      background: #fff;
+      color: #111;
+    }
+  }
+
+  p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: 900px) {
+  .sobre-hero h1 {
+    font-size: 2em;
+  }
+
+  .sobre-content {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sobre-hero h1 {
+    font-size: 1.8em;
+  }
+
+  .sobre-content h2 {
+    font-size: 1.5em;
+  }
+}

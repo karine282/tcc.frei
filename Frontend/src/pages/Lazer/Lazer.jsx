@@ -64,23 +64,7 @@ export default function Lazer() {
       {/* Clubes */}
       
       {/* Slides de locais de lazer */}
-      <section className="slides-lazer">
-        <h2>Pontos de Lazer em São Paulo</h2>
-        <div className="slides-container">
-          <div className="slide">
-            <img src="/assets/images/masp.jpg" alt="MASP" />
-            <p><strong>MASP</strong></p>
-          </div>
-          <div className="slide">
-            <img src="/assets/images/mirante.jpg" alt="Mirante do Sesc" />
-            <p><strong>Mirante do Sesc</strong></p>
-          </div>
-          <div className="slide">
-            <img src="/assets/images/ibirapuera.jpg" alt="Parque Ibirapuera" />
-            <p><strong>Parque Ibirapuera</strong></p>
-          </div>
-        </div>
-      </section>
+      
       {/* Locais */}
       <section className="locais">
         <h2>Locais</h2>
@@ -136,8 +120,8 @@ export default function Lazer() {
 
       {/* Mapa */}
       <main>
-        <section className="mapa">
-          <h2>Veja lugares mais proximos de você para seu lazer e da sua familia!</h2>
+        <section className="containerPesquisaMapa">
+          <h2>Veja lugares mais proximos de você!</h2>
           <div className='containerPesquisaMapa'>
             <section className="pesquisaEsporteMapa">
               <form onSubmit={handleSubmit} className="searchForm">
@@ -170,6 +154,15 @@ export default function Lazer() {
           <h4>Descubra cultura, lazer e esportes gratuitos em São Paulo</h4>
           <p>© LocalizaLivreSP — Conectando a cidade.</p>
         </div>
+        <div className="button-container">
+            <Link to="/login-administrativo">
+              <button className="col">Painel administrativo</button>
+            </Link>
+
+            <Link to="/Desenvolvedores">
+              <button className="col">Colaboradores</button>
+            </Link>
+          </div>
       </footer>
             </div>
     </>

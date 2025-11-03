@@ -42,7 +42,6 @@ export default function Cadastro() {
                 <h2 className="logo">Localiza<span>LivreSP</span></h2>
 
                 <form onSubmit={handleCadastro}>
-                <i class="fa-regular fa-user"></i>
                     <input
                         type="text"
                         className="input-cadastro"

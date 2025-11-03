@@ -28,7 +28,7 @@ function Cultura() {
         </div>
         <nav>
           <Link to="/lazer">Lazer</Link>
-          <Link to="/esportes">Esportes</Link>
+          <Link to="/Esporte">Esportes</Link>
           <Link to="/">
             <i className="fa-solid fa-house"></i>
           </Link>
@@ -140,7 +140,7 @@ function Cultura() {
 
       {/* MAPA */}
       <main>
-        <section className="mapa">
+        <section className="containerPesquisaMapa">
           <h2>Veja locais próximos de você</h2>
           <div className="containerPesquisaMapa">
             <section className="pesquisaCulturaMapa">
@@ -178,6 +178,15 @@ function Cultura() {
           <h4>Descubra cultura, lazer e esportes gratuitos em São Paulo</h4>
           <p>© LocalizaLivreSP — Conectando a cidade.</p>
         </div>
+        <div className="button-container">
+            <Link to="/login-administrativo">
+              <button className="col">Painel administrativo</button>
+            </Link>
+
+            <Link to="/Desenvolvedores">
+              <button className="col">Colaboradores</button>
+            </Link>
+          </div>
       </footer>
 
     </div>

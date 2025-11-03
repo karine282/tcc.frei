@@ -7,6 +7,7 @@ function Inicio() {
   return (
     <>
       <header className="inicio">
+
         <div className="container comeco">
           <div className="logo">Localiza<span>LivreSP</span></div>
           <nav className="nave">
@@ -26,7 +27,7 @@ function Inicio() {
             <p className="hero-sub">Aqui você encontra atividades gratuitas e acessíveis para toda a família.</p>
             <nav className="hero-actions">
               <h3 className='pri'>
-                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-user icon-inicio"></i>
                 <Link to="/Login" className='link'>entrar</Link>
               </h3>
               <h3 className='seg'>
@@ -37,9 +38,9 @@ function Inicio() {
           </div>
         </section>
 
-        <section className="feature container">
+        <section className="feature ">
           <div className="feature-left">
-            <img src="/assets/images/sub.jpg" alt="feature" />
+            <img src="https://blog.blablacar.com.br/wp-content/uploads/2024/06/sala-nobre-museu-do-ipiranga-sp.webp" alt="feature" />
           </div>
           <div className="feature-right">
             <p>
@@ -54,7 +55,7 @@ function Inicio() {
             </ul>
             <p>A cidade é sua. Aproveite!</p>
             <Link to='/Sobre'>
-              <button className='sobre'>sobre nos</button>
+              <button className='bnt-sobre'>sobre nós</button>
             </Link>
           </div>
         </section>
@@ -65,27 +66,37 @@ function Inicio() {
 
           <div className="cartoes">
             <article className="cartao">
+              <a href='https://www.parquedoibirapuera.org/' className='link-categorias'>
               <img src="https://i.pinimg.com/736x/b1/58/46/b1584660ec016e5fbad337b0061b9b39.jpg" alt="Parque 1" />
               <h3>Parque do Ibirapuera</h3>
               <p>Ótimo para caminhadas e piqueniques. Entrada gratuita.</p>
+              </a>
             </article>
 
             <article className="cartao">
+              <a href='https://prefeitura.sp.gov.br/web/meio_ambiente/w/parques/regiao_sul/5747' className='link-categorias'>
+
               <img src="https://i.pinimg.com/1200x/bc/6b/11/bc6b1167e29bbf927e5a380c8a4113b0.jpg" alt="Parque 2" />
-              <h3>Parque do Indepencia</h3>
+              <h3>Parque  Indepencia</h3>
               <p>Eventos culturais, exposições e muito espaço para atividades.</p>
+              </a>
             </article>
 
             <article className="cartao">
+              <a href='https://parquevillalobos.com.br/' className='link-categorias'>
+
               <img src="https://i.pinimg.com/1200x/17/7a/bc/177abc0fd9ecac38ac42937f7d2dbb29.jpg" alt="Parque 3" />
               <h3>Parque Villa-Lobos</h3>
               <p>Área esportiva e pistas de corrida — ideal para famílias.</p>
+              </a>
             </article>
 
             <article className="cartao">
+              <a href='https://www.parqueecologicodotiete.com.br/' className='link-categorias'>
               <img src="https://www.parqueecologicodotiete.com.br/content-wp/uploads/2017/08/parque-ecologico-tiete-peda.jpg" alt="Parque 4" />
               <h3>parque ecologico tiete</h3>
               <p>  Trilhas, ciclovia, quadras, campos, pedalinho, playgrounds, lanchonetes, CRAS e museu .</p>
+              </a>
             </article>
 
           </div>
@@ -101,7 +112,7 @@ function Inicio() {
           </p>
         </div>
         <div className="p3">
-          <img src="https://educacaoeterritorio.org.br/wp-content/uploads/portal_aprendiz/2015/08/ceu5.jpg" alt="CEU" />
+          <img src="https://pbs.twimg.com/media/GcW4CGNWoAAe1_1?format=jpg&name=4096x4096" alt="CEU" />
           <a className="btn btn-segundo" href="https://ceu.sme.prefeitura.sp.gov.br/programacao/">Saiba mais</a>
         </div>
       </section>
@@ -110,20 +121,26 @@ function Inicio() {
       <p class="subtitulo">veja o que você está procurando no momento</p>
 
       <div class="categorias">
-        <div class="categoria">
-          <img src="/assets/images/esportes.jpg" />
-          <p>esportes</p>
-        </div>
+        <Link to='/Esporte' className='link-categorias'>
+          <div className="categoria">
+            <img src="/assets/images/esportes.jpg" />
+            <p>esportes</p>
+          </div>
+        </Link>
 
-        <div class="categoria">
-          <img src="/assets/images/cultu.jpg" />
-          <p>espaços<br />culturais</p>
-        </div>
+        <Link to='/Cultura' className='link-categorias'>
+          <div className="categoria">
+            <img src="/assets/images/cultu.jpg" />
+            <p>espaços<br />culturais</p>
+          </div>
+        </Link>
 
-        <div class="categoria">
-          <img src="/assets/images/lazer.jpg" />
-          <p>lazer</p>
-        </div>
+        <Link to='/Lazer' className='link-categorias'>
+          <div className="categoria">
+            <img src="/assets/images/lazer.jpg" />
+            <p>lazer</p>
+          </div>
+        </Link>
       </div>
 
 
@@ -131,24 +148,28 @@ function Inicio() {
         <h2>Nossas Parcerias</h2>
         <p className="lead">Empresas e organizações que apoiam nossa missão de conectar a comunidade a eventos gratuitos em São Paulo.</p>
         <div className="carousel">
-          <div className="carousel-inner">
-            <div className="parceria-item">
-              <img src="/assets/images/clube.png" alt="Parceria 1" />
-              <h3>Clube de Esportes</h3>
+          <div className="parcerias1">
+            <div className="parceria">
+              <a href="https://www.prefeitura.sp.gov.br/cidade/secretarias/upload/esportes/2020/Janeiro/14/33%20-%20ESPORTE%20E%20LAZER.jpg"><img src="https://images-ext-1.discordapp.net/external/GfSK5hlf1m1iGzXPHJMpxWhJT2b0IGc00fAj-e4dh98/https/www.prefeitura.sp.gov.br/cidade/secretarias/upload/esportes/2020/Janeiro/14/33%2520-%2520ESPORTE%2520E%2520LAZER.jpg?format=webp&width=746&height=670" /></a>
+              <h3>Secretaria Municipal de Esportes e Lazer </h3>
             </div>
-            <div className="parceria-item">
-              <img src="/assets/images/tenis.png" alt="Parceria 2" />
-              <h3>Tenis Clube</h3>
+            <div className="parceria">
+              <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCrbJ7aqu91nn9TEvN8twglzmm_0o34k1T8Q&s"><img src="https://images-ext-1.discordapp.net/external/OzfO4GJSHV7ZQPl3CcRraogEQY_SuqJ6d3irzi3CC18/%3Fq%3Dtbn%3AANd9GcTCrbJ7aqu91nn9TEvN8twglzmm_0o34k1T8Q%26s/https/encrypted-tbn0.gstatic.com/images?format=webp&width=248&height=248" /></a>
+              <h3>samba cultural </h3>
             </div>
-            <div className="parceria-item">
-              <img src="/assets/images/voleiesporte.png" alt="Parceria 3" />
-              <h3>Vôlei Esporte</h3>
+            <div className="parceria">
+              <a href="https://ceu.sme.prefeitura.sp.gov.br/wp-content/uploads/2021/07/logo-ceu.png"><img src="https://images-ext-1.discordapp.net/external/sr3m8gATvHiaACIxWvAgaV3YvKOPrtUYSbIa405R9mA/https/ceu.sme.prefeitura.sp.gov.br/wp-content/uploads/2021/07/logo-ceu.png?format=webp&quality=lossless&width=382&height=374" /></a>
+              <h3>Centros Educacionais Unificados</h3>
             </div>
-            <div className="parceria-item">
-              <img src="/assets/images/instagram.png" alt="Parceria 4" />
-              <h3>Instagram</h3>
+            <div className="parceria">
+              <a href=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTcmDU8H-Tba1lZ0XYPa9oT-Aes1ZBdrve4w&s"><img src="https://images-ext-1.discordapp.net/external/z3ykY9P67V8RJDuLUWcw0fff6UpuKZ9nCUp1KAmwU0A/%3Fq%3Dtbn%3AANd9GcRTcmDU8H-Tba1lZ0XYPa9oT-Aes1ZBdrve4w%26s/https/encrypted-tbn0.gstatic.com/images?format=webp&width=248&height=248" /></a>
+              <h3>sesc</h3>
             </div>
-            {/* Add more parceria-items as needed */}
+            <div className="parceria">
+              <a href="https://catracalivre.com.br/"><img src="https://www.cebrac.com.br/wp-content/uploads/2023/08/catraca_livre_cebrac.png" /></a>
+              <h3>Catraca Livre</h3>
+            </div>
+
           </div>
         </div>
       </section>
@@ -188,7 +209,6 @@ function Inicio() {
             </a>
           </div>
 
-
           <div className="button-container">
             <Link to="/login-administrativo">
               <button className="col">Painel administrativo</button>
@@ -199,8 +219,6 @@ function Inicio() {
             </Link>
           </div>
 
-
-
           <p>© LocalizaLivreSP — Conectando a cidade.</p>
         </div>
       </footer>
@@ -208,4 +226,8 @@ function Inicio() {
   )
 }
 
-export default Inicio
+export default Inicio;
+
+
+
+
