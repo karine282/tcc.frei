@@ -30,7 +30,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    background-color: #6b9080;
+    background-color: #73a942;
     padding: 20px 30px;
     color: white;
     font-family: poppins, sans-serif;
@@ -91,7 +91,7 @@
   }
 
   .searchButton {
-    background-color: #6b9080;
+    background-color: #538d22;
     color: white;
     width: 60px;
     border: none;
@@ -123,7 +123,7 @@
   /* Clubes */
   .areaClubes {
     padding: 40px;
-    background-color: #6b9080;
+    background-color: #73a942;
     color: white;
 
     h2 {
@@ -227,18 +227,58 @@
 
   /* Rodapé */
   .rodapeLazer {
-    background: #4f6e63;
+    background: #73a942;
     color: rgba(255, 249, 249, 0.43);
     padding: 18px 0;
     text-align: center;
     margin-top: 30px;
     height: 200px;
+
+    .logo{
+      color:white;
+      font-weight:800;
+      color: white;
+      padding:6px 10px;
+      border-radius:6px;
+    }
+    
+    span{
+      color: #245501;
+      font-family: 'Poppins', sans-serif;
+    
+    }
+    .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+    
+      .col {
+        color: #245501;
+
+        &:hover {
+          background: #fff;
+          color: #111;
+        }
+    
+      }
+    }
   }
+
+
+
+
+  
+  
+
+  
+      
 
   
 
   .locais {
-    background-color: #4f6e63;
+    background-color: #73a942;
     padding: 40px;
     color: #fff;
     width: 100%;;

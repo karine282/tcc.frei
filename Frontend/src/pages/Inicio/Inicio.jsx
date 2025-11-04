@@ -5,7 +5,8 @@ import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
 
 function Inicio() {
   return (
-    <>
+    <div className='container-inicio'>
+
       <header className="inicio">
 
         <div className="container comeco">
@@ -188,7 +189,7 @@ function Inicio() {
               target="_blank"
               rel="noopener noreferrer"
               className="icones"
-            >
+              >
               <FaInstagram />
             </a>
             <a
@@ -196,7 +197,7 @@ function Inicio() {
               target="_blank"
               rel="noopener noreferrer"
               className="icones"
-            >
+              >
               <FaFacebook />
             </a>
             <a
@@ -204,7 +205,7 @@ function Inicio() {
               target="_blank"
               rel="noopener noreferrer"
               className="icones"
-            >
+              >
               <FaTiktok />
             </a>
           </div>
@@ -222,7 +223,7 @@ function Inicio() {
           <p>© LocalizaLivreSP — Conectando a cidade.</p>
         </div>
       </footer>
-    </>
+              </div>
   )
 }
 

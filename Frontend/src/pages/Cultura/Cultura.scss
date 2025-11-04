@@ -25,7 +25,7 @@
   .logo {
     font-size: 1.2rem;
     span {
-      color: #0a7737;
+      color: #0f4c5c;
       font-weight: 700;
     }
   }
@@ -42,7 +42,7 @@
       transition: color 0.2s ease-in-out;
       
       &.active { font-weight: bold; }
-      &:hover { color: #2d6a4f; }
+      &:hover { color: #0f4c5c; }
     }
   }
 }
@@ -70,7 +70,7 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  background-color: #4f772d;
+  background-color: #4d908e;
   padding: 20px 30px;
   color: white;
   font-family: poppins, sans-serif;
@@ -133,7 +133,7 @@
 }
 
 .searchButton {
-  background-color: #90A955;
+  background-color: #577590;
   color: white;
   width: 60px;
   border: none;
@@ -147,7 +147,7 @@
 /* Área de Locais Culturais */
 .areaCultura {
   padding: 40px;
-  background-color: #4f772d;
+  background-color: #4d908e;
   color: white;
   
   h2 {
@@ -172,7 +172,7 @@
   background-color: #f0f0f0;
   border-radius: 10px;
   padding: 20px;
-  color: #90A955;
+  color: #0f4c5c;
   
   .culturaImagemGrande {
     width: 100%;
@@ -194,12 +194,12 @@
     }
     
     .destaqueEndereco {
-      color: #2d6a4f;
+      color: #277da1;
       font-weight: bold;
       text-decoration: underline;
 
       &:hover {
-        color: #2d6a4f;
+        color: #000000;
       }
     }
   }
@@ -215,7 +215,7 @@
     background-color: white;
     border-radius: 8px;
     padding: 10px;
-    color: #90A955;
+    color: #0f4c5c;
     display: flex;
     gap: 10px;
     align-items: center;
@@ -237,12 +237,12 @@
       }
 
       a {
-        color: #90A955;
+        color: #277da1;
         text-decoration: underline;
         font-weight: 500;
         
         &:hover {
-          color: #2d6a4f;
+          color: #000000;
         }
       }
     }
@@ -269,12 +269,47 @@
 
 /* Rodapé */
 .rodapeCultura {
-  background: #4f772d;
+  background: #4d908e;
   color: rgba(255, 249, 249, 0.43);
   padding: 18px 0;
   text-align: center;
   margin-top: 30px;
   height: 200px;
-}
 
-}
+
+    .logo{
+        color:white;
+        font-weight:800;
+        color: white;
+        padding:6px 10px;
+        border-radius:6px;
+      }
+      
+      span{
+        color: #0f4c5c;
+        font-family: 'Poppins', sans-serif;
+      
+      }
+      .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+      
+        .col {
+          color: #0f4c5c;
+
+          &:hover {
+            background: #fff;
+            color: #111;
+          }
+      
+        }
+      }
+
+    }
+
+  }
+
+

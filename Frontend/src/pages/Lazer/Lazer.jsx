@@ -62,9 +62,7 @@ export default function Lazer() {
         </section>
       </div>
 
-      {/* Clubes */}
       
-      {/* Slides de locais de lazer */}
       
       {/* Locais */}
       <section className="locais">
