@@ -11,8 +11,8 @@ function Sobre() {
           <div className="container">
             <h1>Sobre o Localiza<span>LivreSP</span></h1>
             <p>
-              Conectando você às <span>melhores atividades gratuitas</span> e
-              <span> acessíveis</span> em <span>São Paulo</span>.
+              Conectando você às melhores atividades gratuitas e
+             acessíveis em São Paulo.
             </p>
           </div>
         </section>
@@ -104,7 +104,7 @@ function Sobre() {
             Localiza<span>LivreSP</span>
           </div>
 
-          <h4>Descubra <span>cultura</span>, <span>lazer</span> e <span>esportes gratuitos</span> em <span>São Paulo</span></h4>
+          <h4>Descubra cultura, lazer e esportes gratuitos em São Paulo</h4>
 
           <div className="redes">
             <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="icones">
@@ -128,7 +128,7 @@ function Sobre() {
             </Link>
           </div>
 
-          <p>© <span>LocalizaLivreSP</span> — Conectando a cidade.</p>
+          <p>© LocalizaLivreSP — Conectando a cidade.</p>
         </div>
       </footer>
     </>

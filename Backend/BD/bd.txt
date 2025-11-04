@@ -14,6 +14,69 @@ select * from tb_cadastro;
 
 ALTER TABLE tb_cadastro MODIFY senha VARCHAR(255);
 
+//tabela q o samuel fez
+
+
+drop database TCC;
+
+create database TCC;
+use TCC;
+
+create table login (
+id int primary key auto_increment,
+email varchar (200),
+senha varchar (100)
+);
+
+create table administrativo (
+id int primary key auto_increment,
+email varchar (200),
+senha varchar (100)
+);
+
+
+create table cadastro (
+id int primary key auto_increment,
+usuario varchar (200),
+email varchar (200),
+genero varchar (200),
+cep int,
+senha varchar (200)
+);
+
+insert into login (email,senha)
+values
+('karine123@exemple.com.br','karine123');
+
+insert into cadastro (usuario,email,genero,cep,senha)
+values
+('geovanna','geovanna123@exemple.com.br','feminina','04851360','geovanna123');
+
+insert into administrativo (email,senha)
+values
+('Samuel123@exemple.com.br','Samuel123');
+
+
+select*from login;
+select*from administrativo;
+select*from cadastro;
+
+
+
+
+
+//contatos da pg dev
+
+CREATE TABLE contatos (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(100),
+  email VARCHAR(100),
+  mensagem TEXT
+);
+
+
+
+
 
 .env
 
