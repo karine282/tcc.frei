@@ -6,6 +6,7 @@ function Sobre() {
   return (
     <>
       <main className="sobre-main">
+       
         <section className="sobre-hero">
           <div className="container">
             <h1>Sobre o Localiza<span>LivreSP</span></h1>

@@ -38,7 +38,7 @@ function Cultura() {
       {/* HERO */}
       <section
         className="hero cultura-hero"
-        style={{ backgroundImage: `url(/assets/images/tenis.png)` }}
+        style={{ backgroundImage: `url(/assets/images/cultura.png)` }}
       >
         <h1>Locais Culturais</h1>
       </section>
@@ -49,7 +49,7 @@ function Cultura() {
           Explore centros culturais, museus, bibliotecas, teatros, casas de cultura e projetos comunitários que promovem arte, conhecimento e criatividade de forma acessível. Descubra oficinas, exposições, apresentações e eventos gratuitos ou de baixo custo perto de você. Conecte-se com a cultura, aprenda algo novo e viva experiências enriquecedoras para todas as idades!
         </p>
         <img
-          src="/assets/images/descricaoEsporte.png"
+          src="/assets/images/cultu."
           alt="Descrição cultura"
           className="fotoCultura"
         />
@@ -74,18 +74,15 @@ function Cultura() {
       </div>
 
       {/* ÁREA DE LOCAIS */}
+
       <section className="areaCultura">
         <h2>Espaços Culturais</h2>
         <div className="containerCultura">
           <div className="esquerdaCultura">
-            <img
-              src="/assets/images/clubeJoerg.png"
-              alt="Centro Cultural São Paulo"
-              className="culturaImagemGrande"
-            />
+       
             <p>
               <strong>Centro Cultural São Paulo (CCSP)</strong><br />
-              Rua Vergueiro, 1000 – Liberdade. <br />
+              Rua Vergueiro, 1000 - Liberdade. <br />
               <a
                 href="https://www.google.com/maps?q=Centro+Cultural+São+Paulo"
                 target="_blank"
@@ -96,6 +93,7 @@ function Cultura() {
               </a>
             </p>
           </div>
+          
 
           <div className="direitaCultura">
             <div className="culturaCard">
@@ -106,7 +104,7 @@ function Cultura() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Parque da Independência – Ipiranga
+                  Parque da Independência - Ipiranga
                 </a>
               </p>
             </div>
@@ -118,7 +116,7 @@ function Cultura() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Rua da Consolação, 94 – República
+                  Rua da Consolação, 94 - República
                 </a>
               </p>
             </div>
@@ -130,7 +128,7 @@ function Cultura() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Av. Junta Mizumoto, 13 – Jardim Peri
+                  Av. Junta Mizumoto, 13 - Jardim Peri
                 </a>
               </p>
             </div>

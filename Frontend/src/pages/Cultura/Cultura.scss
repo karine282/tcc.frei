@@ -8,7 +8,6 @@
 .container-cultura{
 
   
-  /* Topo */
   .topo {
   position: absolute;
   top: 0;
@@ -48,7 +47,6 @@
   }
 }
 
-/* Hero */
 .hero.cultura-hero {
   height: 70vh;
   width: 100%;
@@ -68,12 +66,11 @@
   }
 }
 
-/* Descrição cultura */
 .desc-cultura {
   display: flex;
   align-items: center;
   gap: 20px;
-  background-color: #2d6a4f;
+  background-color: #4f772d;
   padding: 20px 30px;
   color: white;
   font-family: poppins, sans-serif;
@@ -109,6 +106,8 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  margin-bottom: 30px;
+
 }
 
 .searchForm {
@@ -134,7 +133,7 @@
 }
 
 .searchButton {
-  background-color: #2d6a4f;
+  background-color: #90A955;
   color: white;
   width: 60px;
   border: none;
@@ -148,7 +147,7 @@
 /* Área de Locais Culturais */
 .areaCultura {
   padding: 40px;
-  background-color: #2d6a4f;
+  background-color: #4f772d;
   color: white;
   
   h2 {
@@ -173,7 +172,7 @@
   background-color: #f0f0f0;
   border-radius: 10px;
   padding: 20px;
-  color: #2d6a4f;
+  color: #90A955;
   
   .culturaImagemGrande {
     width: 100%;
@@ -216,7 +215,7 @@
     background-color: white;
     border-radius: 8px;
     padding: 10px;
-    color: #2d6a4f;
+    color: #90A955;
     display: flex;
     gap: 10px;
     align-items: center;
@@ -238,7 +237,7 @@
       }
 
       a {
-        color: #2d6a4f;
+        color: #90A955;
         text-decoration: underline;
         font-weight: 500;
         
@@ -270,7 +269,7 @@
 
 /* Rodapé */
 .rodapeCultura {
-  background: #2d6a4f;
+  background: #4f772d;
   color: rgba(255, 249, 249, 0.43);
   padding: 18px 0;
   text-align: center;

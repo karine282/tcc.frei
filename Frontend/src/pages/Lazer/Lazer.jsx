@@ -27,9 +27,10 @@ export default function Lazer() {
 
 
       {/* Imagem de fundo do topo */}
+      
       <section
         className="hero lazer-hero"
-        style={{ backgroundImage: `url(/assets/images/lazerpg.jpg)` }}
+        style={{ backgroundImage: `url(/assets/images/lazerbck.jpg)` }}
       >
         <h1>Lazer</h1>
       </section>
@@ -39,7 +40,7 @@ export default function Lazer() {
           “Descubra opções de lazer gratuito em São Paulo! Aqui você encontra ONGs, parques, institutos, cinemas e museus que oferecem atividades culturais, educativas e de entretenimento sem custo. Explore espaços próximos a você e aproveite a cidade de forma acessível e inclusiva.”
         </p>
         <img
-          src="/assets/images/lazer2.jpg"
+          src="/assets/images/lazer.jpg"
           alt="Descrição lazer"
           className="fotoLazer"
         />
@@ -76,7 +77,7 @@ export default function Lazer() {
               <img src="/assets/images/museu.jpg" alt="Parque da Independência" />
               <div className="info">
                 <h3>Parque da Independência</h3>
-                <p>Av. Nazaré, s/n – Ipiranga</p>
+                <p>Av. Nazaré, s/n - Ipiranga</p>
               </div>
             </div>
 
@@ -84,7 +85,7 @@ export default function Lazer() {
               <img src="/assets/images/butantan.jpg" alt="Parque da Ciência do Instituto Butantan" />
               <div className="info">
                 <h3>Parque da Ciência do Instituto Butantan</h3>
-                <p>Avenida Vital Brasil, 1500 – Butantã</p>
+                <p>Avenida Vital Brasil, 1500 - Butantã</p>
               </div>
             </div>
           </div>
@@ -95,7 +96,7 @@ export default function Lazer() {
               <img src="/assets/images/sesc.jpg" alt="Sesc SP" />
               <div className="info">
                 <h3>Sesc SP</h3>
-                <p>Rua Padre Adelino, 1000 – Belenzinho</p>
+                <p>Rua Padre Adelino, 1000 - Belenzinho</p>
               </div>
             </div>
 
@@ -111,7 +112,7 @@ export default function Lazer() {
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8fFL8I_dVcR34uklRZEYUyCMBXem-tm-R1w&s" alt="Cinemateca Brasileira" />
               <div className="info">
                 <h3>Cinemateca Brasileira</h3>
-                <p>Largo Sen. Raul Cardoso, 207 – Vila Clementino</p>
+                <p>Largo Sen. Raul Cardoso, 207 - Vila Clementino</p>
               </div>
             </div>
           </div>

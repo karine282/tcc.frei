@@ -41,7 +41,7 @@ export default function Esporte() {
         <p>
         Encontre quadras públicas, centros esportivos, projetos sociais, parques e ONGs que oferecem atividades físicas e esportivas gratuitas. São aulas, treinos, jogos e eventos para todas as idades e níveis. Descubra locais perto de você e movimente-se de forma acessível, saudável e inclusiva!</p>
         <img
-          src="/assets/images/descricaoEsporte.png"
+          src="/assets/images/voleiesporte.png"
           alt="Descrição esporte"
           className="fotoEsporte"
         />
@@ -76,8 +76,8 @@ export default function Esporte() {
               className="clubeImagemGrande"
             />
             <p>
-              <strong>Centro Esportivo Santo Amaro – CEE Joerg Bruder</strong><br />
-              Av. Padre José Maria, 555 – Santo Amaro. <br />
+              <strong>Centro Esportivo Santo Amaro - CEE Joerg Bruder</strong><br />
+              Av. Padre José Maria, 555 - Santo Amaro. <br />
               <a
                 href="https://www.google.com/maps?q=Av.+Padre+José+Maria,+555,+São+Paulo"
                 target="_blank"
@@ -92,37 +92,37 @@ export default function Esporte() {
           <div className="direitaClube">
             <div className="clubeCard">
               <p>
-                <strong>Centro Esportivo Ibirapuera – CEE Mané Garrincha</strong><br />
+                <strong>Centro Esportivo Ibirapuera - CEE Mané Garrincha</strong><br />
                 <a
                   href="https://www.google.com/maps?q=Rua+Pedro+de+Toledo,+1651,+São+Paulo"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Rua Pedro de Toledo, 1651 – Vila Clementino
+                  Rua Pedro de Toledo, 1651 - Vila Clementino
                 </a>
               </p>
             </div>
             <div className="clubeCard">
               <p>
-                <strong>Centro Esportivo Vila Guarani – CEE Riyuso Ogawa</strong><br />
+                <strong>Centro Esportivo Vila Guarani - CEE Riyuso Ogawa</strong><br />
                 <a
                   href="https://www.google.com/maps?q=Rua+Lussanvira,+178,+São+Paulo"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Rua Lussanvira, 178 – Vila Guarani
+                  Rua Lussanvira, 178 - Vila Guarani
                 </a>
               </p>
             </div>
             <div className="clubeCard">
               <p>
-                <strong>Centro Esportivo Vila Carioca – Balneário Princesa Isabel</strong><br />
+                <strong>Centro Esportivo Vila Carioca - Balneário Princesa Isabel</strong><br />
                 <a
                   href="https://www.google.com/maps?q=Rua+Campante,+100,+São+Paulo"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Rua Campante, 100 – Vila Carioca
+                  Rua Campante, 100 - Vila Carioca
                 </a>
               </p>
             </div>

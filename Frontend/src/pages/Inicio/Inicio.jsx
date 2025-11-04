@@ -67,35 +67,35 @@ function Inicio() {
           <div className="cartoes">
             <article className="cartao">
               <a href='https://www.parquedoibirapuera.org/' className='link-categorias'>
-              <img src="https://i.pinimg.com/736x/b1/58/46/b1584660ec016e5fbad337b0061b9b39.jpg" alt="Parque 1" />
-              <h3>Parque do Ibirapuera</h3>
-              <p>Ótimo para caminhadas e piqueniques. Entrada gratuita.</p>
+                <img src="https://i.pinimg.com/736x/b1/58/46/b1584660ec016e5fbad337b0061b9b39.jpg" alt="Parque 1" />
+                <h3>Parque do Ibirapuera</h3>
+                <p>Ótimo para caminhadas e piqueniques. Entrada gratuita.</p>
               </a>
             </article>
 
             <article className="cartao">
               <a href='https://prefeitura.sp.gov.br/web/meio_ambiente/w/parques/regiao_sul/5747' className='link-categorias'>
 
-              <img src="https://i.pinimg.com/1200x/bc/6b/11/bc6b1167e29bbf927e5a380c8a4113b0.jpg" alt="Parque 2" />
-              <h3>Parque  Indepencia</h3>
-              <p>Eventos culturais, exposições e muito espaço para atividades.</p>
+                <img src="https://i.pinimg.com/1200x/bc/6b/11/bc6b1167e29bbf927e5a380c8a4113b0.jpg" alt="Parque 2" />
+                <h3>Parque  Indepencia</h3>
+                <p>Eventos culturais, exposições e muito espaço para atividades.</p>
               </a>
             </article>
 
             <article className="cartao">
               <a href='https://parquevillalobos.com.br/' className='link-categorias'>
 
-              <img src="https://i.pinimg.com/1200x/17/7a/bc/177abc0fd9ecac38ac42937f7d2dbb29.jpg" alt="Parque 3" />
-              <h3>Parque Villa-Lobos</h3>
-              <p>Área esportiva e pistas de corrida — ideal para famílias.</p>
+                <img src="https://i.pinimg.com/1200x/17/7a/bc/177abc0fd9ecac38ac42937f7d2dbb29.jpg" alt="Parque 3" />
+                <h3>Parque Villa-Lobos</h3>
+                <p>Área esportiva e pistas de corrida — ideal para famílias.</p>
               </a>
             </article>
 
             <article className="cartao">
               <a href='https://www.parqueecologicodotiete.com.br/' className='link-categorias'>
-              <img src="https://www.parqueecologicodotiete.com.br/content-wp/uploads/2017/08/parque-ecologico-tiete-peda.jpg" alt="Parque 4" />
-              <h3>parque ecologico tiete</h3>
-              <p>  Trilhas, ciclovia, quadras, campos, pedalinho, playgrounds, lanchonetes, CRAS e museu .</p>
+                <img src="https://www.parqueecologicodotiete.com.br/content-wp/uploads/2017/08/parque-ecologico-tiete-peda.jpg" alt="Parque 4" />
+                <h3>parque ecologico tiete</h3>
+                <p>  Trilhas, ciclovia, quadras, campos, pedalinho, playgrounds, lanchonetes, CRAS e museu .</p>
               </a>
             </article>
 
@@ -105,7 +105,7 @@ function Inicio() {
 
       <section className="container2">
         <div className="p2">
-          <h2>Programação ceu’s</h2>
+          <h2>Programação ceu's</h2>
           <img src="" alt="" />  centros educacionais unificados
           <p>
             Os CEUs foram construídos com o objetivo de promover uma educação à população de maneira integral, democrática, emancipatória, humanizadora e com qualidade social. Juntando não somente educação, mas também, a cultura, o esporte, lazer e recreação, possibilitando o desenvolvimento do ser humano como um todo, como pessoa de direitos e deveres e dono de sua história.
@@ -150,19 +150,19 @@ function Inicio() {
         <div className="carousel">
           <div className="parcerias1">
             <div className="parceria">
-              <a href="https://www.prefeitura.sp.gov.br/cidade/secretarias/upload/esportes/2020/Janeiro/14/33%20-%20ESPORTE%20E%20LAZER.jpg"><img src="https://images-ext-1.discordapp.net/external/GfSK5hlf1m1iGzXPHJMpxWhJT2b0IGc00fAj-e4dh98/https/www.prefeitura.sp.gov.br/cidade/secretarias/upload/esportes/2020/Janeiro/14/33%2520-%2520ESPORTE%2520E%2520LAZER.jpg?format=webp&width=746&height=670" /></a>
+              <a href="https://prefeitura.sp.gov.br/web/esportes"><img src="https://images-ext-1.discordapp.net/external/GfSK5hlf1m1iGzXPHJMpxWhJT2b0IGc00fAj-e4dh98/https/www.prefeitura.sp.gov.br/cidade/secretarias/upload/esportes/2020/Janeiro/14/33%2520-%2520ESPORTE%2520E%2520LAZER.jpg?format=webp&width=746&height=670" /></a>
               <h3>Secretaria Municipal de Esportes e Lazer </h3>
             </div>
             <div className="parceria">
-              <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCrbJ7aqu91nn9TEvN8twglzmm_0o34k1T8Q&s"><img src="https://images-ext-1.discordapp.net/external/OzfO4GJSHV7ZQPl3CcRraogEQY_SuqJ6d3irzi3CC18/%3Fq%3Dtbn%3AANd9GcTCrbJ7aqu91nn9TEvN8twglzmm_0o34k1T8Q%26s/https/encrypted-tbn0.gstatic.com/images?format=webp&width=248&height=248" /></a>
-              <h3>samba cultural </h3>
+              <a href="https://sampacultura.com/"><img src="https://images-ext-1.discordapp.net/external/OzfO4GJSHV7ZQPl3CcRraogEQY_SuqJ6d3irzi3CC18/%3Fq%3Dtbn%3AANd9GcTCrbJ7aqu91nn9TEvN8twglzmm_0o34k1T8Q%26s/https/encrypted-tbn0.gstatic.com/images?format=webp&width=248&height=248" /></a>
+              <h3>sampa cultural </h3>
             </div>
             <div className="parceria">
-              <a href="https://ceu.sme.prefeitura.sp.gov.br/wp-content/uploads/2021/07/logo-ceu.png"><img src="https://images-ext-1.discordapp.net/external/sr3m8gATvHiaACIxWvAgaV3YvKOPrtUYSbIa405R9mA/https/ceu.sme.prefeitura.sp.gov.br/wp-content/uploads/2021/07/logo-ceu.png?format=webp&quality=lossless&width=382&height=374" /></a>
+              <a href="https://educacao.sme.prefeitura.sp.gov.br/centroseducacionaisunificados/"><img src="https://images-ext-1.discordapp.net/external/sr3m8gATvHiaACIxWvAgaV3YvKOPrtUYSbIa405R9mA/https/ceu.sme.prefeitura.sp.gov.br/wp-content/uploads/2021/07/logo-ceu.png?format=webp&quality=lossless&width=382&height=374" /></a>
               <h3>Centros Educacionais Unificados</h3>
             </div>
             <div className="parceria">
-              <a href=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTcmDU8H-Tba1lZ0XYPa9oT-Aes1ZBdrve4w&s"><img src="https://images-ext-1.discordapp.net/external/z3ykY9P67V8RJDuLUWcw0fff6UpuKZ9nCUp1KAmwU0A/%3Fq%3Dtbn%3AANd9GcRTcmDU8H-Tba1lZ0XYPa9oT-Aes1ZBdrve4w%26s/https/encrypted-tbn0.gstatic.com/images?format=webp&width=248&height=248" /></a>
+              <a href=" https://www.sescsp.org.br/"><img src="https://images-ext-1.discordapp.net/external/z3ykY9P67V8RJDuLUWcw0fff6UpuKZ9nCUp1KAmwU0A/%3Fq%3Dtbn%3AANd9GcRTcmDU8H-Tba1lZ0XYPa9oT-Aes1ZBdrve4w%26s/https/encrypted-tbn0.gstatic.com/images?format=webp&width=248&height=248" /></a>
               <h3>sesc</h3>
             </div>
             <div className="parceria">

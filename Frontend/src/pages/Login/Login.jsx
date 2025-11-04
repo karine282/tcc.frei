@@ -21,11 +21,18 @@ export default function Login() {
       // Exibe mensagem de sucesso
       setMensagem(resposta.data.mensagem);
 
-      // Salva token no localStorage 
-      localStorage.setItem("token", resposta.data.token);
+      // Salva os dados completos no localStorage (incluindo id, nome, email, cep, genero e token)
+      localStorage.setItem("usuario", JSON.stringify({
+        id: resposta.data.id,
+        nome: resposta.data.nome,
+        email: resposta.data.email,
+        cep: resposta.data.cep,  // Adicionado: CEP
+        genero: resposta.data.genero,  // Adicionado: Gênero
+        token: resposta.data.token,
+      }));
 
-      // Redireciona para página inicial 
-      navigate("/"); 
+      // Redireciona para a página de conta
+      navigate("/conta"); 
 
     } catch (erro) {
       console.error("Erro ao logar:", erro.response?.data || erro.message);
@@ -67,6 +74,8 @@ export default function Login() {
           <p className="link">
             não tem uma conta? <Link to="/Cadastro">Criar</Link>
           </p>
+          <Link to='/' className="link">Entrar sem cadastro</Link>
+
         </form>
       </div>
     </div>

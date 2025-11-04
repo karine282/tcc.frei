@@ -86,6 +86,10 @@ export default function Cadastro() {
                     <p className="link">
                         já tem uma conta? <Link to="/login">Entrar</Link>
                     </p>
+
+                    
+                        <Link to='/' className="link">Entrar sem cadastro</Link>
+                    
                 </form>
             </div>
 
