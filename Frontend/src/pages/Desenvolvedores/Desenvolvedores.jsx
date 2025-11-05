@@ -1,22 +1,13 @@
 import { Link } from "react-router-dom";
 import "./Desenvolvedores.scss";
 import React from "react";
+import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
+
 
 
 export default function Desenvolvedores() {
   return (
     <div className="container-sobre">
-
-      <div className="container comeco">
-        <div className="logo">Localiza<span>LivreSP</span></div>
-        <nav className="nave">
-          <Link to='/'><i class="fa-solid fa-house"></i></Link>
-          <Link to="/Cultura">Cultura</Link>
-          <Link to="/Esporte">Esporte</Link>
-          <Link to="/Lazer">Lazer</Link>
-        </nav>
-      </div>
-
       <div className="headerr">
         <video
           className="video-fundo"
@@ -26,7 +17,7 @@ export default function Desenvolvedores() {
           muted
           playsInline
         ></video>
-        <h1 className="empresa">Localiza<span className="typing">LivreSP</span>
+        <h1 className="empresa">Dev<span className="typing">Paulista</span>
         </h1>
 
       </div>
@@ -61,28 +52,28 @@ export default function Desenvolvedores() {
         <h2>Equipe</h2>
         <div className="equipe-container">
           <div className="membro">
-            <img className="membros" src="https://media.discordapp.net/attachments/1354419042978496666/1433400251984777318/IMG-20251030-WA0004.jpg?ex=69048d83&is=69033c03&hm=aa362b50f3d83a8f6d9fd50fdf73900f37e559b1f65836ecf60580eab4cf6960&=&format=webp&width=911&height=524" alt="" />
+            <img className="membros" src="assets/images/karine.webp" alt="" />
             <h3>Karine Cavalcante </h3>
             <p>Dev frontend e Design</p>
             <p>iniciante frontend e backend procurando aprimoraçâo na area.</p>
             <a href="https://www.linkedin.com/in/karine-cavalcante-leal-36316b2b7/?trk=opento_sprofile_details"><button>Linkedin</button></a>
           </div>
           <div className="membro">
-            <img className="membros" src="https://media.discordapp.net/attachments/1354419042978496666/1433400250923618354/IMG-20251030-WA0006.jpg?ex=69048d83&is=69033c03&hm=c0b9e5dabb61e0e769b7be5335e2ab88ae93b70ca15ab109a98e981816035e59&=&format=webp&width=989&height=541" alt="" />
+            <img className="membros" src="assets/images/samuel.webp" alt="" />
             <h3>Samuel de Almeida </h3>
             <p>Dev frontend e banco</p>
             <p>iniciante na area de frontend criar interfaces de banco de dados.</p>
             <a href="https://media.discordapp.net/attachments/1354419042978496666/1433400250923618354/IMG-20251030-WA0006.jpg?ex=69048d83&is=69033c03&hm=c0b9e5dabb61e0e769b7be5335e2ab88ae93b70ca15ab109a98e981816035e59&=&format=webp&width=989&height=541"><button>Linkedin</button></a>
           </div>
           <div className="membro">
-            <img className="membros" src="https://media.discordapp.net/attachments/1354419042978496666/1433400251464679504/IMG-20251030-WA0005.jpg?ex=69048d83&is=69033c03&hm=16e4a1176e9a9588393d07f25533e9252ccdb0cf4e25733bb0d5a79abf028534&=&format=webp&width=1113&height=630" alt="" />
+            <img className="membros" src="assets/images/jennifer.webp" alt="" />
             <h3>Jennifer Berto </h3>
             <p>Dev frontend </p>
             <p>iniciante na area de frontend e  criação de interface Design.</p>
             <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_pro"><button>Linkedin</button></a>
           </div>
           <div className="membro">
-            <img className="membros" src="https://media.discordapp.net/attachments/1375435344928837674/1433432288708005948/9dc17f50-7176-4ed2-a341-c8c32fb55690.jpg?ex=6904ab59&is=690359d9&hm=ad4a3febb13137360c5e457b5c53a0ab2c83c22d79633324b8c6850f370b158d&=&format=webp&width=1232&height=693" alt="" />
+            <img className="membros" src="assets/images/geovanna.webp" alt="" />
             <h3>Geovanna Cristina</h3>
             <p>Dev frontend e Design</p>
             <p>iniciante procurando aprimorar na area em Design e API.</p>
@@ -131,9 +122,80 @@ export default function Desenvolvedores() {
         </div>
       </section>
 
-      <footer className="sobre-footer">
-        <p>© 2025 DevPaulista. Todos os direitos reservados.</p>
-      </footer>
+
+      
+      <section className="parceriasdev">
+        <h2>Nossas Parcerias</h2>
+        <p className="leadev">Empresas e organizações que apoiam nossa missão de conectar a comunidade a eventos gratuitos em São Paulo.</p>
+        <div className="carouseldev">
+          <div className="parceriasdev2">
+            <div className="parceriadev">
+              <a href="https://www.brandup.com.br/"><img src="assets/images/PARdev1.webp" /></a>
+              <h3>BRANDUP: Agência de Marketing para E-commerce </h3>
+            </div>
+            <div className="parceriadev">
+              <a href="https://www.netlify.com/"><img src="assets/images/PARdev2.png" /></a>
+              <h3>Netlify </h3>
+            </div>
+            <div className="parceriadev">
+              <a href="https://www.contabilizei.com.br/sao-paulo/?utm_device=c&utm_term=contabilizei&utm_source=google&utm_medium=cpc&utm_campaign=%5BS%5D_Institucional_Novo_SP&hsa_cam=23030008525&hsa_grp=190703922652&hsa_mt=e&hsa_src=g&hsa_ad=774446589341&hsa_acc=1466761651&hsa_net=adwords&hsa_kw=contabilizei&hsa_tgt=kwd-301556658861&hsa_ver=3&gad_source=1&gad_campaignid=23030008525&gclid=Cj0KCQiA5abIBhCaARIsAM3-zFUxl3YdOKbZqTA8-sMUr1XSNI0riWV7AtCdF2m1PEfvKj3gNNV72KYaAsqPEALw_wcB"><img src="assets/images/PARdev3.jfif" /></a>
+              <h3>Contabilizei Escritório de Contabilidade</h3>
+            </div>
+            <div className="parceriadev">
+              <a href=" https://www.wework.com/pt-BR"><img src="assets/images/PARdev4.svg" /></a>
+              <h3>wework </h3>
+            </div>
+          
+
+          </div>
+        </div>
+      </section>
+<br />
+<br /><br /><br />
+
+   <footer className="rodapee">
+  <div className="container-rodape">
+    <div className="logo-rodape">
+      Dev<span>Paulista</span>
+    </div>
+
+    <p className="descricao">
+      Criando Sites e Designs para o seu Negocio — descubra o seu melhor com desenvolvimento web da DevPaulista.
+    </p>
+
+    <div className="redes-sociais">
+      <a
+        href="https://www.instagram.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="icone"
+      >
+        <FaInstagram />
+      </a>
+      <a
+        href="https://www.facebook.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="icone"
+      >
+        <FaFacebook />
+      </a>
+      <a
+        href="https://www.tiktok.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="icone"
+      >
+        <FaTiktok />
+      </a>
+    </div>
+
+ 
+
+    <p className="copy">© {new Date().getFullYear()} DevPaulista — Todos os direitos reservados.</p>
+  </div>
+</footer>
+
     </div>
   );
 }

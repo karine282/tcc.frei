@@ -94,6 +94,7 @@ export default function Cadastro() {
             </div>
 
             <div className="cadastro-direita">
+                <img src="assets/images/login.jpg" alt="" />
                 <h1>Seja bem-vindo!</h1>
                 <p>crie uma conta para melhor experiência</p>
             </div>
