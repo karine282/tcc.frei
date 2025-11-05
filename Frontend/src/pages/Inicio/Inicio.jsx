@@ -5,32 +5,30 @@ import { Link } from "react-router-dom";
 function Inicio() {
   return (
     <div className='container-inicio'>
-
       <header className="inicio">
-
-        <div className="primeiro-container ">
+        <div className="container-comeco">
           <div className="logo">Localiza<span>LivreSP</span></div>
           <nav className="nave">
             <Link to="/Cultura">Cultura</Link>
             <Link to="/Esporte">Esporte</Link>
             <Link to="/Lazer">Lazer</Link>
-            <Link to='/conta'><i class="fa-solid fa-circle-user icon-usuario" ></i></Link>
+            <Link to='/conta'><i class="fa-solid fa-circle-user"></i></Link>
           </nav>
         </div>
       </header>
       <main>
-        <section className="atencao">
+        <section className="">
           <div className="parte1">
           </div>
           <div className="container hero-content">
             <h1>Bem-vindo ao melhor <span>GUIA DE EVENTOS</span> culturais da Cidade de São Paulo!</h1>
             <p className="hero-sub">Aqui você encontra atividades gratuitas e acessíveis para toda a família.</p>
             <nav className="hero-actions">
-              <h3 className='btn-entrar'>
+              <h3 className='pri'>
                 <i class="fa-solid fa-user icon-inicio"></i>
                 <Link to="/Login" className='link'>entrar</Link>
               </h3>
-              <h3 className='btn-cadastro'>
+              <h3 className='seg'>
                 <i class="fa-solid fa-file-pen icon-inicio"></i>
                 <Link to="/Cadastro" className='link'>cadastre-se</Link></h3>
 
@@ -103,15 +101,15 @@ function Inicio() {
         </section>
       </main>
 
-      <section className="segundo-container">
-        <div className="programacao-ceu">
+      <section className="container2">
+        <div className="p2">
           <h2>Programação ceu's</h2>
-          <p>centros educacionais unificados</p>
+          <img src="" alt="" />  centros educacionais unificados
           <p>
             Os CEUs foram construídos com o objetivo de promover uma educação à população de maneira integral, democrática, emancipatória, humanizadora e com qualidade social. Juntando não somente educação, mas também, a cultura, o esporte, lazer e recreação, possibilitando o desenvolvimento do ser humano como um todo, como pessoa de direitos e deveres e dono de sua história.
           </p>
         </div>
-        <div >
+        <div className="p3">
           <img src="https://pbs.twimg.com/media/GcW4CGNWoAAe1_1?format=jpg&name=4096x4096" alt="CEU" />
           <a className="btn btn-segundo" href="https://ceu.sme.prefeitura.sp.gov.br/programacao/">Saiba mais</a>
         </div>
@@ -130,7 +128,7 @@ function Inicio() {
 
         <Link to='/Cultura' className='link-categorias'>
           <div className="categoria">
-            <img src="/assets/images/cultu.jpg" />
+            <img src="/assets/images/culture.jpg" />
             <p>espaços<br />culturais</p>
           </div>
         </Link>
@@ -182,7 +180,29 @@ function Inicio() {
 
           <h4>Descubra cultura, lazer e esportes gratuitos em São Paulo</h4>
 
-
+          <div className="redes">
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icones"
+              >
+            </a>
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icones"
+              >
+            </a>
+            <a
+              href="https://www.tiktok.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icones"
+              >
+            </a>
+          </div>
 
           <div className="button-container">
             <Link to="/login-administrativo">
@@ -197,7 +217,7 @@ function Inicio() {
           <p>© LocalizaLivreSP — Conectando a cidade.</p>
         </div>
       </footer>
-    </div>
+              </div>
   )
 }
 

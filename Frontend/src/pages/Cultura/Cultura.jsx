@@ -12,26 +12,26 @@ function Cultura() {
     setPesquisa(e.target.value);
   };
 
-  // Lida com o envio do formulário
+  // Lida com o envio do formulário e reseta o input
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Pesquisa enviada:", pesquisa);
+    setPesquisa(""); // Reseta para melhor UX
   };
 
   return (
     <div className="container-cultura">
-
       {/* TOPO */}
       <header className="topo">
         <div className="logo">
-          <Link to='/' className="link-cultura">
+          <Link to='/' className="Link">
           Localiza<span>LivreSP</span>
           </Link>
         </div>
         <nav>
           <Link to="/lazer">Lazer</Link>
           <Link to="/Esporte">Esportes</Link>
-          <Link to="/">
+          <Link to="/" aria-label="Página inicial">
             <i className="fa-solid fa-house"></i>
           </Link>
         </nav>
@@ -51,9 +51,10 @@ function Cultura() {
           Explore centros culturais, museus, bibliotecas, teatros, casas de cultura e projetos comunitários que promovem arte, conhecimento e criatividade de forma acessível. Descubra oficinas, exposições, apresentações e eventos gratuitos ou de baixo custo perto de você. Conecte-se com a cultura, aprenda algo novo e viva experiências enriquecedoras para todas as idades!
         </p>
         <img
-          src="/assets/images/desccultura.jpg"
-          alt="foto de pessoas pulando"
+          src="/assets/images/cultural.jpg"
+          alt="Imagem ilustrativa de atividades culturais em São Paulo"
           className="fotoCultura"
+          loading="lazy"
         />
       </section>
 
@@ -67,78 +68,102 @@ function Cultura() {
               value={pesquisa}
               onChange={handleInputChange}
               className="searchInput"
+              aria-label="Campo de busca por locais culturais"
             />
-            <button type="submit" className="searchButton">
-            <i className="fa-solid fa-magnifying-glass icone-pesquisar"></i>
+            <button type="submit" className="searchButton" aria-label="Buscar">
+              <i class="fa-solid fa-magnifying-glass"></i>
             </button>
           </form>
         </section>
       </div>
 
       {/* ÁREA DE LOCAIS */}
-
-      <section className="locais">
-        <h2>Locais</h2>
+      <section className="areaCultura">
+        <h2>Espaços Culturais</h2>
 
         <div className="locais-grid">
           {/* Esquerda */}
           <div className="coluna-esquerda">
-            <div className="local-card grande">
-              <a href='https://www.google.com/search?q=Centro+Cultural+S%C3%A3o+Paulo+(CCSP)&rlz=1C1GCEA_enBR1147BR1147&oq=Centro+Cultural+S%C3%A3o+Paulo+(CCSP)&gs_lcrp=EgZjaHJvbWUqDAgAEEUYOxjjAhiABDIMCAAQRRg7GOMCGIAEMg0IARAuGK8BGMcBGIAEMgYIAhBFGEAyCAgDEAAYFhgeMggIBBAAGBYYHjIICAUQABgWGB4yCAgGEAAYFhgeMggIBxAAGBYYHtIBBzc5OWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8' target="_blank">
-              <img src="/assets/images/centrocultural.png" alt="Centro Cultural São Paulo (CCSP)" />
-              <div className="info">
-                <h3>Centro Cultural São Paulo (CCSP)</h3>
-                <p>Rua Vergueiro, 1000 - Liberdade.</p>
+            <a
+              href="https://www.google.com/maps?q=Centro+Cultural+São+Paulo"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ver Centro Cultural São Paulo no Google Maps"
+            >
+              <div className="local-card grande">
+                <img src="/assets/images/ccsp.png" alt="Centro Cultural São Paulo" loading="lazy" />
+                <div className="info">
+                  <h3>Centro Cultural São Paulo (CCSP)</h3>
+                  <p>Rua Vergueiro, 1000 - Liberdade</p>
+                </div>
               </div>
-              </a>
-            </div>
+            </a>
 
-            <div className="local-card grande">
-              <a href='https://museudoipiranga.org.br/' target="_blank">
-              <img src="/assets/images/museuipiranga.png" alt="Museu do Ipiranga" />
-              <div className="info">
-                <h3>Museu do Ipiranga</h3>
-                <p>Parque da Independência - Ipiranga</p>
+            <a
+              href="https://www.google.com/maps?q=Museu+do+Ipiranga,+São+Paulo"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ver Museu do Ipiranga no Google Maps"
+            >
+              <div className="local-card grande">
+                <img src="/assets/images/museuipiranga.png" alt="Museu do Ipiranga" loading="lazy" />
+                <div className="info">
+                  <h3>Museu do Ipiranga</h3>
+                  <p>Parque da Independência - Ipiranga</p>
+                </div>
               </div>
-              </a>
-            </div>
+            </a>
           </div>
 
           {/* Direita */}
           <div className="coluna-direita">
-            <div className="local-card pequeno">
-              <a href='htthttps://prefeitura.sp.gov.br/web/cultura/bma' target="_blank">
-              <img src="/assets/images/biblioteca.png" alt="Biblioteca Mário de Andrade" />
-              <div className="info">
-                <h3>Biblioteca Mário de Andrade</h3>
-                <p>Rua da Consolação, 94 - República</p>
+            <a
+              href="https://www.google.com/maps?q=Biblioteca+Mário+de+Andrade,+São+Paulo"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ver Biblioteca Mário de Andrade no Google Maps"
+            >
+              <div className="local-card pequeno">
+                <img src="/assets/images/biblioteca.png" alt="Biblioteca Mário de Andrade" loading="lazy" />
+                <div className="info">
+                  <h3>Biblioteca Mário de Andrade</h3>
+                  <p>Rua da Consolação, 94 - República</p>
+                </div>
               </div>
-              </a>
-            </div>
+            </a>
 
-            <div className="local-card pequeno">
-              <a href='https://www.tripadvisor.com.br/Attraction_Review-g303631-d550339-Reviews-Paulista_Avenue-Sao_Paulo_State_of_Sao_Paulo.html' target="_blank">
-              <img src="/assets/images/avenidapaulista.png" alt="Paulista Aberta" />
-              <div className="info">
-                <h3>Casa de Cultura do Butantã</h3>
-                <p>Av. Junta Mizumoto, 13 - Jardim Peri</p>
+            <a
+              href="https://www.google.com/maps?q=Casa+de+Cultura+do+Butantã,+São+Paulo"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ver Casa de Cultura do Butantã no Google Maps"
+            >
+              <div className="local-card pequeno">
+                <img src="/assets/images/casacultura.png" alt="Casa de Cultura do Butantã" loading="lazy" />
+                <div className="info">
+                  <h3>Casa de Cultura do Butantã</h3>
+                  <p>Av. Junta Mizumoto, 13 - Jardim Peri</p>
+                </div>
               </div>
-              </a>
-            </div>
+            </a>
 
-            <div className="local-card pequeno central">
-              <a href='https://cinemateca.org.br/' target="_blank">
-              <img src="/assets/images/cinema.png" alt="Cinemateca Brasileira" />
-              <div className="info">
-                <h3>Cinemateca Brasileira</h3>
-                <p>Largo Sen. Raul Cardoso, 207 - Vila Clementino</p>
+            <a
+              href="https://www.google.com/maps?q=Casa+das+Rosas,+São+Paulo"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ver Casa das Rosas no Google Maps"
+            >
+              <div className="local-card pequeno central">
+                <img src="/assets/images/casadasrosas.png" alt="Casa das Rosas" loading="lazy" />
+                <div className="info">
+                  <h3>Casa das Rosas</h3>
+                  <p>Av. Paulista, 37 - Bela Vista</p>
+                </div>
               </div>
-              </a>
-            </div>
+            </a>
           </div>
         </div>
       </section>
-
 
       {/* MAPA */}
       <main>
@@ -153,9 +178,10 @@ function Cultura() {
                   value={pesquisa}
                   onChange={handleInputChange}
                   className="searchInput"
+                  aria-label="Campo para inserir CEP e buscar locais próximos"
                 />
-                <button type="submit" className="searchButton">
-                <i className="fa-solid fa-magnifying-glass icone-pesquisar"></i>
+                <button type="submit" className="searchButton" aria-label="Buscar por CEP">
+                  <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
               </form>
             </section>
@@ -167,6 +193,7 @@ function Cultura() {
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
+            title="Mapa de locais culturais em São Paulo"
           ></iframe>
         </section>
       </main>
@@ -181,16 +208,14 @@ function Cultura() {
           <p>© LocalizaLivreSP — Conectando a cidade.</p>
         </div>
         <div className="button-container">
-            <Link to="/login-administrativo">
-              <button className="col">Painel administrativo</button>
-            </Link>
-
-            <Link to="/Desenvolvedores">
-              <button className="col">Colaboradores</button>
-            </Link>
-          </div>
+          <Link to="/login-administrativo">
+            <button className="col">Painel administrativo</button>
+          </Link>
+          <Link to="/Desenvolvedores">
+            <button className="col">Colaboradores</button>
+          </Link>
+        </div>
       </footer>
-
     </div>
   );
 }

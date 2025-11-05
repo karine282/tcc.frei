@@ -17,7 +17,7 @@ export default function Lazer() {
 
       {/* Topo */}
       <header className="topo">
-        <Link to='/' className='link-lazer'>
+        <Link to='/' className='Link'>
         <div className="logo">Localiza<span>LivreSP</span></div>
         </Link>
         <nav>
@@ -39,7 +39,7 @@ export default function Lazer() {
 
       <section className="desc-lazer">
         <p>
-          “Descubra opções de lazer gratuito em São Paulo! Aqui você encontra ONGs, parques, institutos, cinemas e museus que oferecem atividades culturais, educativas e de entretenimento sem custo. Explore espaços próximos a você e aproveite a cidade de forma acessível e inclusiva.”
+          Descubra opções de lazer gratuito em São Paulo! Aqui você encontra ONGs, parques, institutos, cinemas e museus que oferecem atividades culturais, educativas e de entretenimento sem custo. Explore espaços próximos a você e aproveite a cidade de forma acessível e inclusiva.
         </p>
         <img
           src="/assets/images/lazer.jpg"
@@ -50,7 +50,7 @@ export default function Lazer() {
 
       {/* Barra de pesquisa */}
       <div className='containerPesquisa'>
-        <section className="pesquisaLazer">
+        <section className="pesquisaEsporte">
           <form onSubmit={handleSubmit} className="searchForm">
             <input
               type="text"
@@ -60,8 +60,7 @@ export default function Lazer() {
               className="searchInput"
               />
             <button type="submit" className="searchButton">
-            <i className="fa-solid fa-magnifying-glass icone-pesquisar"></i>
-
+              <i class="fa-solid fa-magnifying-glass"></i>
             </button>
           </form>
         </section>
@@ -76,19 +75,19 @@ export default function Lazer() {
         <div className="locais-grid">
           {/* Esquerda */}
           <div className="coluna-esquerda">
+            <a href='https://prefeitura.sp.gov.br/meio_ambiente/w/parques/regiao_sul/5747' target="_blank">
             <div className="local-card grande">
-              <a href='https://prefeitura.sp.gov.br/web/meio_ambiente/w/parques/regiao_sul/5747' target="_blank">
-              <img src="/assets/images/parqueinde.png" alt="Parque da Independência" />
+              <img src="/assets/images/parqueind.png" alt="Parque da Independência" />
               <div className="info">
                 <h3>Parque da Independência</h3>
                 <p>Av. Nazaré, s/n - Ipiranga</p>
               </div>
-              </a>
             </div>
+            </a>
 
             <div className="local-card grande">
               <a href='https://parquedaciencia.butantan.gov.br/' target="_blank">
-              <img src="/assets/images/parqueciencia.png" alt="Parque da Ciência do Instituto Butantan" />
+              <img src="/assets/images/ciencia.png" alt="Parque da Ciência do Instituto Butantan" />
               <div className="info">
                 <h3>Parque da Ciência do Instituto Butantan</h3>
                 <p>Avenida Vital Brasil, 1500 - Butantã</p>
@@ -100,8 +99,8 @@ export default function Lazer() {
           {/* Direita */}
           <div className="coluna-direita">
             <div className="local-card pequeno">
-              <a href='https://www.sescsp.org.br/unidades/belenzinho/' target="_blank">
-              <img src="/assets/images/sescSp.png" alt="Sesc SP" />
+              <a href='https://www.sesc.com.br/unidade/sesc-belenzinho/' target="_blank">
+              <img src="/assets/images/sesc.png" alt="Sesc SP" />
               <div className="info">
                 <h3>Sesc SP</h3>
                 <p>Rua Padre Adelino, 1000 - Belenzinho</p>
@@ -110,8 +109,8 @@ export default function Lazer() {
             </div>
 
             <div className="local-card pequeno">
-              <a href='https://www.tripadvisor.com.br/Attraction_Review-g303631-d550339-Reviews-Paulista_Avenue-Sao_Paulo_State_of_Sao_Paulo.html' target="_blank">
-              <img src="/assets/images/avenidapaulista.png" alt="Paulista Aberta" />
+              <a href='https://www.melhoresdestinos.com.br/avenida-paulista.html' target="_blank">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5hNpTPDNRfH58xAHWQ3VUFSreaPRY8Wvc7w&s" alt="Paulista Aberta" />
               <div className="info">
                 <h3>Paulista Aberta</h3>
                 <p>Av. Paulista, 900</p>
@@ -121,7 +120,7 @@ export default function Lazer() {
 
             <div className="local-card pequeno central">
               <a href='https://cinemateca.org.br/' target="_blank">
-              <img src="/assets/images/cinema.png" alt="Cinemateca Brasileira" />
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8fFL8I_dVcR34uklRZEYUyCMBXem-tm-R1w&s" alt="Cinemateca Brasileira" />
               <div className="info">
                 <h3>Cinemateca Brasileira</h3>
                 <p>Largo Sen. Raul Cardoso, 207 - Vila Clementino</p>
@@ -137,7 +136,7 @@ export default function Lazer() {
         <section className="containerPesquisaMapa">
           <h2>Veja lugares mais proximos de você!</h2>
           <div className='containerPesquisaMapa'>
-            <section className="pesquisaLazerMapa">
+            <section className="pesquisaEsporteMapa">
               <form onSubmit={handleSubmit} className="searchForm">
                 <input
                   type="text"
@@ -147,8 +146,7 @@ export default function Lazer() {
                   className="searchInput"
                   />
                 <button type="submit" className="searchButton">
-                <i className="fa-solid fa-magnifying-glass icone-pesquisar"></i>
-
+                  <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
               </form>
             </section>
@@ -167,15 +165,11 @@ export default function Lazer() {
       {/* Rodapé */}
       <footer className="rodapeLazer">
         <div className="container">
-          <div className="logo">
-            Localiza<span>LivreSP</span>
-          </div>
-
+          <div className="logo">Localiza<span>LivreSP</span></div>
           <h4>Descubra cultura, lazer e esportes gratuitos em São Paulo</h4>
-
-
-
-          <div className="button-container">
+          <p>© LocalizaLivreSP — Conectando a cidade.</p>
+        </div>
+        <div className="button-container">
             <Link to="/login-administrativo">
               <button className="col">Painel administrativo</button>
             </Link>
@@ -184,9 +178,6 @@ export default function Lazer() {
               <button className="col">Colaboradores</button>
             </Link>
           </div>
-
-          <p>© LocalizaLivreSP — Conectando a cidade.</p>
-        </div>
       </footer>
             </div>
     </>
