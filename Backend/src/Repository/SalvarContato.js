@@ -1,4 +1,4 @@
-import con from "./connection.js";
+import con from "./Conection.js";
 
 export default async function salvarContato(nome, email, mensagem) {
   const comando = ` 

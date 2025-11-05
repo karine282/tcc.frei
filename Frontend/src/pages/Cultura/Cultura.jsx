@@ -24,7 +24,9 @@ function Cultura() {
       {/* TOPO */}
       <header className="topo">
         <div className="logo">
+          <Link to='/' className="link-cultura">
           Localiza<span>LivreSP</span>
+          </Link>
         </div>
         <nav>
           <Link to="/lazer">Lazer</Link>
@@ -49,8 +51,8 @@ function Cultura() {
           Explore centros culturais, museus, bibliotecas, teatros, casas de cultura e projetos comunitários que promovem arte, conhecimento e criatividade de forma acessível. Descubra oficinas, exposições, apresentações e eventos gratuitos ou de baixo custo perto de você. Conecte-se com a cultura, aprenda algo novo e viva experiências enriquecedoras para todas as idades!
         </p>
         <img
-          src="/assets/images/cultu."
-          alt="Descrição cultura"
+          src="/assets/images/desccultura.jpg"
+          alt="foto de pessoas pulando"
           className="fotoCultura"
         />
       </section>
@@ -67,7 +69,7 @@ function Cultura() {
               className="searchInput"
             />
             <button type="submit" className="searchButton">
-              <CiSearch className="icone-pesquisar" />
+            <i className="fa-solid fa-magnifying-glass icone-pesquisar"></i>
             </button>
           </form>
         </section>
@@ -75,66 +77,68 @@ function Cultura() {
 
       {/* ÁREA DE LOCAIS */}
 
-      <section className="areaCultura">
-        <h2>Espaços Culturais</h2>
-        <div className="containerCultura">
-          <div className="esquerdaCultura">
-       
-            <p>
-              <strong>Centro Cultural São Paulo (CCSP)</strong><br />
-              Rua Vergueiro, 1000 - Liberdade. <br />
-              <a
-                href="https://www.google.com/maps?q=Centro+Cultural+São+Paulo"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="destaqueEndereco"
-              >
-                Ver no Google Maps
-              </a>
-            </p>
-          </div>
-          
+      <section className="locais">
+        <h2>Locais</h2>
 
-          <div className="direitaCultura">
-            <div className="culturaCard">
-              <p>
-                <strong>Museu do Ipiranga</strong><br />
-                <a
-                  href="https://www.google.com/maps?q=Museu+do+Ipiranga,+São+Paulo"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Parque da Independência - Ipiranga
-                </a>
-              </p>
+        <div className="locais-grid">
+          {/* Esquerda */}
+          <div className="coluna-esquerda">
+            <div className="local-card grande">
+              <a href='https://www.google.com/search?q=Centro+Cultural+S%C3%A3o+Paulo+(CCSP)&rlz=1C1GCEA_enBR1147BR1147&oq=Centro+Cultural+S%C3%A3o+Paulo+(CCSP)&gs_lcrp=EgZjaHJvbWUqDAgAEEUYOxjjAhiABDIMCAAQRRg7GOMCGIAEMg0IARAuGK8BGMcBGIAEMgYIAhBFGEAyCAgDEAAYFhgeMggIBBAAGBYYHjIICAUQABgWGB4yCAgGEAAYFhgeMggIBxAAGBYYHtIBBzc5OWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8' target="_blank">
+              <img src="/assets/images/centrocultural.png" alt="Centro Cultural São Paulo (CCSP)" />
+              <div className="info">
+                <h3>Centro Cultural São Paulo (CCSP)</h3>
+                <p>Rua Vergueiro, 1000 - Liberdade.</p>
+              </div>
+              </a>
             </div>
-            <div className="culturaCard">
-              <p>
-                <strong>Biblioteca Mário de Andrade</strong><br />
-                <a
-                  href="https://www.google.com/maps?q=Biblioteca+Mário+de+Andrade,+São+Paulo"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Rua da Consolação, 94 - República
-                </a>
-              </p>
+
+            <div className="local-card grande">
+              <a href='https://museudoipiranga.org.br/' target="_blank">
+              <img src="/assets/images/museuipiranga.png" alt="Museu do Ipiranga" />
+              <div className="info">
+                <h3>Museu do Ipiranga</h3>
+                <p>Parque da Independência - Ipiranga</p>
+              </div>
+              </a>
             </div>
-            <div className="culturaCard">
-              <p>
-                <strong>Casa de Cultura do Butantã</strong><br />
-                <a
-                  href="https://www.google.com/maps?q=Casa+de+Cultura+do+Butantã,+São+Paulo"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Av. Junta Mizumoto, 13 - Jardim Peri
-                </a>
-              </p>
+          </div>
+
+          {/* Direita */}
+          <div className="coluna-direita">
+            <div className="local-card pequeno">
+              <a href='htthttps://prefeitura.sp.gov.br/web/cultura/bma' target="_blank">
+              <img src="/assets/images/biblioteca.png" alt="Biblioteca Mário de Andrade" />
+              <div className="info">
+                <h3>Biblioteca Mário de Andrade</h3>
+                <p>Rua da Consolação, 94 - República</p>
+              </div>
+              </a>
+            </div>
+
+            <div className="local-card pequeno">
+              <a href='https://www.tripadvisor.com.br/Attraction_Review-g303631-d550339-Reviews-Paulista_Avenue-Sao_Paulo_State_of_Sao_Paulo.html' target="_blank">
+              <img src="/assets/images/avenidapaulista.png" alt="Paulista Aberta" />
+              <div className="info">
+                <h3>Casa de Cultura do Butantã</h3>
+                <p>Av. Junta Mizumoto, 13 - Jardim Peri</p>
+              </div>
+              </a>
+            </div>
+
+            <div className="local-card pequeno central">
+              <a href='https://cinemateca.org.br/' target="_blank">
+              <img src="/assets/images/cinema.png" alt="Cinemateca Brasileira" />
+              <div className="info">
+                <h3>Cinemateca Brasileira</h3>
+                <p>Largo Sen. Raul Cardoso, 207 - Vila Clementino</p>
+              </div>
+              </a>
             </div>
           </div>
         </div>
       </section>
+
 
       {/* MAPA */}
       <main>
@@ -151,7 +155,7 @@ function Cultura() {
                   className="searchInput"
                 />
                 <button type="submit" className="searchButton">
-                  <CiSearch />
+                <i className="fa-solid fa-magnifying-glass icone-pesquisar"></i>
                 </button>
               </form>
             </section>

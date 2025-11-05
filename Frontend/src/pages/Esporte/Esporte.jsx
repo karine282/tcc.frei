@@ -14,12 +14,14 @@ export default function Esporte() {
   };
 
   return (
-    
-    <div className='conatiner.esporte'>
+
+    <div className='container-esporte'>
 
       {/* Topo */}
       <header className="topo">
-        <div className="logo">Localiza<span>LivreSP</span></div>
+        <Link to='/' className='link-esporte' >
+          <div className="logo">Localiza<span>LivreSP</span></div>
+        </Link>
         <nav>
           <Link to="/cultura">Cultura</Link>
           <Link to="/lazer">Lazer</Link>
@@ -33,13 +35,13 @@ export default function Esporte() {
         style={{ backgroundImage: `url(/assets/images/tenis.png)` }}
       >
         <h1>Esportes</h1>
-        
+
       </section>
 
       {/* Descrição do esporte */}
       <section className="desc-esporte">
         <p>
-        Encontre quadras públicas, centros esportivos, projetos sociais, parques e ONGs que oferecem atividades físicas e esportivas gratuitas. São aulas, treinos, jogos e eventos para todas as idades e níveis. Descubra locais perto de você e movimente-se de forma acessível, saudável e inclusiva!</p>
+          Encontre quadras públicas, centros esportivos, projetos sociais, parques e ONGs que oferecem atividades físicas e esportivas gratuitas. São aulas, treinos, jogos e eventos para todas as idades e níveis. Descubra locais perto de você e movimente-se de forma acessível, saudável e inclusiva!</p>
         <img
           src="/assets/images/voleiesporte.png"
           alt="Descrição esporte"
@@ -83,7 +85,7 @@ export default function Esporte() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="destaqueEndereco"
-                >
+              >
                 Capital São Paulo
               </a>
             </p>
@@ -143,8 +145,11 @@ export default function Esporte() {
                   value={pesquisa}
                   onChange={handleInputChange}
                   className="searchInput"
-                  />
-                <button type="submit" className="searchButton" />
+                />
+                <button type="submit" className="searchButton">
+                  <i className="fa-solid fa-magnifying-glass icone-pesquisar"></i>
+
+                </button>
               </form>
             </section>
           </div>
@@ -155,19 +160,22 @@ export default function Esporte() {
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
-            ></iframe>
+          ></iframe>
         </section>
       </main>
 
       {/* Rodapé */}
       <footer className="rodapeEsporte">
         <div className="container">
-          <div className="logo">Localiza<span>LivreSP</span></div>
-          <h4>Descubra cultura, lazer e esportes gratuitos em São Paulo</h4>
-          <p>© LocalizaLivreSP — Conectando a cidade.</p>
-        </div>
+          <div className="logo">
+            Localiza<span>LivreSP</span>
+          </div>
 
-        <div className="button-container">
+          <h4>Descubra cultura, lazer e esportes gratuitos em São Paulo</h4>
+
+
+
+          <div className="button-container">
             <Link to="/login-administrativo">
               <button className="col">Painel administrativo</button>
             </Link>
@@ -176,8 +184,11 @@ export default function Esporte() {
               <button className="col">Colaboradores</button>
             </Link>
           </div>
+
+          <p>© LocalizaLivreSP — Conectando a cidade.</p>
+        </div>
       </footer>
-            </div>
-    
+    </div>
+
   );
 }
