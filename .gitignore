@@ -3,8 +3,8 @@
 # ========================
 node_modules/
 dist/
-.env
-.env.local
+
+
 *.log
 *.tmp
 *.bak
@@ -36,5 +36,5 @@ frontend/.env.local
 # BACKEND / EXPRESS
 # ========================
 backend/node_modules/
-backend/.env
-backend/.env.local
+
+

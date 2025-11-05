@@ -2,6 +2,8 @@ import { useState } from 'react';
 import './Esporte.scss';
 import { Link } from "react-router-dom";
 import { CiSearch } from "react-icons/ci";
+import Mapa from '../../components/Mapa.jsx';
+
 
 export default function Esporte() {
   const [pesquisa, setPesquisa] = useState('');
@@ -71,6 +73,49 @@ export default function Esporte() {
           </form>
         </section>
       </div>
+
+
+       <section className="parques">
+      
+          <div className="cartoes">
+            <article className="cartao">
+              <a href='https://www.parquedoibirapuera.org/' className='link-categorias'>
+                <img src="https://i.pinimg.com/736x/b1/58/46/b1584660ec016e5fbad337b0061b9b39.jpg" alt="Parque 1" />
+                <h3>Parque do Ibirapuera</h3>
+                <p>Ótimo para caminhadas e piqueniques. Entrada gratuita.</p>
+              </a>
+            </article>
+
+            <article className="cartao">
+              <a href='https://prefeitura.sp.gov.br/web/meio_ambiente/w/parques/regiao_sul/5747' className='link-categorias'>
+
+                <img src="https://i.pinimg.com/1200x/bc/6b/11/bc6b1167e29bbf927e5a380c8a4113b0.jpg" alt="Parque 2" />
+                <h3>Parque  Indepencia</h3>
+                <p>Eventos culturais, exposições e muito espaço para atividades.</p>
+              </a>
+            </article>
+
+            <article className="cartao">
+              <a href='https://parquevillalobos.com.br/' className='link-categorias'>
+
+                <img src="https://i.pinimg.com/1200x/17/7a/bc/177abc0fd9ecac38ac42937f7d2dbb29.jpg" alt="Parque 3" />
+                <h3>Parque Villa-Lobos</h3>
+                <p>Área esportiva e pistas de corrida — ideal para famílias.</p>
+              </a>
+            </article>
+
+            <article className="cartao">
+              <a href='https://www.parqueecologicodotiete.com.br/' className='link-categorias'>
+                <img src="https://www.parqueecologicodotiete.com.br/content-wp/uploads/2017/08/parque-ecologico-tiete-peda.jpg" alt="Parque 4" />
+                <h3>parque ecologico tiete</h3>
+                <p>  Trilhas, ciclovia, quadras, campos, pedalinho, playgrounds, lanchonetes, CRAS e museu .</p>
+              </a>
+            </article>
+
+          </div>
+        </section>
+      
+
 
       {/* Clubes */}
       <section className="areaClubes">
@@ -151,6 +196,7 @@ export default function Esporte() {
                 <button type="submit" className="searchButton">
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
+                  <Mapa />
               </form>
             </section>
           </div>

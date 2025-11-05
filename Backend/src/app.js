@@ -7,6 +7,7 @@ import con from "./Repository/Conection.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import adicionarRotas from "./Rotas.js";
+import ContatoController from "./Controller/ContatoController.js";
 
 
 const servidor = express();
@@ -16,6 +17,8 @@ dotenv.config();
 
 
 adicionarRotas(servidor);
+app.use("/api", ContatoController);
+
 
 
 const PORTA = process.env.PORTA;
