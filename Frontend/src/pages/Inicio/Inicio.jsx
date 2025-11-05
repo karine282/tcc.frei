@@ -1,15 +1,12 @@
 import { useState } from 'react'
 import './Inicio.scss'
 import { Link } from "react-router-dom";
-import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
 
 function Inicio() {
   return (
     <div className='container-inicio'>
-
       <header className="inicio">
-
-        <div className="container comeco">
+        <div className="container-comeco">
           <div className="logo">Localiza<span>LivreSP</span></div>
           <nav className="nave">
             <Link to="/Cultura">Cultura</Link>
@@ -20,7 +17,7 @@ function Inicio() {
         </div>
       </header>
       <main>
-        <section className="atencao">
+        <section className="">
           <div className="parte1">
           </div>
           <div className="container hero-content">
@@ -39,11 +36,11 @@ function Inicio() {
           </div>
         </section>
 
-        <section className="feature ">
-          <div className="feature-left">
+        <section className="desc ">
+          <div className="desc-esquerda">
             <img src="https://blog.blablacar.com.br/wp-content/uploads/2024/06/sala-nobre-museu-do-ipiranga-sp.webp" alt="feature" />
           </div>
-          <div className="feature-right">
+          <div className="desc-direita">
             <p>
               Aqui você encontra as melhores opções para curtir a cidade — de forma gratuita ou acessível.
               Nosso objetivo é conectar a comunidade a tudo que São Paulo oferece: eventos culturais, atividades
@@ -131,7 +128,7 @@ function Inicio() {
 
         <Link to='/Cultura' className='link-categorias'>
           <div className="categoria">
-            <img src="/assets/images/cultu.jpg" />
+            <img src="/assets/images/culture.jpg" />
             <p>espaços<br />culturais</p>
           </div>
         </Link>
@@ -190,7 +187,6 @@ function Inicio() {
               rel="noopener noreferrer"
               className="icones"
               >
-              <FaInstagram />
             </a>
             <a
               href="https://www.facebook.com/"
@@ -198,7 +194,6 @@ function Inicio() {
               rel="noopener noreferrer"
               className="icones"
               >
-              <FaFacebook />
             </a>
             <a
               href="https://www.tiktok.com/"
@@ -206,7 +201,6 @@ function Inicio() {
               rel="noopener noreferrer"
               className="icones"
               >
-              <FaTiktok />
             </a>
           </div>
 

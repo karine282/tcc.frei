@@ -47,7 +47,6 @@ export default function ContaUsuario() {
                     localStorage.removeItem('usuario'); // Remove dados ao sair
                     navigate('/login'); // Redireciona para login
                 }}>Sair da conta <i className="fa-solid fa-right-from-bracket icon-editar"></i></h3>
-                <h3>Adicionar conta <i className="fa-solid fa-user-plus icon-editar"></i></h3>
             </div>
         </div>
     );

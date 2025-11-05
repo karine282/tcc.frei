@@ -17,7 +17,9 @@ export default function Lazer() {
 
       {/* Topo */}
       <header className="topo">
+        <Link to='/' className='Link'>
         <div className="logo">Localiza<span>LivreSP</span></div>
+        </Link>
         <nav>
           <Link to="/cultura">Cultura</Link>
           <Link to="/Esporte" className="active">Esportes</Link>
@@ -30,14 +32,14 @@ export default function Lazer() {
       
       <section
         className="hero lazer-hero"
-        style={{ backgroundImage: `url(/assets/images/lazerbck.jpg)` }}
+        style={{ backgroundImage: `url(/assets/images/lazerbkg.jpg)` }}
       >
         <h1>Lazer</h1>
       </section>
 
       <section className="desc-lazer">
         <p>
-          “Descubra opções de lazer gratuito em São Paulo! Aqui você encontra ONGs, parques, institutos, cinemas e museus que oferecem atividades culturais, educativas e de entretenimento sem custo. Explore espaços próximos a você e aproveite a cidade de forma acessível e inclusiva.”
+          Descubra opções de lazer gratuito em São Paulo! Aqui você encontra ONGs, parques, institutos, cinemas e museus que oferecem atividades culturais, educativas e de entretenimento sem custo. Explore espaços próximos a você e aproveite a cidade de forma acessível e inclusiva.
         </p>
         <img
           src="/assets/images/lazer.jpg"
@@ -57,7 +59,9 @@ export default function Lazer() {
               onChange={handleInputChange}
               className="searchInput"
               />
-            <button type="submit" className="searchButton" />
+            <button type="submit" className="searchButton">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
           </form>
         </section>
       </div>
@@ -71,47 +75,57 @@ export default function Lazer() {
         <div className="locais-grid">
           {/* Esquerda */}
           <div className="coluna-esquerda">
+            <a href='https://prefeitura.sp.gov.br/meio_ambiente/w/parques/regiao_sul/5747' target="_blank">
             <div className="local-card grande">
-              <img src="/assets/images/museu.jpg" alt="Parque da Independência" />
+              <img src="/assets/images/parqueind.png" alt="Parque da Independência" />
               <div className="info">
                 <h3>Parque da Independência</h3>
                 <p>Av. Nazaré, s/n - Ipiranga</p>
               </div>
             </div>
+            </a>
 
             <div className="local-card grande">
-              <img src="/assets/images/butantan.jpg" alt="Parque da Ciência do Instituto Butantan" />
+              <a href='https://parquedaciencia.butantan.gov.br/' target="_blank">
+              <img src="/assets/images/ciencia.png" alt="Parque da Ciência do Instituto Butantan" />
               <div className="info">
                 <h3>Parque da Ciência do Instituto Butantan</h3>
                 <p>Avenida Vital Brasil, 1500 - Butantã</p>
               </div>
+              </a>
             </div>
           </div>
 
           {/* Direita */}
           <div className="coluna-direita">
             <div className="local-card pequeno">
-              <img src="/assets/images/sesc.jpg" alt="Sesc SP" />
+              <a href='https://www.sesc.com.br/unidade/sesc-belenzinho/' target="_blank">
+              <img src="/assets/images/sesc.png" alt="Sesc SP" />
               <div className="info">
                 <h3>Sesc SP</h3>
                 <p>Rua Padre Adelino, 1000 - Belenzinho</p>
               </div>
+              </a>
             </div>
 
             <div className="local-card pequeno">
+              <a href='https://www.melhoresdestinos.com.br/avenida-paulista.html' target="_blank">
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5hNpTPDNRfH58xAHWQ3VUFSreaPRY8Wvc7w&s" alt="Paulista Aberta" />
               <div className="info">
                 <h3>Paulista Aberta</h3>
                 <p>Av. Paulista, 900</p>
               </div>
+              </a>
             </div>
 
             <div className="local-card pequeno central">
+              <a href='https://cinemateca.org.br/' target="_blank">
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8fFL8I_dVcR34uklRZEYUyCMBXem-tm-R1w&s" alt="Cinemateca Brasileira" />
               <div className="info">
                 <h3>Cinemateca Brasileira</h3>
                 <p>Largo Sen. Raul Cardoso, 207 - Vila Clementino</p>
               </div>
+              </a>
             </div>
           </div>
         </div>
@@ -131,7 +145,9 @@ export default function Lazer() {
                   onChange={handleInputChange}
                   className="searchInput"
                   />
-                <button type="submit" className="searchButton" />
+                <button type="submit" className="searchButton">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
               </form>
             </section>
           </div>
