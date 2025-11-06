@@ -17,7 +17,7 @@ dotenv.config();
 
 
 adicionarRotas(servidor);
-app.use("/api", ContatoController);
+servidor.use("/api", ContatoController);
 
 
 
