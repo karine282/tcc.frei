@@ -3,7 +3,7 @@ import './administradores.scss'
 export default function Administracao(){
     return(
         <>
-        <h1>painel...</h1>
+        <h1>fazer painel....</h1>
         </>
     );
 }
