@@ -5,20 +5,19 @@ import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
 function Sobre() {
   return (
     <>
-      <main className="sobre-main">
-       
-        <section className="sobre-hero">
-          <div className="container">
+      <main className="sobre-mainn">
+        <section className="sobre-heroo">
+          <div className="containerso">
             <h1>Sobre o Localiza<span>LivreSP</span></h1>
             <p>
-              Conectando você às melhores atividades gratuitas e
-             acessíveis em São Paulo.
+              Conectando você às <span>melhores atividades gratuitas</span> e
+              <span> acessíveis</span> em <span>São Paulo</span>.
             </p>
           </div>
         </section>
 
-        <section className="sobre-content container">
-          <div className="section">
+        <section className="sobre-contente container">
+          <div className="sectionsobre">
             <h2><span>Nossa Missão</span></h2>
             <p>
               O <span>LocalizaLivreSP</span> é o seu <span>guia definitivo</span> para
@@ -30,7 +29,7 @@ function Sobre() {
             </p>
           </div>
 
-          <div className="section">
+          <div className="sectionsobre">
             <h2><span>O que Oferecemos</span></h2>
             <ul>
               <li><strong>Eventos Culturais:</strong> Exposições, shows, teatros e muito mais em espaços públicos.</li>
@@ -46,7 +45,7 @@ function Sobre() {
             </p>
           </div>
 
-          <div className="section">
+          <div className="sectionsobre">
             <h2><span>Nossa História</span></h2>
             <p>
               Fundado em <span>2020</span> por um grupo de entusiastas da <span>cultura paulistana</span>, o
@@ -59,7 +58,7 @@ function Sobre() {
             </p>
           </div>
 
-          <div className="section">
+          <div className="sectionsobre">
             <h2><span>Nossa Equipe</span></h2>
             <p>
               Nossa equipe é formada por <span>apaixonados por São Paulo</span>: designers urbanos,
@@ -72,7 +71,7 @@ function Sobre() {
             </p>
           </div>
 
-          <div className="section">
+          <div className="sectionsobre">
             <h2><span>Impacto na Comunidade</span></h2>
             <p>
               Desde o lançamento, o <span>LocalizaLivreSP</span> já impactou
@@ -84,7 +83,7 @@ function Sobre() {
             </p>
           </div>
 
-          <div className="section">
+          <div className="sectionsobre">
             <h2><span>Planos Futuros</span></h2>
             <p>
               Planejamos expandir o <span>LocalizaLivreSP</span> com <span>mapas interativos</span>,
@@ -98,27 +97,46 @@ function Sobre() {
         </section>
       </main>
 
+ 
       <footer className="rodape">
-        <div className="container">
-          <div className="logo">
-            Localiza<span>LivreSP</span>
-          </div>
+  <div className="container-roda">
+    <div className="logoo-rodape">
+      Localiza<span>LivreSP</span>
+    </div>
 
-          <h4>Descubra cultura, lazer e esportes gratuitos em São Paulo</h4>
+    <p className="descricaoo">
+    <h4>Descubra <span>cultura</span>, <span>lazer</span> e <span>esportes gratuitos</span> em <span>São Paulo</span></h4>
 
-          <div className="redes">
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="icones">
-              <FaInstagram />
-            </a>
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="icones">
-              <FaFacebook />
-            </a>
-            <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" className="icones">
-              <FaTiktok />
-            </a>
-          </div>
+    </p>
 
-          <div className="button-container">
+    <div className="redes-sociaiss">
+      <a
+        href="https://www.instagram.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="icones"
+      >
+        <FaInstagram />
+      </a>
+      <a
+        href="https://www.facebook.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="icones"
+      >
+        <FaFacebook />
+      </a>
+      <a
+        href="https://www.tiktok.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="icones"
+      >
+        <FaTiktok />
+      </a>
+    </div>
+
+    <div className="button-container">
             <Link to="/login-administrativo">
               <button className="col">Painel administrativo</button>
             </Link>
@@ -128,9 +146,11 @@ function Sobre() {
             </Link>
           </div>
 
-          <p>© LocalizaLivreSP — Conectando a cidade.</p>
-        </div>
-      </footer>
+    <p className="copys">© {new Date().getFullYear()} DevPaulista — Todos os direitos reservados.</p>
+  </div>
+</footer>
+        
+      
     </>
   );
 }

@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './Inicio.scss'
 import { Link } from "react-router-dom";
+import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
+
 
 function Inicio() {
   return (
@@ -12,7 +14,7 @@ function Inicio() {
             <Link to="/Cultura">Cultura</Link>
             <Link to="/Esporte">Esporte</Link>
             <Link to="/Lazer">Lazer</Link>
-            <Link to='/conta'><i class="fa-solid fa-circle-user"></i></Link>
+            <Link to='/conta'><i className="fa-solid fa-circle-user"></i></Link>
           </nav>
         </div>
       </header>
@@ -172,51 +174,48 @@ function Inicio() {
         </div>
       </section>
 
-      <footer className="rodape">
-        <div className="container">
-          <div className="logo">
-            Localiza<span>LivreSP</span>
-          </div>
+      <footer className="rodapee">
+  <div className="container-rodape">
+    <div className="logo-rodape">
+      Dev<span>Paulista</span>
+    </div>
 
-          <h4>Descubra cultura, lazer e esportes gratuitos em São Paulo</h4>
+    <p className="descricao">
+      Criando Sites e Designs para o seu Negocio — descubra o seu melhor com desenvolvimento web da DevPaulista.
+    </p>
 
-          <div className="redes">
-            <a
-              href="https://www.instagram.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="icones"
-              >
-            </a>
-            <a
-              href="https://www.facebook.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="icones"
-              >
-            </a>
-            <a
-              href="https://www.tiktok.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="icones"
-              >
-            </a>
-          </div>
+    <div className="redes-sociais">
+      <a
+        href="https://www.instagram.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="icone"
+      >
+        <FaInstagram />
+      </a>
+      <a
+        href="https://www.facebook.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="icone"
+      >
+        <FaFacebook />
+      </a>
+      <a
+        href="https://www.tiktok.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="icone"
+      >
+        <FaTiktok />
+      </a>
+    </div>
 
-          <div className="button-container">
-            <Link to="/login-administrativo">
-              <button className="col">Painel administrativo</button>
-            </Link>
+ 
 
-            <Link to="/Desenvolvedores">
-              <button className="col">Colaboradores</button>
-            </Link>
-          </div>
-
-          <p>© LocalizaLivreSP — Conectando a cidade.</p>
-        </div>
-      </footer>
+    <p className="copy">© {new Date().getFullYear()} DevPaulista — Todos os direitos reservados.</p>
+  </div>
+</footer>
               </div>
   )
 }
