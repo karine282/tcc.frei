@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import './Lazer.scss';
 import { Link } from "react-router-dom";
+import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
+
 
 
 export default function Lazer() {
@@ -200,23 +202,56 @@ export default function Lazer() {
         </section>
       </main>
 
-      {/* Rodapé */}
-      <footer className="rodapeLazer">
-        <div className="container">
-          <div className="logo">Localiza<span>LivreSP</span></div>
-          <h4>Descubra cultura, lazer e esportes gratuitos em São Paulo</h4>
-          <p>© LocalizaLivreSP — Conectando a cidade.</p>
-        </div>
-        <div className="button-container">
+      <footer className="rodapeL">
+  <div className="container-roda">
+    <div className="logo-roda">
+      Localiza<span>LivreSP</span>
+    </div>
+
+    <p className="descricaoo">
+    <h4>Descubra cultura, lazer e esportes gratuitos em São Paulo</h4></p>
+
+    <div className="redes-sociaiss">
+      <a
+        href="https://www.instagram.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="icone"
+      >
+        <FaInstagram />
+      </a>
+      <a
+        href="https://www.facebook.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="icone"
+      >
+        <FaFacebook />
+      </a>
+      <a
+        href="https://www.tiktok.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="icone"
+      >
+        <FaTiktok />
+      </a>
+    </div>
+
+    <div className="button-container">
             <Link to="/login-administrativo">
               <button className="col">Painel administrativo</button>
             </Link>
-
             <Link to="/Desenvolvedores">
               <button className="col">Colaboradores</button>
             </Link>
           </div>
-      </footer>
+
+ 
+
+    <p className="copys">© {new Date().getFullYear()} LocalizaLivreSP — Conectando a cidade. — Todos os direitos reservados.</p>
+  </div>
+</footer>
             </div>
     </>
   );

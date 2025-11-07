@@ -2,26 +2,24 @@ import { Link } from "react-router-dom";
 import "./Cultura.scss";
 import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
+import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
+
 
 function Cultura() {
-  // Estado da pesquisa
   const [pesquisa, setPesquisa] = useState("");
 
-  // Atualiza o valor do input
   const handleInputChange = (e) => {
     setPesquisa(e.target.value);
   };
 
-  // Lida com o envio do formulário e reseta o input
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Pesquisa enviada:", pesquisa);
-    setPesquisa(""); // Reseta para melhor UX
+    setPesquisa("");
   };
 
   return (
     <div className="container-cultura">
-      {/* TOPO */}
       <header className="topo">
         <div className="logo">
           <Link to='/' className="Link">
@@ -119,12 +117,10 @@ function Cultura() {
 
 
 
-      {/* ÁREA DE LOCAIS */}
       <section className="areaCultura">
         <h2>Espaços Culturais</h2>
 
         <div className="locais-grid">
-          {/* Esquerda */}
           <div className="coluna-esquerda">
             <a
               href="https://www.google.com/maps?q=Centro+Cultural+São+Paulo"
@@ -157,7 +153,6 @@ function Cultura() {
             </a>
           </div>
 
-          {/* Direita */}
           <div className="coluna-direita">
             <a
               href="https://www.google.com/maps?q=Biblioteca+Mário+de+Andrade,+São+Paulo"
@@ -207,7 +202,6 @@ function Cultura() {
         </div>
       </section>
 
-      {/* MAPA */}
       <main>
         <section className="containerPesquisaMapa">
           <h2>Veja locais próximos de você</h2>
@@ -240,24 +234,57 @@ function Cultura() {
         </section>
       </main>
 
-      {/* RODAPÉ */}
-      <footer className="rodapeCultura">
-        <div className="container">
-          <div className="logo">
-            Localiza<span>LivreSP</span>
+      <footer className="rodapeC">
+  <div className="container-roda">
+    <div className="logo-roda">
+      Localiza<span>LivreSP</span>
+    </div>
+
+    <p className="descricaoo">
+    <h4>Descubra cultura, lazer e esportes gratuitos em São Paulo</h4></p>
+
+    <div className="redes-sociaiss">
+      <a
+        href="https://www.instagram.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="icone"
+      >
+        <FaInstagram />
+      </a>
+      <a
+        href="https://www.facebook.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="icone"
+      >
+        <FaFacebook />
+      </a>
+      <a
+        href="https://www.tiktok.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="icone"
+      >
+        <FaTiktok />
+      </a>
+    </div>
+
+    <div className="button-container">
+            <Link to="/login-administrativo">
+              <button className="col">Painel administrativo</button>
+            </Link>
+            <Link to="/Desenvolvedores">
+              <button className="col">Colaboradores</button>
+            </Link>
           </div>
-          <h4>Descubra cultura, lazer e esportes gratuitos em São Paulo</h4>
-          <p>© LocalizaLivreSP — Conectando a cidade.</p>
-        </div>
-        <div className="button-container">
-          <Link to="/login-administrativo">
-            <button className="col">Painel administrativo</button>
-          </Link>
-          <Link to="/Desenvolvedores">
-            <button className="col">Colaboradores</button>
-          </Link>
-        </div>
-      </footer>
+
+ 
+
+    <p className="copys">© {new Date().getFullYear()} LocalizaLivreSP — Conectando a cidade. — Todos os direitos reservados.</p>
+  </div>
+</footer>
+
     </div>
   );
 }

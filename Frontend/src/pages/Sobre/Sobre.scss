@@ -10,66 +10,52 @@
   width: 90%;
   max-width: 1800px;
   font-family: 'Poppins', sans-serif;
+  position: relative;
+  z-index: 2;
+  text-align: center;
 }
 
-
-.sobre-header .logo {
-  color: white;
-  font-weight: 800;
-  padding: 6px 10px;
-  border-radius: 6px;
-
-}
-
-.sobre-header span {
-  color: #0a7737;
-  font-weight: 1000;
-}
-
-.sobre-header .nave a {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.sobre-mainn {
-  margin-top: 80px; 
-}
 
 .sobre-heroo {
-  height: 300px;
+  height: 350px;
   background-image: url('/assets/images/sub.jpg');
-  margin-top: -80px;
   background-size: cover;
   background-position: center;
   position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
   color: white;
+  text-align: center;
+  overflow: hidden;
 }
 
 .sobre-heroo::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(48, 48, 48, 0.35) 10%, rgba(43, 43, 43, 0.6) 70%);
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
 }
 
-.sobre-heroo .container {
-  position: relative;
-  text-align: center;
+.titulo-sobre {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-family: 'Poppins', sans-serif;
+
 }
 
-.sobre-heroo h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-  font-weight: 800;
+.logo-sobre {
+  color: #0a7737;
 }
 
-.sobre-heroo p {
-  font-size: 1.2em;
+.descricao-sobre {
+  font-size: 1.3rem;
+  margin-top: 10px;
   opacity: 0.95;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
 }
 
 .sobre-contente {
@@ -83,6 +69,7 @@
   font-size: 2em;
   margin-bottom: 20px;
   position: relative;
+  font-family: "Outfit", sans-serif;
 }
 
 .sobre-contente h2::after {
@@ -133,38 +120,29 @@
   color: #00695c;
 }
 
-.sobre-contente .sectionsobre {
+.sectionsobre {
   margin-bottom: 40px;
   background-color: #fff;
   border-radius: 15px;
   padding: 30px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: "Poppins", sans-serif;
 }
 
-.sobre-contente .sectionsobre:hover {
+.sectionsobre:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-.sobre-contente .sectionsobre h2 {
-  margin-bottom: 15px;
-}
-
-.sobre-contente .sectionsobre p {
-  margin-bottom: 0;
-}
-
 .rodape {
-  background:#022b27;
+  background: #022b27;
   color: #fff;
   padding: 50px 0;
   text-align: center;
   font-family: "Poppins", sans-serif;
-  position: relative;
-  z-index: 2;
 
-  .container-roda{
+  .container-roda {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
@@ -173,9 +151,8 @@
   .logoo-rodape {
     font-size: 2rem;
     font-weight: 700;
-    color: #fff;
     span {
-      color: #074d16;
+      color: #0a7737;
     }
   }
 
@@ -185,6 +162,7 @@
     max-width: 600px;
     line-height: 1.6;
     color: #ccc;
+    font-family: "Outfit", sans-serif;
   }
 
   .redes-sociaiss {
@@ -199,26 +177,16 @@
       transition: transform 0.3s, color 0.3s;
       &:hover {
         transform: scale(1.2);
-        color: #165810;
+        color: #09b46a;
       }
     }
   }
 
-  .links-rodape {
+  .button-container {
     display: flex;
     justify-content: center;
-    gap: 25px;
-    margin-bottom: 20px;
+    gap: 15px;
     flex-wrap: wrap;
-
-    a {
-      color: #ccc;
-      font-weight: 500;
-      transition: color 0.3s;
-      &:hover {
-        color: #1f4b14;
-      }
-    }
   }
 
   .col {
@@ -229,12 +197,11 @@
     border-radius: 6px;
     cursor: pointer;
     transition: 0.3s;
-    text-align: center;
-
     &:hover {
       background: #fff;
       color: #111;
     }
+  }
 
   .copys {
     font-size: 0.9rem;
@@ -243,24 +210,14 @@
   }
 }
 
-}
-
 @media (max-width: 900px) {
-  .sobre-hero h1 {
-    font-size: 2em;
-  }
-
-  .sobre-content {
-    padding: 40px 20px;
+  .titulo-sobre {
+    font-size: 2.3rem;
   }
 }
 
 @media (max-width: 600px) {
-  .sobre-hero h1 {
-    font-size: 1.8em;
-  }
-
-  .sobre-content h2 {
-    font-size: 1.5em;
+  .titulo-sobre {
+    font-size: 1.8rem;
   }
 }

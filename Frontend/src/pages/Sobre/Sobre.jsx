@@ -8,10 +8,11 @@ function Sobre() {
       <main className="sobre-mainn">
         <section className="sobre-heroo">
           <div className="containerso">
-            <h1>Sobre o Localiza<span>LivreSP</span></h1>
-            <p>
-              Conectando você às <span>melhores atividades gratuitas</span> e
-              <span> acessíveis</span> em <span>São Paulo</span>.
+            <h1 className="titulo-sobre">
+            Localiza<span className="logo-sobre">LivreSP</span>
+            </h1>
+            <p className="descricao-sobre">
+              Conectando você às melhores atividades gratuitas e acessíveis em São Paulo.
             </p>
           </div>
         </section>
@@ -24,8 +25,8 @@ function Sobre() {
               descobrir <span>eventos culturais</span>, <span>esportivos</span> e de
               <span> lazer gratuitos</span> na cidade de <span>São Paulo</span>.
               <br />
-              <span>Nosso objetivo</span> é <span>promover o acesso à cultura, ao esporte e ao lazer</span> para todas as famílias,
-              facilitando a localização de atividades que enriquecem a vida urbana.
+              <span>Nosso objetivo</span> é <span>promover o acesso à cultura, ao esporte e ao lazer</span> 
+              para todas as famílias, facilitando a localização de atividades que enriquecem a vida urbana.
             </p>
           </div>
 
@@ -37,7 +38,6 @@ function Sobre() {
               <li><strong>Lazer ao Ar Livre:</strong> Parques, feiras e passeios familiares.</li>
               <li><strong>Informações Atualizadas:</strong> Dados precisos sobre horários, locais e acessibilidade.</li>
             </ul>
-
             <p>
               A cidade de <span>São Paulo</span> oferece uma <span>infinidade de oportunidades</span> para se
               <span> divertir e aprender</span> sem gastar muito. Aqui, você encontra tudo isso de forma
@@ -97,60 +97,42 @@ function Sobre() {
         </section>
       </main>
 
- 
       <footer className="rodape">
-  <div className="container-roda">
-    <div className="logoo-rodape">
-      Localiza<span>LivreSP</span>
-    </div>
+        <div className="container-roda">
+          <div className="logoo-rodape">
+            Localiza<span>LivreSP</span>
+          </div>
 
-    <p className="descricaoo">
-    <h4>Descubra <span>cultura</span>, <span>lazer</span> e <span>esportes gratuitos</span> em <span>São Paulo</span></h4>
+          <h4 className="descricaoo">
+            Descubra <span>cultura</span>, <span>lazer</span> e <span>esportes gratuitos</span> em <span>São Paulo</span>
+          </h4>
 
-    </p>
+          <div className="redes-sociaiss">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="icones">
+              <FaInstagram />
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="icones">
+              <FaFacebook />
+            </a>
+            <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" className="icones">
+              <FaTiktok />
+            </a>
+          </div>
 
-    <div className="redes-sociaiss">
-      <a
-        href="https://www.instagram.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="icones"
-      >
-        <FaInstagram />
-      </a>
-      <a
-        href="https://www.facebook.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="icones"
-      >
-        <FaFacebook />
-      </a>
-      <a
-        href="https://www.tiktok.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="icones"
-      >
-        <FaTiktok />
-      </a>
-    </div>
-
-    <div className="button-container">
+          <div className="button-container">
             <Link to="/login-administrativo">
               <button className="col">Painel administrativo</button>
             </Link>
-
             <Link to="/Desenvolvedores">
               <button className="col">Colaboradores</button>
             </Link>
           </div>
 
-    <p className="copys">© {new Date().getFullYear()} DevPaulista — Todos os direitos reservados.</p>
-  </div>
-</footer>
-        
-      
+          <p className="copys">
+            © {new Date().getFullYear()} DevPaulista — Todos os direitos reservados.
+          </p>
+        </div>
+      </footer>
     </>
   );
 }

@@ -172,7 +172,7 @@ export default function Desenvolvedores() {
               <h3>Contabilizei Escritório de Contabilidade</h3>
             </div>
             <div className="parceriadev">
-              <a href=" https://www.wework.com/pt-BR"><img src="assets/images/PARdev4.svg" /></a>
+              <a href=" https://www.wework.com/pt-BR"><img src="assets/images/WeWork.png" /></a>
               <h3>wework </h3>
             </div>
           

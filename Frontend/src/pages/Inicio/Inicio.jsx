@@ -7,36 +7,39 @@ import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
 function Inicio() {
   return (
     <div className='container-inicio'>
-      <header className="inicio">
+       <header className="inicio">
         <div className="container-comeco">
           <div className="logo">Localiza<span>LivreSP</span></div>
           <nav className="nave">
             <Link to="/Cultura">Cultura</Link>
             <Link to="/Esporte">Esporte</Link>
             <Link to="/Lazer">Lazer</Link>
-            <Link to='/conta'><i className="fa-solid fa-circle-user"></i></Link>
+            <Link to="/Conta"><i className="fa-solid fa-circle-user"></i></Link>
           </nav>
         </div>
       </header>
       <main>
-        <section className="">
-          <div className="parte1">
-          </div>
-          <div className="container hero-content">
-            <h1>Bem-vindo ao melhor <span>GUIA DE EVENTOS</span> culturais da Cidade de São Paulo!</h1>
-            <p className="hero-sub">Aqui você encontra atividades gratuitas e acessíveis para toda a família.</p>
-            <nav className="hero-actions">
-              <h3 className='pri'>
-                <i class="fa-solid fa-user icon-inicio"></i>
-                <Link to="/Login" className='link'>entrar</Link>
-              </h3>
-              <h3 className='seg'>
-                <i class="fa-solid fa-file-pen icon-inicio"></i>
-                <Link to="/Cadastro" className='link'>cadastre-se</Link></h3>
-
-            </nav>
-          </div>
-        </section>
+      <section className="inicio-hero">
+        <div className="overlay"></div>
+        <div className="hero-content">
+          <h1>Bem-vindo ao melhor <span>GUIA DE EVENTOS  </span> 
+          culturais da Cidade de 
+            São Paulo!</h1>
+          <p className="hero-sub">
+            Aqui você encontra atividades gratuitas e acessíveis para toda a família.
+          </p>
+          <nav className="hero-actions">
+            <h3 className="pri">
+              <i className="fa-solid fa-user icon-inicio"></i>
+              <Link to="/Login" className="link">entrar</Link>
+            </h3>
+            <h3 className="seg">
+              <i className="fa-solid fa-file-pen icon-inicio"></i>
+              <Link to="/Cadastro" className="link">cadastre-se</Link>
+            </h3>
+          </nav>
+        </div>
+      </section>
 
         <section className="desc ">
           <div className="desc-esquerda">
@@ -104,18 +107,20 @@ function Inicio() {
       </main>
 
       <section className="container2">
-        <div className="p2">
-          <h2>Programação ceu's</h2>
-          <img src="" alt="" />  centros educacionais unificados
-          <p>
-            Os CEUs foram construídos com o objetivo de promover uma educação à população de maneira integral, democrática, emancipatória, humanizadora e com qualidade social. Juntando não somente educação, mas também, a cultura, o esporte, lazer e recreação, possibilitando o desenvolvimento do ser humano como um todo, como pessoa de direitos e deveres e dono de sua história.
-          </p>
-        </div>
-        <div className="p3">
-          <img src="https://pbs.twimg.com/media/GcW4CGNWoAAe1_1?format=jpg&name=4096x4096" alt="CEU" />
-          <a className="btn btn-segundo" href="https://ceu.sme.prefeitura.sp.gov.br/programacao/">Saiba mais</a>
-        </div>
-      </section>
+  <div className="p2">
+    <h2>Programação ceu's</h2>
+    <img src="" alt="" />
+    <p>Centros educacionais unificados</p>
+    <p>
+      Os CEUs foram construídos com o objetivo de promover uma educação à população de maneira integral, democrática, emancipatória, humanizadora e com qualidade social. Juntando não somente educação, mas também, a cultura, o esporte, lazer e recreação, possibilitando o desenvolvimento do ser humano como um todo, como pessoa de direitos e deveres e dono de sua história.
+    </p>
+    <Link className='btn btn-ceus' to='/UnidadesCeus'>Encontrar Unidades</Link>
+  </div>
+  <div className="p3">
+    <img src="https://pbs.twimg.com/media/GcW4CGNWoAAe1_1?format=jpg&name=4096x4096" alt="CEU" />
+    <a className="btn btn-segundo" href="https://ceu.sme.prefeitura.sp.gov.br/programacao/">Saiba mais</a>
+  </div>
+</section>
 
       <h1>Categorias</h1>
       <p class="subtitulo">veja o que você está procurando no momento</p>
@@ -173,18 +178,16 @@ function Inicio() {
           </div>
         </div>
       </section>
-
-      <footer className="rodapee">
-  <div className="container-rodape">
-    <div className="logo-rodape">
-      Dev<span>Paulista</span>
+      <footer className="rodape">
+  <div className="container-roda">
+    <div className="logo-roda">
+      Localiza<span>LivreSP</span>
     </div>
 
-    <p className="descricao">
-      Criando Sites e Designs para o seu Negocio — descubra o seu melhor com desenvolvimento web da DevPaulista.
-    </p>
+    <p className="descricaoo">
+    <h4>Descubra cultura, lazer e esportes gratuitos em São Paulo</h4></p>
 
-    <div className="redes-sociais">
+    <div className="redes-sociaiss">
       <a
         href="https://www.instagram.com/"
         target="_blank"
@@ -211,11 +214,21 @@ function Inicio() {
       </a>
     </div>
 
+    <div className="button-container">
+            <Link to="/login-administrativo">
+              <button className="col">Painel administrativo</button>
+            </Link>
+            <Link to="/Desenvolvedores">
+              <button className="col">Colaboradores</button>
+            </Link>
+          </div>
+
  
 
-    <p className="copy">© {new Date().getFullYear()} DevPaulista — Todos os direitos reservados.</p>
+    <p className="copys">© {new Date().getFullYear()} LocalizaLivreSP — Conectando a cidade. — Todos os direitos reservados.</p>
   </div>
 </footer>
+
               </div>
   )
 }

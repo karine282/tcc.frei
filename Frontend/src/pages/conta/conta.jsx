@@ -1,9 +1,9 @@
 import './conta.scss';
-import { Link, useNavigate } from "react-router-dom"; // Adicione useNavigate para redirecionamento
+import { Link, useNavigate } from "react-router-dom"; 
 import { useState, useEffect } from 'react';
 
 export default function ContaUsuario() {
-    const [usuario, setUsuario] = useState({}); // Estado para armazenar dados do usuário
+    const [usuario, setUsuario] = useState({}); 
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -12,7 +12,7 @@ export default function ContaUsuario() {
             setUsuario(JSON.parse(dadosUsuario));
         } else {
             alert('Você precisa fazer login primeiro!');
-            navigate('/login'); // Ajuste para sua rota de login
+            navigate('/login'); 
         }
     }, [navigate]);
 
@@ -20,8 +20,9 @@ export default function ContaUsuario() {
         <div className="container-conta">
             <header className="inicio">
                 <div className="container comeco">
-                    <div className="logo">Localiza<span>LivreSP</span></div>
+                    <div className="logoconta">Localiza<span>LivreSP</span></div>
                     <nav className="nave">
+                        <br />
                         <Link to="/Cultura">Cultura</Link>
                         <Link to="/Esporte">Esporte</Link>
                         <Link to="/Lazer">Lazer</Link>
@@ -30,7 +31,8 @@ export default function ContaUsuario() {
                     </nav>
                 </div>
             </header>
-            
+            <br />
+            <br />
             <div className="biografia">
                 <h2>Sua biografia</h2>
                 <h3>Nome de usuário <i className="fa-regular fa-pen-to-square icon-editar"></i></h3>
@@ -44,10 +46,11 @@ export default function ContaUsuario() {
             </div>
             <div className='sair-conta'>
                 <h3 onClick={() => {
-                    localStorage.removeItem('usuario'); // Remove dados ao sair
-                    navigate('/login'); // Redireciona para login
+                    localStorage.removeItem('usuario'); 
+                    navigate('/login'); 
                 }}>Sair da conta <i className="fa-solid fa-right-from-bracket icon-editar"></i></h3>
             </div>
+            <br />
         </div>
     );
 }

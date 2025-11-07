@@ -3,28 +3,28 @@ import './Esporte.scss';
 import { Link } from "react-router-dom";
 import { CiSearch } from "react-icons/ci";
 import Mapa from '../../components/Mapa.jsx';
+import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
+import Pesquisa from '../../components/Pesquisa.jsx';
+
 
 
 export default function Esporte() {
   const [pesquisa, setPesquisa] = useState('');
-  const [cep, setCep] = useState(''); // Estado separado para o CEP no mapa
+  const [cep, setCep] = useState(''); 
 
   const handleInputChange = (e) => setPesquisa(e.target.value);
-  const handleCepChange = (e) => setCep(e.target.value); // Handler para CEP
+  const handleCepChange = (e) => setCep(e.target.value); 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(`Texto pesquisado: ${pesquisa}`);
-    // Aqui você pode adicionar lógica para buscar resultados
   };
   const handleCepSubmit = (e) => {
     e.preventDefault();
     console.log(`CEP pesquisado: ${cep}`);
-    // Sugestão: Integre com API de mapas para atualizar o iframe dinamicamente
   };
 
   return (
     <div className='container-esporte'>
-      {/* Topo */}
       <header className="topo">
         <Link to='/' className='Link'> 
         <div className="logo">Localiza<span>LivreSP</span></div>
@@ -36,7 +36,6 @@ export default function Esporte() {
         </nav>
       </header>
 
-      {/* Imagem de fundo do topo */}
       <section
         className="hero esporte-hero"
         style={{ backgroundImage: `url(/assets/images/tenis.png)` }}
@@ -44,7 +43,6 @@ export default function Esporte() {
         <h1>Esportes</h1>
       </section>
 
-      {/* Descrição do esporte */}
       <section className="desc-esporte">
         <p>
           Encontre quadras públicas, centros esportivos, projetos sociais, parques e ONGs que oferecem atividades físicas e esportivas gratuitas. São aulas, treinos, jogos e eventos para todas as idades e níveis. Descubra locais perto de você e movimente-se de forma acessível, saudável e inclusiva!
@@ -56,7 +54,6 @@ export default function Esporte() {
         />
       </section>
 
-      {/* Barra de pesquisa */}
       <div className='containerPesquisa'>
         <section className="pesquisaEsporte">
           <form onSubmit={handleSubmit} className="searchForm">
@@ -117,12 +114,10 @@ export default function Esporte() {
       
 
 
-      {/* Clubes */}
       <section className="areaClubes">
         <h2>Clubes</h2>
 
         <div className="locais-grid">
-          {/* Esquerda */}
           <div className="coluna-esquerda">
             <div className="local-card grande">
               <a href='https://www.bing.com/maps/search?name=Clube+Escola+Santo+Amaro&trfc=&mepi=0%7E%7EEmbedded%7ELargeMapLink&FORM=MPSRPL&style=r&q=Clube+Escola+Santo+Amaro&ss=id.ypid%3AYN7993x2110695150883685952&ppois=-23.65450096130371_-46.71187973022461_Clube+Escola+Santo+Amaro&cp=-23.654501%7E-46.711880&lvl=16' target='blank'>
@@ -142,7 +137,6 @@ export default function Esporte() {
             </div>
           </div>
 
-          {/* Direita */}
           <div className="coluna-direita">
             <div className="local-card pequeno">
               <a href='https://www.bing.com/maps/search?name=Centro+Esportivo+Man%C3%A9+Garrincha&trfc=&mepi=0%7E%7EEmbedded%7ELargeMapLink&FORM=MPSRPL&style=r&q=Centro+Esportivo+Man%C3%A9+Garrincha&ss=id.ypid%3AYN7993x10007318974561949929&ppois=-23.598100662231445_-46.65359878540039_Centro+Esportivo+Man%C3%A9+Garrincha&cp=-23.598101%7E-46.653599&lvl=16' target='blank'>
@@ -179,7 +173,6 @@ export default function Esporte() {
         </div>
       </section>
 
-      {/* Mapa */}
       <main>
         <section className="containerPesquisaMapa">
           <h2>Veja locais próximos de você</h2>
@@ -212,23 +205,57 @@ export default function Esporte() {
         </section>
       </main>
 
-      {/* Rodapé */}
-      <footer className="rodapeEsporte">
-        <div className="container">
-          <div className="logo">Localiza<span>LivreSP</span></div>
-          <h4>Descubra cultura, lazer e esportes gratuitos em São Paulo</h4>
-          <p>© LocalizaLivreSP — Conectando a cidade.</p>
-        </div>
+      <footer className="rodapeE">
+  <div className="container-roda">
+    <div className="logo-roda">
+      Localiza<span>LivreSP</span>
+    </div>
 
-        <div className="button-container">
-          <Link to="/login-administrativo">
-            <button className="col">Painel administrativo</button>
-          </Link>
-          <Link to="/Desenvolvedores">
-            <button className="col">Colaboradores</button>
-          </Link>
-        </div>
-      </footer>
+    <p className="descricaoo">
+    <h4>Descubra cultura, lazer e esportes gratuitos em São Paulo</h4></p>
+
+    <div className="redes-sociaiss">
+      <a
+        href="https://www.instagram.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="icone"
+      >
+        <FaInstagram />
+      </a>
+      <a
+        href="https://www.facebook.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="icone"
+      >
+        <FaFacebook />
+      </a>
+      <a
+        href="https://www.tiktok.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="icone"
+      >
+        <FaTiktok />
+      </a>
+    </div>
+
+    <div className="button-container">
+            <Link to="/login-administrativo">
+              <button className="col">Painel administrativo</button>
+            </Link>
+            <Link to="/Desenvolvedores">
+              <button className="col">Colaboradores</button>
+            </Link>
+          </div>
+
+ 
+
+    <p className="copys">© {new Date().getFullYear()} LocalizaLivreSP — Conectando a cidade. — Todos os direitos reservados.</p>
+  </div>
+</footer>
+
     </div>
   );
 }
