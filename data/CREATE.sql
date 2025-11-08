@@ -20,4 +20,5 @@ CREATE TABLE contatos (
   mensagem TEXT
 );
 
+
 select * from tb_cadastro;

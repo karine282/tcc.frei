@@ -156,7 +156,7 @@ export default function Desenvolvedores() {
       
       <section className="parceriasdev">
         <h2>Nossas Parcerias</h2>
-        <p className="leadev">Empresas e organizações que apoiam nossa missão de conectar a comunidade a eventos gratuitos em São Paulo.</p>
+        <p className="leadev">Empresas e organizações que apoiam nossa missão de conectar a sua empresa ao mundo digital.</p>
         <div className="carouseldev">
           <div className="parceriasdev2">
             <div className="parceriadev">

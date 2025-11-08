@@ -30,11 +30,10 @@ export default function Lazer() {
       </header>
 
 
-      {/* Imagem de fundo do topo */}
       
       <section
         className="hero lazer-hero"
-        style={{ backgroundImage: `url(/assets/images/lazerbkg.jpg)` }}
+        style={{ backgroundImage: `url(/assets/images/lazer.png)` }}
       >
         <h1>Lazer</h1>
       </section>
@@ -50,7 +49,6 @@ export default function Lazer() {
         />
       </section>
 
-      {/* Barra de pesquisa */}
       <div className='containerPesquisa'>
         <section className="pesquisaEsporte">
           <form onSubmit={handleSubmit} className="searchForm">
@@ -108,12 +106,10 @@ export default function Lazer() {
           </div>
         </section>
       
-      {/* Locais */}
       <section className="locais">
         <h2>Locais</h2>
 
         <div className="locais-grid">
-          {/* Esquerda */}
           <div className="coluna-esquerda">
             <a href='https://prefeitura.sp.gov.br/meio_ambiente/w/parques/regiao_sul/5747' target="_blank">
             <div className="local-card grande">

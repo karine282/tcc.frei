@@ -3,10 +3,23 @@ import "./Cultura.scss";
 import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
+import BuscaCEP from "../../components/BuscaCEP.jsx";
+
 
 
 function Cultura() {
   const [pesquisa, setPesquisa] = useState("");
+  const [bairro, setBairro] = useState("");
+
+  const locaisCulturais = [
+  { nome: "Centro Cultural São Paulo", bairro: "Liberdade" },
+  { nome: "Museu do Ipiranga", bairro: "Ipiranga" },
+  { nome: "Biblioteca Mário de Andrade", bairro: "República" },
+  { nome: "Casa das Rosas", bairro: "Bela Vista" },
+  { nome: "Casa de Cultura do Butantã", bairro: "Butantã" },
+];
+
+
 
   const handleInputChange = (e) => {
     setPesquisa(e.target.value);
@@ -35,15 +48,13 @@ function Cultura() {
         </nav>
       </header>
 
-      {/* HERO */}
       <section
         className="hero cultura-hero"
-        style={{ backgroundImage: `url(/assets/images/cultura.png)` }}
+        style={{ backgroundImage: `url(/assets/images/cul.jpg)` }}
       >
         <h1>Locais Culturais</h1>
       </section>
 
-      {/* DESCRIÇÃO */}
       <section className="desc-cultura">
         <p>
           Explore centros culturais, museus, bibliotecas, teatros, casas de cultura e projetos comunitários que promovem arte, conhecimento e criatividade de forma acessível. Descubra oficinas, exposições, apresentações e eventos gratuitos ou de baixo custo perto de você. Conecte-se com a cultura, aprenda algo novo e viva experiências enriquecedoras para todas as idades!
@@ -56,24 +67,24 @@ function Cultura() {
         />
       </section>
 
-      {/* PESQUISA */}
-      <div className="containerPesquisa">
-        <section className="pesquisaCultura">
-          <form className="searchForm" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              placeholder="Buscar por nome, categoria, bairro ou atividade..."
-              value={pesquisa}
-              onChange={handleInputChange}
-              className="searchInput"
-              aria-label="Campo de busca por locais culturais"
-            />
-            <button type="submit" className="searchButton" aria-label="Buscar">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-          </form>
-        </section>
-      </div>
+    <section className="pesquisaCultura">
+  <form onSubmit={handleSubmit} className="searchForm">
+    <input
+      type="text"
+      placeholder="Buscar por nome, categoria, bairro ou atividade..."
+      value={pesquisa}
+      onChange={handleInputChange}
+      className="searchInput"
+      aria-label="Campo de busca por locais culturais"
+    />
+    <button type="submit" className="searchButton">
+      <i className="fa-solid fa-magnifying-glass"></i>
+    </button>
+  </form>
+
+
+</section>
+
 
    <section className="parques">
          
@@ -207,21 +218,31 @@ function Cultura() {
           <h2>Veja locais próximos de você</h2>
           <div className="containerPesquisaMapa">
             <section className="pesquisaCulturaMapa">
-              <form onSubmit={handleSubmit} className="searchForm">
-                <input
-                  type="text"
-                  placeholder="CEP"
-                  value={pesquisa}
-                  onChange={handleInputChange}
-                  className="searchInput"
-                  aria-label="Campo para inserir CEP e buscar locais próximos"
-                />
-                <button type="submit" className="searchButton" aria-label="Buscar por CEP">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-              </form>
+             
+              <BuscaCEP onEnderecoEncontrado={(bairroEncontrado) => setBairro(bairroEncontrado)} />
+
+{bairro && (
+  <div className="resultado-bairro">
+   
+    <ul>
+      {locaisCulturais
+        .filter((local) =>
+          local.bairro.toLowerCase() === bairro.toLowerCase()
+        )
+        .map((local) => (
+          <li key={local.nome}>{local.nome}</li>
+        ))}
+    </ul>
+
+   
+  </div>
+)}
+
             </section>
           </div>
+
+          <br />
+          <br />
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.385218520387!2d-46.6623393850227!3d-23.590475184667895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c2d6a9b6bb%3A0x67b198b8f4cdbb!2sAvenida%20Paulista!5e0!3m2!1spt-BR!2sbr!4v1234567890"
             width="100%"
@@ -233,15 +254,16 @@ function Cultura() {
           ></iframe>
         </section>
       </main>
-
+<br /><br /><br /> 
       <footer className="rodapeC">
   <div className="container-roda">
     <div className="logo-roda">
       Localiza<span>LivreSP</span>
     </div>
 
-    <p className="descricaoo">
-    <h4>Descubra cultura, lazer e esportes gratuitos em São Paulo</h4></p>
+  <div className="descricaoo">
+  <h4>Descubra cultura, lazer e esportes gratuitos em São Paulo</h4>
+</div>
 
     <div className="redes-sociaiss">
       <a
