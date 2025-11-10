@@ -80,7 +80,6 @@
 
 .info-comeco {
   height: 520px;
-  background-image: url('https://cdn.pixabay.com/photo/2020/09/18/03/28/people-5580755_1280.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -97,8 +96,12 @@
 .parte1 {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(48, 48, 48, 0.35) 10%, rgba(43, 43, 43, 0.6) 70%);
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
 }
+
 
 .hero-content {
   position: relative;

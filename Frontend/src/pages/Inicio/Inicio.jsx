@@ -18,7 +18,13 @@ function Inicio() {
       </header>
       <main>
         <section className="">
-          <div className="parte1">
+          <div className="parte1" style={{
+            backgroundImage: `linear-gradient(180deg, rgba(48,48,48,0.35) 10%, rgba(43,43,43,0.6) 70%), url('https://cdn.pixabay.com/photo/2020/09/18/03/28/people-5580755_1280.jpg')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            height: '100vh'
+          }}>
+
           </div>
           <div className="container hero-content">
             <h1>Bem-vindo ao melhor <span>GUIA DE EVENTOS</span> culturais da Cidade de São Paulo!</h1>
@@ -186,21 +192,21 @@ function Inicio() {
               target="_blank"
               rel="noopener noreferrer"
               className="icones"
-              >
+            >
             </a>
             <a
               href="https://www.facebook.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="icones"
-              >
+            >
             </a>
             <a
               href="https://www.tiktok.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="icones"
-              >
+            >
             </a>
           </div>
 
@@ -217,7 +223,7 @@ function Inicio() {
           <p>© LocalizaLivreSP — Conectando a cidade.</p>
         </div>
       </footer>
-              </div>
+    </div>
   )
 }
 
