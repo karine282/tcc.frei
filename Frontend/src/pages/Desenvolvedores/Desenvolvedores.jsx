@@ -6,6 +6,36 @@ import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
 
 
 export default function Desenvolvedores() {
+
+    // Função para enviar o formulário
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const nome = e.target.nome.value;
+    const email = e.target.email.value;
+    const mensagem = e.target.mensagem.value;
+
+    try {
+      const response = await fetch("http://localhost:5000/api/contato", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ nome, email, mensagem }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert("validado " + data.mensagem);
+        e.target.reset();
+      } else {
+        alert("erro" + data.erro);
+      }
+    } catch (erro) {
+      alert("Erro ao enviar: " + erro.message);
+    }
+  };
+
+
   return (
     <div className="container-sobre">
       <div className="headerr">
@@ -126,7 +156,7 @@ export default function Desenvolvedores() {
       
       <section className="parceriasdev">
         <h2>Nossas Parcerias</h2>
-        <p className="leadev">Empresas e organizações que apoiam nossa missão de conectar a comunidade a eventos gratuitos em São Paulo.</p>
+        <p className="leadev">Empresas e organizações que apoiam nossa missão de conectar a sua empresa ao mundo digital.</p>
         <div className="carouseldev">
           <div className="parceriasdev2">
             <div className="parceriadev">
@@ -142,7 +172,7 @@ export default function Desenvolvedores() {
               <h3>Contabilizei Escritório de Contabilidade</h3>
             </div>
             <div className="parceriadev">
-              <a href=" https://www.wework.com/pt-BR"><img src="assets/images/PARdev4.svg" /></a>
+              <a href=" https://www.wework.com/pt-BR"><img src="assets/images/WeWork.png" /></a>
               <h3>wework </h3>
             </div>
           

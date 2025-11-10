@@ -5,32 +5,32 @@ import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
 function Sobre() {
   return (
     <>
-      <main className="sobre-main">
-       
-        <section className="sobre-hero">
-          <div className="container">
-            <h1>Sobre o Localiza<span>LivreSP</span></h1>
-            <p>
-              Conectando você às melhores atividades gratuitas e
-             acessíveis em São Paulo.
+      <main className="sobre-mainn">
+        <section className="sobre-heroo">
+          <div className="containerso">
+            <h1 className="titulo-sobre">
+            Localiza<span className="logo-sobre">LivreSP</span>
+            </h1>
+            <p className="descricao-sobre">
+              Conectando você às melhores atividades gratuitas e acessíveis em São Paulo.
             </p>
           </div>
         </section>
 
-        <section className="sobre-content container">
-          <div className="section">
+        <section className="sobre-contente container">
+          <div className="sectionsobre">
             <h2><span>Nossa Missão</span></h2>
             <p>
               O <span>LocalizaLivreSP</span> é o seu <span>guia definitivo</span> para
               descobrir <span>eventos culturais</span>, <span>esportivos</span> e de
               <span> lazer gratuitos</span> na cidade de <span>São Paulo</span>.
               <br />
-              <span>Nosso objetivo</span> é <span>promover o acesso à cultura, ao esporte e ao lazer</span> para todas as famílias,
-              facilitando a localização de atividades que enriquecem a vida urbana.
+              <span>Nosso objetivo</span> é <span>promover o acesso à cultura, ao esporte e ao lazer</span> 
+              para todas as famílias, facilitando a localização de atividades que enriquecem a vida urbana.
             </p>
           </div>
 
-          <div className="section">
+          <div className="sectionsobre">
             <h2><span>O que Oferecemos</span></h2>
             <ul>
               <li><strong>Eventos Culturais:</strong> Exposições, shows, teatros e muito mais em espaços públicos.</li>
@@ -38,7 +38,6 @@ function Sobre() {
               <li><strong>Lazer ao Ar Livre:</strong> Parques, feiras e passeios familiares.</li>
               <li><strong>Informações Atualizadas:</strong> Dados precisos sobre horários, locais e acessibilidade.</li>
             </ul>
-
             <p>
               A cidade de <span>São Paulo</span> oferece uma <span>infinidade de oportunidades</span> para se
               <span> divertir e aprender</span> sem gastar muito. Aqui, você encontra tudo isso de forma
@@ -46,7 +45,7 @@ function Sobre() {
             </p>
           </div>
 
-          <div className="section">
+          <div className="sectionsobre">
             <h2><span>Nossa História</span></h2>
             <p>
               Fundado em <span>2020</span> por um grupo de entusiastas da <span>cultura paulistana</span>, o
@@ -59,7 +58,7 @@ function Sobre() {
             </p>
           </div>
 
-          <div className="section">
+          <div className="sectionsobre">
             <h2><span>Nossa Equipe</span></h2>
             <p>
               Nossa equipe é formada por <span>apaixonados por São Paulo</span>: designers urbanos,
@@ -72,7 +71,7 @@ function Sobre() {
             </p>
           </div>
 
-          <div className="section">
+          <div className="sectionsobre">
             <h2><span>Impacto na Comunidade</span></h2>
             <p>
               Desde o lançamento, o <span>LocalizaLivreSP</span> já impactou
@@ -84,7 +83,7 @@ function Sobre() {
             </p>
           </div>
 
-          <div className="section">
+          <div className="sectionsobre">
             <h2><span>Planos Futuros</span></h2>
             <p>
               Planejamos expandir o <span>LocalizaLivreSP</span> com <span>mapas interativos</span>,
@@ -99,14 +98,16 @@ function Sobre() {
       </main>
 
       <footer className="rodape">
-        <div className="container">
-          <div className="logo">
+        <div className="container-roda">
+          <div className="logoo-rodape">
             Localiza<span>LivreSP</span>
           </div>
 
-          <h4>Descubra cultura, lazer e esportes gratuitos em São Paulo</h4>
+          <h4 className="descricaoo">
+            Descubra <span>cultura</span>, <span>lazer</span> e <span>esportes gratuitos</span> em <span>São Paulo</span>
+          </h4>
 
-          <div className="redes">
+          <div className="redes-sociaiss">
             <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="icones">
               <FaInstagram />
             </a>
@@ -122,13 +123,14 @@ function Sobre() {
             <Link to="/login-administrativo">
               <button className="col">Painel administrativo</button>
             </Link>
-
             <Link to="/Desenvolvedores">
               <button className="col">Colaboradores</button>
             </Link>
           </div>
 
-          <p>© LocalizaLivreSP — Conectando a cidade.</p>
+          <p className="copys">
+            © {new Date().getFullYear()} DevPaulista — Todos os direitos reservados.
+          </p>
         </div>
       </footer>
     </>

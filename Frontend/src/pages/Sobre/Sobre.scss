@@ -6,86 +6,73 @@
   box-sizing: border-box;
 }
 
-.container {
+.containerso {
   width: 90%;
   max-width: 1800px;
   font-family: 'Poppins', sans-serif;
+  position: relative;
+  z-index: 2;
+  text-align: center;
 }
 
 
-.sobre-header .logo {
-  color: white;
-  font-weight: 800;
-  padding: 6px 10px;
-  border-radius: 6px;
-
-}
-
-.sobre-header span {
-  color: #0a7737;
-  font-weight: 1000;
-}
-
-.sobre-header .nave a {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.sobre-main {
-  margin-top: 80px; 
-}
-
-.sobre-hero {
-  height: 300px;
+.sobre-heroo {
+  height: 350px;
   background-image: url('/assets/images/sub.jpg');
-  margin-top: -80px;
   background-size: cover;
   background-position: center;
   position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
   color: white;
+  text-align: center;
+  overflow: hidden;
 }
 
-.sobre-hero::before {
+.sobre-heroo::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(48, 48, 48, 0.35) 10%, rgba(43, 43, 43, 0.6) 70%);
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
 }
 
-.sobre-hero .container {
-  position: relative;
-  text-align: center;
+.titulo-sobre {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-family: 'Poppins', sans-serif;
+
 }
 
-.sobre-hero h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-  font-weight: 800;
+.logo-sobre {
+  color: #0a7737;
 }
 
-.sobre-hero p {
-  font-size: 1.2em;
+.descricao-sobre {
+  font-size: 1.3rem;
+  margin-top: 10px;
   opacity: 0.95;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
 }
 
-.sobre-content {
+.sobre-contente {
   padding: 60px 20px;
   background-color: #f2f2f2;
   text-align: center;
 }
 
-.sobre-content h2 {
+.sobre-contente h2 {
   color: #055353;
   font-size: 2em;
   margin-bottom: 20px;
   position: relative;
+  font-family: "Outfit", sans-serif;
 }
 
-.sobre-content h2::after {
+.sobre-contente h2::after {
   content: '';
   position: absolute;
   bottom: -10px;
@@ -97,7 +84,7 @@
   border-radius: 2px;
 }
 
-.sobre-content p {
+.sobre-contente p {
   max-width: 800px;
   margin: 0 auto 20px;
   font-size: 1.1em;
@@ -105,7 +92,7 @@
   color: #333;
 }
 
-.sobre-content ul {
+.sobre-contente ul {
   list-style: none;
   padding: 0;
   max-width: 800px;
@@ -117,7 +104,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.sobre-content li {
+.sobre-contente li {
   margin-bottom: 10px;
   font-size: 1.1em;
   color: #333333;
@@ -125,76 +112,84 @@
   border-bottom: 1px solid #eee;
 }
 
-.sobre-content li:last-child {
+.sobre-contente li:last-child {
   border-bottom: none;
 }
 
-.sobre-content li strong {
+.sobre-contente li strong {
   color: #00695c;
 }
 
-.sobre-content .section {
+.sectionsobre {
   margin-bottom: 40px;
   background-color: #fff;
   border-radius: 15px;
   padding: 30px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: "Poppins", sans-serif;
 }
 
-.sobre-content .section:hover {
+.sectionsobre:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-.sobre-content .section h2 {
-  margin-bottom: 15px;
-}
-
-.sobre-content .section p {
-  margin-bottom: 0;
-}
-
-.sobre {
-  background-color: #000000;
+.rodape {
+  background: #022b27;
   color: #fff;
+  padding: 50px 0;
   text-align: center;
-  padding: 2rem 0;
+  font-family: "Poppins", sans-serif;
 
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+  .container-roda {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
 
+  .logoo-rodape {
+    font-size: 2rem;
+    font-weight: 700;
     span {
       color: #0a7737;
     }
   }
 
-  h4 {
-    margin: 1rem 0;
-    font-weight: 400;
+  .descricaoo {
+    margin: 15px auto 30px;
+    font-size: 1rem;
+    max-width: 600px;
+    line-height: 1.6;
+    color: #ccc;
+    font-family: "Outfit", sans-serif;
   }
 
-  .redes {
-    margin: 1rem 0;
+  .redes-sociaiss {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 20px;
+    margin-bottom: 30px;
 
     .icones {
-      color: #fff;
       font-size: 1.8rem;
-      transition: 0.3s;
-
+      color: #fdfdfd;
+      transition: transform 0.3s, color 0.3s;
       &:hover {
-        color: #0a7737;
-        transform: scale(1.1);
+        transform: scale(1.2);
+        color: #09b46a;
       }
     }
   }
 
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
 
-  .cola {
+  .col {
     background: #ffffff;
     color: #0a7737;
     border: none;
@@ -202,37 +197,27 @@
     border-radius: 6px;
     cursor: pointer;
     transition: 0.3s;
-    margin-left: 80%;
-
     &:hover {
       background: #fff;
       color: #111;
     }
   }
 
-  p {
-    margin-top: 1rem;
+  .copys {
     font-size: 0.9rem;
-    opacity: 0.8;
+    color: #777;
+    margin-top: 20px;
   }
 }
 
 @media (max-width: 900px) {
-  .sobre-hero h1 {
-    font-size: 2em;
-  }
-
-  .sobre-content {
-    padding: 40px 20px;
+  .titulo-sobre {
+    font-size: 2.3rem;
   }
 }
 
 @media (max-width: 600px) {
-  .sobre-hero h1 {
-    font-size: 1.8em;
-  }
-
-  .sobre-content h2 {
-    font-size: 1.5em;
+  .titulo-sobre {
+    font-size: 1.8rem;
   }
 }

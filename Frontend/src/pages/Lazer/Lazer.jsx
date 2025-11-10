@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import './Lazer.scss';
 import { Link } from "react-router-dom";
+import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
+
 
 
 export default function Lazer() {
@@ -28,11 +30,10 @@ export default function Lazer() {
       </header>
 
 
-      {/* Imagem de fundo do topo */}
       
       <section
         className="hero lazer-hero"
-        style={{ backgroundImage: `url(/assets/images/lazerbkg.jpg)` }}
+        style={{ backgroundImage: `url(/assets/images/lazer.png)` }}
       >
         <h1>Lazer</h1>
       </section>
@@ -48,7 +49,6 @@ export default function Lazer() {
         />
       </section>
 
-      {/* Barra de pesquisa */}
       <div className='containerPesquisa'>
         <section className="pesquisaEsporte">
           <form onSubmit={handleSubmit} className="searchForm">
@@ -66,14 +66,50 @@ export default function Lazer() {
         </section>
       </div>
 
+         <section className="parques">
+          
+          <div className="cartoes">
+            <article className="cartao">
+              <a href='https://www.parquedoibirapuera.org/' className='link-categorias'>
+                <img src="https://i.pinimg.com/736x/b1/58/46/b1584660ec016e5fbad337b0061b9b39.jpg" alt="Parque 1" />
+                <h3>Parque do Ibirapuera</h3>
+                <p>Ótimo para caminhadas e piqueniques. Entrada gratuita.</p>
+              </a>
+            </article>
+
+            <article className="cartao">
+              <a href='https://prefeitura.sp.gov.br/web/meio_ambiente/w/parques/regiao_sul/5747' className='link-categorias'>
+
+                <img src="https://i.pinimg.com/1200x/bc/6b/11/bc6b1167e29bbf927e5a380c8a4113b0.jpg" alt="Parque 2" />
+                <h3>Parque  Indepencia</h3>
+                <p>Eventos culturais, exposições e muito espaço para atividades.</p>
+              </a>
+            </article>
+
+            <article className="cartao">
+              <a href='https://parquevillalobos.com.br/' className='link-categorias'>
+
+                <img src="https://i.pinimg.com/1200x/17/7a/bc/177abc0fd9ecac38ac42937f7d2dbb29.jpg" alt="Parque 3" />
+                <h3>Parque Villa-Lobos</h3>
+                <p>Área esportiva e pistas de corrida — ideal para famílias.</p>
+              </a>
+            </article>
+
+            <article className="cartao">
+              <a href='https://www.parqueecologicodotiete.com.br/' className='link-categorias'>
+                <img src="https://www.parqueecologicodotiete.com.br/content-wp/uploads/2017/08/parque-ecologico-tiete-peda.jpg" alt="Parque 4" />
+                <h3>parque ecologico tiete</h3>
+                <p>  Trilhas, ciclovia, quadras, campos, pedalinho, playgrounds, lanchonetes, CRAS e museu .</p>
+              </a>
+            </article>
+
+          </div>
+        </section>
       
-      
-      {/* Locais */}
       <section className="locais">
         <h2>Locais</h2>
 
         <div className="locais-grid">
-          {/* Esquerda */}
           <div className="coluna-esquerda">
             <a href='https://prefeitura.sp.gov.br/meio_ambiente/w/parques/regiao_sul/5747' target="_blank">
             <div className="local-card grande">
@@ -162,23 +198,56 @@ export default function Lazer() {
         </section>
       </main>
 
-      {/* Rodapé */}
-      <footer className="rodapeLazer">
-        <div className="container">
-          <div className="logo">Localiza<span>LivreSP</span></div>
-          <h4>Descubra cultura, lazer e esportes gratuitos em São Paulo</h4>
-          <p>© LocalizaLivreSP — Conectando a cidade.</p>
-        </div>
-        <div className="button-container">
+      <footer className="rodapeL">
+  <div className="container-roda">
+    <div className="logo-roda">
+      Localiza<span>LivreSP</span>
+    </div>
+
+    <p className="descricaoo">
+    <h4>Descubra cultura, lazer e esportes gratuitos em São Paulo</h4></p>
+
+    <div className="redes-sociaiss">
+      <a
+        href="https://www.instagram.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="icone"
+      >
+        <FaInstagram />
+      </a>
+      <a
+        href="https://www.facebook.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="icone"
+      >
+        <FaFacebook />
+      </a>
+      <a
+        href="https://www.tiktok.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="icone"
+      >
+        <FaTiktok />
+      </a>
+    </div>
+
+    <div className="button-container">
             <Link to="/login-administrativo">
               <button className="col">Painel administrativo</button>
             </Link>
-
             <Link to="/Desenvolvedores">
               <button className="col">Colaboradores</button>
             </Link>
           </div>
-      </footer>
+
+ 
+
+    <p className="copys">© {new Date().getFullYear()} LocalizaLivreSP — Conectando a cidade. — Todos os direitos reservados.</p>
+  </div>
+</footer>
             </div>
     </>
   );

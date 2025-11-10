@@ -6,38 +6,33 @@ import api from "../../api";
 export default function Login() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
-  const [mensagem, setMensagem] = useState(""); // Para mostrar erros ou sucesso
+  const [mensagem, setMensagem] = useState("");
   const navigate = useNavigate(); 
 
   const handleLogin = async (e) => {
     e.preventDefault();
 
     try {
-      // Chama a API de login
       const resposta = await api.post("/login", { email, senha });
 
       console.log("Resposta da API:", resposta.data);
 
-      // Exibe mensagem de sucesso
       setMensagem(resposta.data.mensagem);
 
-      // Salva os dados completos no localStorage (incluindo id, nome, email, cep, genero e token)
       localStorage.setItem("usuario", JSON.stringify({
         id: resposta.data.id,
         nome: resposta.data.nome,
         email: resposta.data.email,
-        cep: resposta.data.cep,  // Adicionado: CEP
-        genero: resposta.data.genero,  // Adicionado: Gênero
+        cep: resposta.data.cep,  
+        genero: resposta.data.genero,  
         token: resposta.data.token,
       }));
 
-      // Redireciona para a página de conta
       navigate("/conta"); 
 
     } catch (erro) {
       console.error("Erro ao logar:", erro.response?.data || erro.message);
 
-      // Mostra a mensagem de erro retornada pelo backend
       setMensagem(erro.response?.data?.erro || "Erro ao logar. Tente novamente.");
     }
   };
@@ -47,6 +42,9 @@ export default function Login() {
       <div className="login-esquerda">
         <h1>Seja bem-vindo de volta!</h1>
         <p>faça login para continuar</p>
+        <p>ou</p>
+        <br />
+        <button className="entrar"><Link to='/' className="link">Entrar sem cadastro</Link></button>
       </div>
 
       <div className="login-direita">
@@ -74,7 +72,7 @@ export default function Login() {
           <p className="link">
             não tem uma conta? <Link to="/Cadastro">Criar</Link>
           </p>
-          <Link to='/' className="link">Entrar sem cadastro</Link>
+        
 
         </form>
       </div>

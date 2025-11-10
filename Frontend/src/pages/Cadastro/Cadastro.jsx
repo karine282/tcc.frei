@@ -37,7 +37,6 @@ export default function Cadastro() {
 
     return (
         <div className="container-cadastro">
-            {/* Inputs agora ficam à esquerda */}
             <div className="cadastro-esquerda">
                 <h2 className="logo">Localiza<span>LivreSP</span></h2>
 
@@ -72,13 +71,7 @@ export default function Cadastro() {
                         value={cep}
                         onChange={(e) => setCep(e.target.value)}
                     />
-                    <input
-                        type="password"
-                        className="input-cadastro"
-                        placeholder="senha"
-                        value={senha}
-                        onChange={(e) => setSenha(e.target.value)}
-                    />
+                    <input type="password"  className="input-cadastro"  placeholder="senha" value={senha}onChange={(e) => setSenha(e.target.value)} />
 
                     <button type="submit">Criar</button>
                     {mensagem && <p className="mensagem">{mensagem}</p>}
@@ -88,15 +81,16 @@ export default function Cadastro() {
                     </p>
 
                     
-                        <Link to='/' className="link">Entrar sem cadastro</Link>
                     
                 </form>
             </div>
 
             <div className="cadastro-direita">
-                <img src="assets/images/login.jpg" alt="" />
                 <h1>Seja bem-vindo!</h1>
                 <p>crie uma conta para melhor experiência</p>
+                <br />
+                        <button className="entrar"><Link to='/' className="link">Entrar sem cadastro</Link></button>
+
             </div>
         </div>
     );
