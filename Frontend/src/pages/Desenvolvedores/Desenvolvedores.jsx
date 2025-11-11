@@ -47,7 +47,7 @@ export default function Desenvolvedores() {
           muted
           playsInline
         ></video>
-        <h1 className="empresa">Dev<span className="typing">Paulista</span>
+        <h1 className="empresa">Localiza<span className="typing">LivreSP</span>
         </h1>
 
       </div>
