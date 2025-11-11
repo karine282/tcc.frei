@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './Lazer.scss';
 import { Link } from "react-router-dom";
 import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
-
+import BuscaCEP from "../../components/BuscaCEP.jsx";
 
 
 export default function Lazer() {
@@ -17,7 +17,6 @@ export default function Lazer() {
   return (
     <><div className='container-lazer'>
 
-      {/* Topo */}
       <header className="topo">
         <Link to='/' className='Link'>
         <div className="logo">Localiza<span>LivreSP</span></div>
@@ -132,7 +131,6 @@ export default function Lazer() {
             </div>
           </div>
 
-          {/* Direita */}
           <div className="coluna-direita">
             <div className="local-card pequeno">
               <a href='https://www.sesc.com.br/unidade/sesc-belenzinho/' target="_blank">
@@ -167,26 +165,33 @@ export default function Lazer() {
         </div>
       </section>
 
-      {/* Mapa */}
       <main>
-        <section className="containerPesquisaMapa">
-          <h2>Veja lugares mais proximos de você!</h2>
-          <div className='containerPesquisaMapa'>
-            <section className="pesquisaEsporteMapa">
-              <form onSubmit={handleSubmit} className="searchForm">
-                <input
-                  type="text"
-                  placeholder="CEP"
-                  value={pesquisa}
-                  onChange={handleInputChange}
-                  className="searchInput"
-                  />
-                <button type="submit" className="searchButton">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-              </form>
-            </section>
-          </div>
+         <section className="containerPesquisaMapa">
+                         <h2>Veja locais próximos de você</h2>
+                         <div className="containerPesquisaMapa">
+                           <section className="pesquisaCulturaMapa">
+                            
+                             <BuscaCEP onEnderecoEncontrado={(bairroEncontrado) => setBairro(bairroEncontrado)} />
+               
+               {bairro && (
+                 <div className="resultado-bairro">
+                  
+                   <ul>
+                     {locaisCulturais
+                       .filter((local) =>
+                         local.bairro.toLowerCase() === bairro.toLowerCase()
+                       )
+                       .map((local) => (
+                         <li key={local.nome}>{local.nome}</li>
+                       ))}
+                   </ul>
+               
+                  
+                 </div>
+               )}
+               
+                           </section>
+                         </div>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.385218520387!2d-46.6623393850227!3d-23.590475184667895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c2d6a9b6bb%3A0x67b198b8f4cdbb!2sAvenida%20Paulista!5e0!3m2!1spt-BR!2sbr!4v1234567890"
             width="100%"
