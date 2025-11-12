@@ -1,17 +1,14 @@
-import con from "./conection.js";
+import con from "./Conection.js";
 
 class EnderecoRepository {
   async verificarCEP(cep) {
-    return new Promise((resolve, reject) => {
-      const query = 'SELECT ds_existe FROM tb_ceps WHERE cep = ?';
-      con.query(query, [cep], (err, results) => {
-        if (err) {
-          reject(err);
-        } else {
-          resolve(results.length > 0 && results[0].ds_existe === 1);
-        }
-      });
-    });
+    const results = await con.query('SELECT cep FROM tb_ceps WHERE cep = ? LIMIT 1', [cep]);
+
+    if (Array.isArray(results) && Array.isArray(results[0]) && results[0].length > 0) {
+      return true;
+    }
+
+    return false;
   }
 }
 

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import './Cadastro.scss';
 import api from "../../api";
 
@@ -11,6 +11,8 @@ export default function Cadastro() {
     const [cep, setCep] = useState("");
     const [senha, setSenha] = useState("");
     const [mensagem, setMensagem] = useState("");
+    const navigate = useNavigate();
+
 
     const handleCadastro = async (e) => {
         e.preventDefault();
@@ -24,7 +26,7 @@ export default function Cadastro() {
                 senha
             });
 
-            alert(" Cadastro realizado com sucesso!");
+            navigate("/");
             console.log("Resposta da API:", resposta.data);
         } catch (erro) {
             console.error("Erro ao cadastrar:", erro.response?.data || erro.message);
@@ -71,7 +73,7 @@ export default function Cadastro() {
                         value={cep}
                         onChange={(e) => setCep(e.target.value)}
                     />
-                    <input type="password"  className="input-cadastro"  placeholder="senha" value={senha}onChange={(e) => setSenha(e.target.value)} />
+                    <input type="password" className="input-cadastro" placeholder="senha" value={senha} onChange={(e) => setSenha(e.target.value)} />
 
                     <button type="submit">Criar</button>
                     {mensagem && <p className="mensagem">{mensagem}</p>}
@@ -80,8 +82,8 @@ export default function Cadastro() {
                         já tem uma conta? <Link to="/login">Entrar</Link>
                     </p>
 
-                    
-                    
+
+
                 </form>
             </div>
 
@@ -89,7 +91,7 @@ export default function Cadastro() {
                 <h1>Seja bem-vindo!</h1>
                 <p>crie uma conta para melhor experiência</p>
                 <br />
-                        <button className="entrar"><Link to='/' className="link">Entrar sem cadastro</Link></button>
+                <button className="entrar"><Link to='/' className="link">Entrar sem cadastro</Link></button>
 
             </div>
         </div>
