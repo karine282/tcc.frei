@@ -1,7 +1,7 @@
 import express from 'express';
+import con from "../Repository/Conection.js"
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import con from "../Repository/Conection.js"
 import { validarNovoCadastro, validarUsuarioDuplicado, validarCamposObrigatorios } from '../validation/cadastro/cadastroValidation.js'
 import { buscarCadastroPorId } from "../Repository/cadastroRepository.js";
 

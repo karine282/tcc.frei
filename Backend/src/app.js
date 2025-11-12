@@ -3,9 +3,6 @@ import "dotenv/config.js";
 import dotenv from 'dotenv';
 import express from 'express';
 import cors from 'cors';
-import con from "./Repository/Conection.js";
-import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
 import adicionarRotas from "./Rotas.js";
 import ContatoController from "./Controller/ContatoController.js";
 
