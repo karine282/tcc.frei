@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import './Esporte.scss';
 import { Link } from "react-router-dom";
-import { CiSearch } from "react-icons/ci";
-import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
 import BuscaCEPEsporte from '../../components/BuscaCEPEsporte';
 
 
@@ -96,7 +94,6 @@ export default function Esporte() {
         />
       </section>
 
-      <div className='containerPesquisa'>
         <section className="pesquisaEsporte">
           <form onSubmit={handleSubmit} className="searchForm">
             <input
@@ -138,7 +135,6 @@ export default function Esporte() {
             </div>
           )}
         </section>
-      </div>
 
 
       <section className="parques">
@@ -289,33 +285,6 @@ export default function Esporte() {
 
           <p className="descricaoo">
             <h4>Descubra cultura, lazer e esportes gratuitos em São Paulo</h4></p>
-
-          <div className="redes-sociaiss">
-            <a
-              href="https://www.instagram.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="icone"
-            >
-              <FaInstagram />
-            </a>
-            <a
-              href="https://www.facebook.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="icone"
-            >
-              <FaFacebook />
-            </a>
-            <a
-              href="https://www.tiktok.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="icone"
-            >
-              <FaTiktok />
-            </a>
-          </div>
 
           <div className="button-container">
             <Link to="/login-administrativo">

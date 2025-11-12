@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Cultura.scss";
 import { useState } from "react";
-import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
 import BuscaCEP from "../../components/BuscaCEPCultura.jsx";
 
 
@@ -131,56 +130,56 @@ function Cultura() {
         )}
       </section>
 
-  <section className="populares">
-          <h2>Mais populares</h2>
-          <p className="leadpopu">veja aqui os lugares culturais mais frenquentados da cidade.</p>
+      <section className="populares">
+        <h2>Mais populares</h2>
+        <p className="leadpopu">veja aqui os lugares culturais mais frenquentados da cidade.</p>
 
-          <div className="cartoes">
-            <article className="cartao">
-              <a href='https://www.masp.com.br/' className='link-categorias'>
-                <img src="assets/images/masp.webp" />
-                <h3> Museu de Arte de SP </h3>
-                <p>Localização: Av. Paulista, 1578 – Bela Vista, São Paulo, SP.
-                  Verifique os dias de gratuidade.</p>
-              </a>
-            </article>
+        <div className="cartoes">
+          <article className="cartao">
+            <a href='https://www.masp.com.br/' className='link-categorias'>
+              <img src="assets/images/masp.webp" />
+              <h3> Museu de Arte de SP </h3>
+              <p>Localização: Av. Paulista, 1578 – Bela Vista, São Paulo, SP.
+                Verifique os dias de gratuidade.</p>
+            </a>
+          </article>
 
-            <article className="cartao">
-              <a href='https://museuafrobrasil.org.br/' className='link-categorias'>
+          <article className="cartao">
+            <a href='https://museuafrobrasil.org.br/' className='link-categorias'>
 
-                <img src="assets/images/AFRO.jpg" />
-                <h3>Museu Afro Brasil </h3>
-                <p>Localização:Parque Ibirapue
-                  ra, portão 10.
-                  Quartas-feiras
-                </p>
-              </a>
-            </article>
+              <img src="assets/images/AFRO.jpg" />
+              <h3>Museu Afro Brasil </h3>
+              <p>Localização:Parque Ibirapue
+                ra, portão 10.
+                Quartas-feiras
+              </p>
+            </a>
+          </article>
 
-            <article className="cartao">
-              <a href='https://parquevillalobos.com.br/' className='link-categorias'>
-                <img src="assets/images/ipiranga.jpg" />
+          <article className="cartao">
+            <a href='https://parquevillalobos.com.br/' className='link-categorias'>
+              <img src="assets/images/ipiranga.jpg" />
 
-                <h3>Museu do Ipiranga  </h3>
-                <p>Localização:Rua dos Patriotas, 100.
-                  Quartas-feiras; 1º domingo do mês; feriados:25/1 e 7/9.
-                </p>
-              </a>
-            </article>
+              <h3>Museu do Ipiranga  </h3>
+              <p>Localização:Rua dos Patriotas, 100.
+                Quartas-feiras; 1º domingo do mês; feriados:25/1 e 7/9.
+              </p>
+            </a>
+          </article>
 
-            <article className="cartao">
-              <a href='https://pinacoteca.org.br/' className='link-categorias'>
-                <img src="assets/images/pinaco.jfif" />
-                <h3>Pinacoteca do Estado</h3>
-                <p>Localização:Praça da Luz, 2.
-                  Sábados para todos; segundo domingo do mês.
-                </p>
-              </a>
-            </article>
+          <article className="cartao">
+            <a href='https://pinacoteca.org.br/' className='link-categorias'>
+              <img src="assets/images/pinaco.jfif" />
+              <h3>Pinacoteca do Estado</h3>
+              <p>Localização:Praça da Luz, 2.
+                Sábados para todos; segundo domingo do mês.
+              </p>
+            </a>
+          </article>
 
-          </div>
-        </section>
-   
+        </div>
+      </section>
+
 
 
       <section className="areaCultura">
@@ -311,19 +310,6 @@ function Cultura() {
           <div className="descricaoo">
             <h4>Descubra cultura, lazer e esportes gratuitos em São Paulo</h4>
           </div>
-
-          <div className="redes-sociaiss">
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="icone">
-              <FaInstagram />
-            </a>
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="icone">
-              <FaFacebook />
-            </a>
-            <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" className="icone">
-              <FaTiktok />
-            </a>
-          </div>
-
           <div className="button-container">
             <Link to="/login-administrativo">
               <button className="col">Painel administrativo</button>

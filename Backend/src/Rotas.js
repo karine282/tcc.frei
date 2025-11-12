@@ -5,6 +5,7 @@ import ContatoController from './Controller/ContatoController.js';
 import lugaresCulturaisController from './Controller/lugaresCulturaisController.js';
 import lugaresEsportivosController from './Controller/lugaresEsportivosController.js';
 import lugaresLazerController from './Controller/lugaresLazerController.js';
+import BuscarCepCulturaController from './Controller/BuscarCepCulturaController.js'; 
 
 
 export default function adicionarRotas(servidor) {
@@ -18,6 +19,8 @@ export default function adicionarRotas(servidor) {
   servidor.use('/api', lugaresCulturaisController);
   servidor.use('/api', lugaresEsportivosController);
   servidor.use('/api', lugaresLazerController);
+  servidor.use('/api', BuscarCepCulturaController); 
+
 
 
 }

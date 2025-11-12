@@ -35,13 +35,13 @@ export default function ContaUsuario() {
             <br />
             <div className="biografia">
                 <h2>Sua biografia</h2>
-                <h3>Nome de usuário <i className="fa-regular fa-pen-to-square icon-editar"></i></h3>
+                <h3>Nome de usuário </h3>
                 <p>{usuario.nome || 'Carregando...'}</p> 
-                <h3>CEP <i className="fa-regular fa-pen-to-square icon-editar"></i></h3>
+                <h3>CEP </h3>
                 <p>{usuario.cep || 'Carregando...'}</p> 
-                <h3>Gênero <i className="fa-regular fa-pen-to-square icon-editar"></i></h3>
+                <h3>Gênero </h3>
                 <p>{usuario.genero || 'Carregando...'}</p> 
-                <h3>Email <i className="fa-regular fa-pen-to-square icon-editar"></i></h3>
+                <h3>Email </h3>
                 <p>{usuario.email || 'Carregando...'}</p> 
             </div>
             <div className='sair-conta'>

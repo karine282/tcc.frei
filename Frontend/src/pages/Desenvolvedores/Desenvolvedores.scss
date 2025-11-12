@@ -1,9 +1,12 @@
-html, body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+.container-desenvolvedores{
+
 
 .container-sobre {
   color: #222;
@@ -12,6 +15,28 @@ html, body {
   text-align: center;
   min-height: 100vh;
   margin: 0;
+}
+
+.logo {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 800;
+  
+ span {
+    color: #0078ff;
+  }
+  
+}
+.nave a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nave a:hover {
+  color: #0078ff  ;
 }
 
 .headerr {
@@ -381,6 +406,29 @@ html, body {
       color: #1175af;
     }
   }
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    
+  }
+
+  .col {
+    background: #ffffff;
+    color: #1175af;
+    border: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background: #1175af;
+      color: #ffffff;
+    }
+  }
 
   .descricao {
     margin: 15px auto 30px;
@@ -464,4 +512,5 @@ html, body {
   .servicos ul {
     grid-template-columns: 1fr;
   }
+}
 }
