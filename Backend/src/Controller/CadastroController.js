@@ -1,9 +1,9 @@
 import express from 'express';
-import con from "../Repository/Conection.js"
 import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
-import { validarNovoCadastro, validarUsuarioDuplicado, validarCamposObrigatorios } from '../validation/cadastro/cadastroValidation.js'
-import { buscarCadastroPorId } from "../Repository/cadastroRepository.js";
+import { validarNovoCadastro, validarUsuarioDuplicado, validarCamposObrigatorios } from '../validation/cadastro/cadastroValidation.js';
+import cadastroRepository from "../Repository/cadastroRepository.js";
+import con from "../Repository/Conection.js";  
+
 
 const servidor = express();
 
@@ -14,23 +14,14 @@ servidor.post("/cadastro", async (req, res) => {
     const { nome, email, genero, cep, senha } = req.body;
 
     validarCamposObrigatorios({ nome, email, genero, cep, senha });
-
     validarNovoCadastro({ nome, email, genero, cep });
-
-    await validarUsuarioDuplicado(con, email);
-
+    await validarUsuarioDuplicado(con, email);  
 
     const senhaHash = await bcrypt.hash(senha, 10);
     console.log(" Senha criptografada gerada com sucesso");
 
+    await cadastroRepository.inserirUsuario({ nome, email, genero, cep, senhaHash });
 
-
-    await con.query(`
-        INSERT INTO tb_cadastro (nm_usuario, email_usuario, ds_genero, ds_cep, senha)
-        VALUES (?, ?, ?, ?, ?)
-      `, [nome, email, genero, cep, senhaHash]);
-
-    console.log("Usuário inserido com sucesso");
     res.status(201).json({ mensagem: "Usuário cadastrado com sucesso!" });
 
   } catch (err) {
@@ -54,7 +45,7 @@ servidor.post("/cadastro", async (req, res) => {
 servidor.get("/cadastro/:id", async (req, res) => {
   try {
     const { id } = req.params;
-    const usuario = await buscarCadastroPorId(id);
+    const usuario = await cadastroRepository.buscarCadastroPorId(id);
 
     if (!usuario)
       return res.status(404).json({ erro: "Usuário não encontrado" });
@@ -63,6 +54,16 @@ servidor.get("/cadastro/:id", async (req, res) => {
   } catch (err) {
     console.error("Erro ao buscar usuário:", err.message);
     res.status(500).json({ erro: "Erro interno ao buscar usuário" });
+  }
+});
+
+servidor.get("/admin/usuarios", async (req, res) => {
+  try {
+    const usuarios = await cadastroRepository.listarUsuarios();
+    res.status(200).json(usuarios);
+  } catch (err) {
+    console.error("Erro ao buscar usuários:", err.message);
+    res.status(500).json({ erro: "Erro ao buscar usuários" });
   }
 });
 

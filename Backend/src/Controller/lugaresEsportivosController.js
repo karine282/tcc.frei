@@ -1,27 +1,19 @@
 import express from 'express';
-import con from "../Repository/Conection.js";
+import esportesRepository from "../Repository/lugaresEsportivosRepository.js";  
+import con from "../Repository/Conection.js";  
 
 const router = express.Router();
 
-// GET /api/locais?nome=algo
 router.get('/esportes', async (req, res) => {
     try {
         const { nome } = req.query;
-        console.log('chegou')
+        console.log('chegou');
         if (!nome || nome.trim().length < 2) {
             return res.status(400).json({ erro: "Informe ao menos 2 letras para busca." });
         }
 
-        const query = `
-            SELECT * FROM locais_esportivos 
-            WHERE nome LIKE ? 
-            OR bairro LIKE ?
-            LIMIT 20
-        `;
-        const busca = `%${nome}%`;
-        const [rows] = await con.execute(query, [busca, busca]);
+        const rows = await esportesRepository.buscarLocaisPorNomeOuBairro(nome);
         console.log(rows);
-        
 
         if (rows.length === 0) {
             return res.status(404).json({ erro: "Nenhum local encontrado." });

@@ -1,5 +1,4 @@
 
-
 export function validarNovoCadastro(cadastroObj) {
     if (!cadastroObj.nome)
         throw new Error("nome de usuario obrigatorio");

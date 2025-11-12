@@ -11,7 +11,7 @@
   overflow-x: hidden;
 }
 
-.icon-inicio{
+.icon-inicio {
   margin: 5px;
 }
 
@@ -38,12 +38,15 @@
   color: white;
   font-size: 1.3rem;
   font-weight: 800;
-  
- span {
+
+
+  span {
     color: #0a7737;
+    font-weight: 800;
   }
-  
+
 }
+
 .nave a {
   color: white;
   margin-left: 20px;
@@ -67,13 +70,14 @@
   justify-content: flex-start;
   color: white;
   padding-left: 50px;
-}
 
-.inicio-hero .overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 10%, rgba(0, 0, 0, 0.7) 70%);
-  z-index: 1;
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 10%, rgba(0, 0, 0, 0.7) 70%);
+    z-index: 1;
+  }
+
 }
 
 .hero-content {
@@ -81,16 +85,17 @@
   z-index: 2;
   max-width: 600px;
   padding: 80px 20px;
-}
 
-.hero-content h1 {
-  font-size: 34px;
-  font-weight: 700;
-  margin-bottom: 15px;
-}
+  h1 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
 
-.hero-content span {
-  color: #0a7737;
+  span {
+    color: #0a7737;
+  }
+
 }
 
 .hero-sub {
@@ -115,12 +120,12 @@
   font-size: 0.9rem;
   cursor: pointer;
   transition: 0.3s;
-}
 
-.pri:hover,
-.seg:hover {
-  background: white;
-  color: #0a7737;
+  &:hover {
+    background: white;
+    color: #0a7737;
+  }
+
 }
 
 .link {
@@ -295,24 +300,24 @@
   gap: 14px;
   justify-content: center;
   margin-top: 20px;
+
+  p {
+    margin-bottom: 8px;
+    width: 2;
+
+  }
+
+  h2 {
+    background-color: #ffffff;
+    width: 50%;
+    color: #0e2f1c;
+    font-weight: bolder;
+    margin-top: 60px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
 }
-
-.p2 p {
-  margin-bottom: 8px;
-  width: 2;
-
-}
-
-.p2 h2 {
-  background-color: #ffffff;
-  width: 50%;
-  color: #0e2f1c;
-  font-weight: bolder;
-  margin-top: 60px;
-  border-radius: 10px;
-  text-align: center;
-}
-
 
 h1 {
   margin-top: 50px;

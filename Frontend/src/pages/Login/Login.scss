@@ -17,7 +17,7 @@
     background-image: url();
     flex: 1;
     text-align: center;
-    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 2px 2px 4px #3d3d3d;
     
   }
   
@@ -71,22 +71,25 @@
   }
   
   button {
-    background-color: black;
+    background-color: #0b3b36;
     color: white;
     padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
-  }
 
-  .entrar{
-    background-color : #0b3b36;
-  }
-  
-  button:hover {
+    &:hover {
     background-color: #222;
   }
+
+  }
+
+  .btn-entrar{
+    background-color: #000;
+  }
+  
+
   
   .link {
     margin-top: 10px;
@@ -98,9 +101,7 @@
     color: #b6ffbf;
     text-decoration: none;
   }
-  p{
-    
-  }
+
   
   
 }

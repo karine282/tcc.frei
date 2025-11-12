@@ -139,7 +139,7 @@ function Cultura() {
             <a href='https://www.masp.com.br/' className='link-categorias'>
               <img src="assets/images/masp.webp" />
               <h3> Museu de Arte de SP </h3>
-              <p>Localização: Av. Paulista, 1578 – Bela Vista, São Paulo, SP.
+              <p>Localização: Av. Paulista, 1578 - Bela Vista, São Paulo, SP.
                 Verifique os dias de gratuidade.</p>
             </a>
           </article>

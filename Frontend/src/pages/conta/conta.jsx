@@ -1,6 +1,8 @@
 import './conta.scss';
 import { Link, useNavigate } from "react-router-dom"; 
 import { useState, useEffect } from 'react';
+import api from "../../api";
+
 
 export default function ContaUsuario() {
     const [usuario, setUsuario] = useState({}); 
@@ -20,7 +22,9 @@ export default function ContaUsuario() {
         <div className="container-conta">
             <header className="inicio">
                 <div className="container comeco">
+                    <Link to='/' className='link'>
                     <div className="logoconta">Localiza<span>LivreSP</span></div>
+                    </Link>
                     <nav className="nave">
                         <br />
                         <Link to="/Cultura">Cultura</Link>

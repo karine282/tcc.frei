@@ -75,7 +75,7 @@ export default function Cadastro() {
                     />
                     <input type="password" className="input-cadastro" placeholder="senha" value={senha} onChange={(e) => setSenha(e.target.value)} />
 
-                    <button type="submit">Criar</button>
+                    <button type="submit" className="btn-entrar">Criar</button>
                     {mensagem && <p className="mensagem">{mensagem}</p>}
 
                     <p className="link">

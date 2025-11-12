@@ -132,6 +132,8 @@ export default function Lazer() {
         </section>
 
       <section className="parques">
+         <h2>Mais populares</h2>
+        <p className="leadpopu">veja aqui os lugares para lazer mais frenquentados da cidade.</p>
 
         <div className="cartoes">
           <article className="cartao">

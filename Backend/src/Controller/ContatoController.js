@@ -1,5 +1,6 @@
 import express from "express";
-import SalvarContato from "../Repository/SalvarContato.js";
+import con from "../Repository/Conection.js";  
+
 
 const router = express.Router();
 

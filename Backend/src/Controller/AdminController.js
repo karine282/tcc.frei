@@ -1,67 +1,56 @@
-import express from 'express';
+import express from "express";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import con from "../Repository/Conection.js";
-import { validarCamposLogin, validarUsuario, validarSenha } from '../validation/login/loginValidation.js';
+import dotenv from "dotenv";
+import admRepository from "../Repository/AdminRepository.js";  
+import con from "../Repository/Conection.js";  
 
-const servidor = express();
 
-servidor.post("/loginAdm", async (req, res) => {
-    try {
+dotenv.config();
+const router = express.Router();
 
-      const senhaHash = await bcrypt.hash(senha, 10);
-      console.log(" Senha criptografada gerada com sucesso");
-        const { email, senha } = req.body;
+const JWT_SECRET = process.env.JWT_SECRET;
 
-        await con.query(`
-          INSERT INTO tb_adm (email, senha)
-          VALUES (?, ?, ?, ?, ?)
-        `, [email, senhaHash]);
+router.post("/loginAdm", async (req, res) => {
+  try {
+    const { email, senha } = req.body;
 
-        // Verifica se campos foram enviados
-        validarCamposLogin({ email, senha });
-
-        // Busca usuário pelo email
-        const [usuarios] = await con.query(
-            "SELECT * FROM tb_adm WHERE email = ?",
-            [email]
-        );
-
-        validarUsuario(usuarios);
-        const usuario = usuarios[0];
-
-        // Compara senha informada com a senha criptografada no banco
-        const senhaValida = await bcrypt.compare(senha, usuario.senha);
-        validarSenha(senhaValida);
-
-        // Gera token JWT válido por 1h
-        const token = jwt.sign(
-            { id: usuario.id_cadastro, nome: usuario.nm_usuario },
-            process.env.JWT_SECRET || "chave-secreta",
-            { expiresIn: "1h" }
-        );
-
-        //  Retorna os dados necessários ao front-end
-        return res.status(200).json({
-            mensagem: "Entrando...",
-            id: usuario.id_cadastro,
-            email: usuario.email,
-            token
-        });
-
-    } catch (err) {
-        console.error(err.message);
-
-        if (
-            err.message === "Preencha todos os campos" ||
-            err.message === "Usuário não encontrado" ||
-            err.message === "Senha incorreta"
-        ) {
-            return res.status(400).json({ erro: err.message });
-        }
-
-        res.status(500).json({ erro: "Erro no login" });
+    if (!email || !senha) {
+      return res.status(400).json({ erro: "Preencha todos os campos." });
     }
+
+    const usuario = await admRepository.buscarUsuarioPorEmail(email);
+    if (!usuario) {
+      return res.status(404).json({ erro: "Usuário não encontrado." });
+    }
+
+    if (!admRepository.verificarSeEhAdmin(usuario)) {
+      return res.status(403).json({ erro: "Acesso negado. Usuário não é administrador." });
+    }
+
+    const senhaValida = await bcrypt.compare(senha, usuario.senha);
+    if (!senhaValida) {
+      return res.status(401).json({ erro: "Senha incorreta." });
+    }
+
+    const token = jwt.sign(
+      { id: usuario.id_usuario, email: usuario.email_usuario, role: "admin" },
+      JWT_SECRET,
+      { expiresIn: "2h" }
+    );
+
+    res.status(200).json({
+      mensagem: "Login realizado com sucesso!",
+      usuario: {
+        nome: usuario.nm_usuario,
+        email: usuario.email_usuario,
+      },
+      token,
+    });
+  } catch (erro) {
+    console.error("Erro ao fazer login:", erro);
+    res.status(500).json({ erro: "Erro interno do servidor." });
+  }
 });
 
-export default servidor;
+export default router;

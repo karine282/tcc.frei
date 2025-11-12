@@ -10,9 +10,15 @@ nm_usuario varchar(200),
 email_usuario varchar(200),
 ds_genero varchar(50),
 ds_cep varchar(9),
-senha varchar(500)
+senha varchar(500),
+ds_adm boolean
 );
 
+insert into tb_cadastro(nm_usuario, email_usuario, ds_genero, ds_cep, senha, ds_adm) values
+("geovanna cristina", "ra55241809830@gmail.com", "feminino", "010010000", "$2b$10$ydauH6/ttbtXVXqz9qUA5eaIlbNmsGXduT4LG9U2VwwdM72pM4nES", true);
+
+
+SELECT id_usuario, email_usuario, senha, ds_adm FROM tb_cadastro WHERE email_usuario = 'ra55241809830@gmail.com';
 CREATE TABLE contatos (
   id INT AUTO_INCREMENT PRIMARY KEY,
   nome VARCHAR(100),

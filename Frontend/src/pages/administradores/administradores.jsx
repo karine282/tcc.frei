@@ -9,9 +9,11 @@ export default function Administracao() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const token = JSON.parse(localStorage.getItem("usuario"))?.token;
+    const usuarioLogado = JSON.parse(localStorage.getItem("usuario"));
+    const token = usuarioLogado?.token;
+
     if (!token) {
-      navigate("/login");
+      navigate("/login-administrativo");
       return;
     }
 
@@ -24,6 +26,11 @@ export default function Administracao() {
       } catch (erro) {
         console.error("Erro ao buscar usuários:", erro);
         setMensagem("Erro ao carregar usuários");
+
+        if (erro.response?.status === 401) {
+          localStorage.removeItem("usuario");
+          navigate("/login-administrativo");
+        }
       }
     };
 
@@ -47,7 +54,7 @@ export default function Administracao() {
 
   const handleLogout = () => {
     localStorage.removeItem("usuario");
-    navigate("/login");
+    navigate("/login-administrativo");
   };
 
   return (
@@ -56,6 +63,10 @@ export default function Administracao() {
         <h1>Painel Administrativo</h1>
         <button className="btn-logout" onClick={handleLogout}>Sair</button>
       </header>
+
+      <div className="info-cadastros">
+        <p>Total de usuários cadastrados: <strong>{usuarios.length}</strong></p>
+      </div>
 
       {mensagem && <p className="mensagem">{mensagem}</p>}
 

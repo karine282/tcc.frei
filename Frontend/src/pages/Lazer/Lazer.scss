@@ -21,11 +21,11 @@
     background: transparent;
 
     .logo {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
 
       span {
         color: #0a7737;
-        font-weight: 700;
+        font-weight: 800;
       }
     }
 
@@ -130,12 +130,12 @@
     border-radius: 8px;
     font-size: 1rem;
     transition: all 0.3s ease;
-  }
 
-  .searchInput:focus {
-    border-color: #0080ff;
-    outline: none;
-    box-shadow: 0 0 6px rgba(0, 128, 255, 0.3);
+    .searchInput:focus {
+      border-color: #0080ff;
+      outline: none;
+      box-shadow: 0 0 6px rgba(0, 128, 255, 0.3);
+    }
   }
 
   .searchButton {
@@ -239,23 +239,24 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
     border: 1px solid #eee;
-  }
 
-  .local-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 6px 18px rgba(0, 128, 255, 0.2);
-    border-color: #0080ff;
-  }
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 18px rgba(0, 128, 255, 0.2);
+      border-color: #0080ff;
+    }
 
-  .local-card h5 {
-    font-size: 1.1rem;
-    color: #0080ff;
-    margin-bottom: 0.5rem;
-  }
+    h5 {
+      font-size: 1.1rem;
+      color: #0080ff;
+      margin-bottom: 0.5rem;
+    }
 
-  .local-card p {
-    font-size: 0.9rem;
-    color: #666;
+    p {
+      font-size: 0.9rem;
+      color: #666;
+    }
+
   }
 
   .nenhumLocal {
@@ -285,6 +286,20 @@
 
 
     .lead {
+      color: #333;
+      font-size: 1.1em;
+      max-width: 700px;
+      margin: 0 auto 50px;
+      font-weight: 500;
+    }
+
+    h2 {
+      color: #5e9030;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .leadpopu {
       color: #333;
       font-size: 1.1em;
       max-width: 700px;
@@ -322,7 +337,7 @@
     h3 {
       font-size: 1.2em;
       margin: 15px 15px 5px;
-      color: #00695c;
+      color: #73a942;
     }
 
     p {
