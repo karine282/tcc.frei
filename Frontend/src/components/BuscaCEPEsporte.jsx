@@ -81,21 +81,27 @@ export default function BuscaCEPEsporte() {
 
  const locaisEsporteSP = {
   "Sé": [
-    { nome: "Praça da Sé - Corrida e alongamento", endereco: "Praça da Sé, s/n - Sé, SP", link: "https://www.google.com/maps/dir/?api=1&destination=Praça+da+Sé,+São+Paulo+-+SP" },
-    { nome: "Ginásio Poliesportivo Dom Pedro", endereco: "R. Direita, s/n - Sé, SP", link: "https://www.google.com/maps/dir/?api=1&destination=Ginásio+Poliesportivo+Dom+Pedro,+SP" },
-    { nome: "Praça Princesa Isabel - Quadra e exercícios", endereco: "Praça Princesa Isabel, s/n - Sé, SP", link: "https://www.google.com/maps/dir/?api=1&destination=Praça+Princesa+Isabel,+SP" }
+    { nome: "Praça da Sé – Corrida e alongamento", endereco: "Praça da Sé, s/n – Sé, SP", link: "https://www.google.com/maps/dir/?api=1&destination=Praça+da+Sé,+São+Paulo" },
+    { nome: "Praça Princesa Isabel – Quadra e exercícios", endereco: "Praça Princesa Isabel, s/n – Sé, SP", link: "https://www.google.com/maps/dir/?api=1&destination=Praça+Princesa+Isabel,+São+Paulo" },
+    { nome: "Praça do Patriarca – Quadras e alongamento", endereco: "Praça do Patriarca, s/n – Sé, SP", link: "https://www.google.com/maps/dir/?api=1&destination=Praça+do+Patriarca,+São+Paulo" },
+    { nome: "Praça Antônio Prado – Academia a céu aberto", endereco: "Praça Antônio Prado, s/n – Sé, SP", link: "https://www.google.com/maps/dir/?api=1&destination=Praça+Antônio+Prado,+São+Paulo" },
+    { nome: "Ginásio Poliesportivo Dom Pedro II", endereco: "R. Direita, s/n – Sé, SP", link: "https://www.google.com/maps/dir/?api=1&destination=R.+Direita,+São+Paulo" }
   ],
 
-  "Bela Vista": [
-    { nome: "Ginásio Poliesportivo Wlamir Marques", endereco: "R. Comendador Elias Zarzur, 30 - Bela Vista, SP", link: "https://www.google.com/maps/dir/?api=1&destination=R.+Comendador+Elias+Zarzur,+30+-+Bela+Vista,+SP" },
-    { nome: "Praça Rotary - Quadra poliesportiva", endereco: "R. Rui Barbosa, 200 - Bela Vista, SP", link: "https://www.google.com/maps/dir/?api=1&destination=R.+Rui+Barbosa,+200+-+Bela+Vista,+SP" },
-    { nome: "Parque Minhocão - Corrida e exercícios", endereco: "Av. São João, s/n - Bela Vista, SP", link: "https://www.google.com/maps/dir/?api=1&destination=Parque+Minhocão,+SP" }
+  "Bela Vista": [
+    { nome: "Parque Minhocão – Corrida e alongamento", endereco: "Av. São João, s/n – Bela Vista, SP", link: "https://www.google.com/maps/dir/?api=1&destination=Av.+São+João,+São+Paulo" },
+    { nome: "Ginásio Poliesportivo Wlamir Marques", endereco: "R. Comendador Elias Zarzur, 30 – Bela Vista, SP", link: "https://www.google.com/maps/dir/?api=1&destination=R.+Comendador+Elias+Zarzur,+30,+São+Paulo" },
+    { nome: "Praça Rotary – Quadra poliesportiva", endereco: "R. Rui Barbosa, 200 – Bela Vista, SP", link: "https://www.google.com/maps/dir/?api=1&destination=R.+Rui+Barbosa,+200,+São+Paulo" },
+    { nome: "Pista de corrida Av. Paulista (trecho Bela Vista)", endereco: "Av. Paulista, s/n – Bela Vista, SP", link: "https://www.google.com/maps/dir/?api=1&destination=Av.+Paulista,+São+Paulo" },
+    { nome: "Praça do Ciclista – Alongamento e exercícios", endereco: "Av. Paulista, s/n – Bela Vista, SP", link: "https://www.google.com/maps/dir/?api=1&destination=Praça+do+Ciclista,+São+Paulo" }
   ],
 
   "Santana": [
-    { nome: "Parque da Juventude - Pista e quadras", endereco: "Av. Zaki Narchi, 1300 - Santana, SP", link: "https://www.google.com/maps/dir/?api=1&destination=Parque+da+Juventude,+SP" },
-    { nome: "Ginásio Poliesportivo de Santana", endereco: "R. Dr. Cesar, 150 - Santana, SP", link: "https://www.google.com/maps/dir/?api=1&destination=R.+Dr.+Cesar,+150+-+Santana,+SP" },
-    { nome: "Praça Doutor João Mendes - Quadra", endereco: "R. Voluntários da Pátria, 1000 - Santana, SP", link: "https://www.google.com/maps/dir/?api=1&destination=R.+Voluntários+da+Pátria,+1000+-+Santana,+SP" }
+    { nome: "Parque da Juventude – Pista e quadras", endereco: "Av. Cruzeiro do Sul, 2630 – Santana, SP", link: "https://www.google.com/maps/dir/?api=1&destination=Av.+Cruzeiro+do+Sul,+2630,+São+Paulo" },
+    { nome: "Ginásio Poliesportivo de Santana", endereco: "R. Dr. Cesar, 150 – Santana, SP", link: "https://www.google.com/maps/dir/?api=1&destination=R.+Dr.+Cesar,+150,+São+Paulo" },
+    { nome: "Praça Doutor João Mendes – Quadra", endereco: "R. Voluntários da Pátria, 1000 – Santana, SP", link: "https://www.google.com/maps/dir/?api=1&destination=R.+Voluntários+da+Pátria,+1000,+São+Paulo" },
+    { nome: "Parque Regional do Trote – Corrida/quadras", endereco: "R. Prof. Carlos de Carvalho, 2100 – Santana, SP", link: "https://www.google.com/maps/dir/?api=1&destination=R.+Prof.+Carlos+de+Carvalho,+2100,+São+Paulo" },
+    { nome: "Praça Raul de Carvalho – Academia ao ar livre", endereco: "R. Conselheiro Moreira de Barros, s/n – Santana, SP", link: "https://www.google.com/maps/dir/?api=1&destination=R.+Conselheiro+Moreira+de+Barros,+São+Paulo" }
   ],
 
   "Vila Mariana": [

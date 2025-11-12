@@ -1,7 +1,7 @@
 import express from 'express';
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import con from "../Repository/Conection.js"
+import con from '../Repository/Conection.js';
 import { validarNovoCadastro, validarUsuarioDuplicado, validarCamposObrigatorios } from '../validation/cadastro/cadastroValidation.js'
 import { buscarCadastroPorId } from "../Repository/cadastroRepository.js";
 
@@ -13,22 +13,17 @@ servidor.post("/cadastro", async (req, res) => {
 
     const { nome, email, genero, cep, senha } = req.body;
 
-    // Valida campos obrigatórios
     validarCamposObrigatorios({ nome, email, genero, cep, senha });
 
-    //  Valida campos específicos
     validarNovoCadastro({ nome, email, genero, cep });
 
-    //  Verifica se já existe usuário com o mesmo email
     await validarUsuarioDuplicado(con, email);
 
-    //  Criptografa a senha
 
     const senhaHash = await bcrypt.hash(senha, 10);
     console.log(" Senha criptografada gerada com sucesso");
 
 
-    //  Insere no banco
 
     await con.query(`
         INSERT INTO tb_cadastro (nm_usuario, email_usuario, ds_genero, ds_cep, senha)

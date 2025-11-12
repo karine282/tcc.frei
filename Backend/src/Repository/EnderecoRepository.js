@@ -1,7 +1,6 @@
 import con from "./conection.js";
 
 class EnderecoRepository {
-  // Verifica se o CEP existe na tabela tb_ceps
   async verificarCEP(cep) {
     return new Promise((resolve, reject) => {
       const query = 'SELECT ds_existe FROM tb_ceps WHERE cep = ?';

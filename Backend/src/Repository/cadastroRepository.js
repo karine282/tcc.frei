@@ -1,4 +1,4 @@
-import con from "./Conection.js";
+import con from "./conection.js";
 
 export async function salvarCadastro(cadastro) {
     let comando = `

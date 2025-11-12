@@ -1,0 +1,94 @@
+.container-painel {
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(90deg, #0b3b36 0%, #09786b 100%);
+  color: #fff;
+  max-width: 1800px;
+  height: 630px;
+  margin: 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  .painel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+
+    h1 {
+      color: #ffffff;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    .btn-logout {
+      padding: 10px 20px;
+      background-color: #f44336;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #d32f2f;
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .mensagem {
+    color: #ffd700;
+    font-weight: 500;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .tabela-usuarios {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px; 
+
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+    }
+
+    th {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      font-weight: 600;
+      border-radius: 8px 8px 0 0;
+    }
+
+    tr {
+      background-color: rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+      border-radius: 8px;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    td {
+      border-bottom: none;
+    }
+
+    .btn-excluir {
+      padding: 6px 12px;
+      background-color: #ffffff;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #ffffff;
+        transform: scale(1.05);
+      }
+    }
+  }
+}
