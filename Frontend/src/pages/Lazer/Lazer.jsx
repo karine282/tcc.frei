@@ -2,17 +2,33 @@ import { useState } from 'react';
 import './Lazer.scss';
 import { Link } from "react-router-dom";
 import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
-import BuscaCEP from "../../components/BuscaCEP.jsx";
-
+import BuscaCEPLazer from '../../components/BuscaCEPLazer';
 
 export default function Lazer() {
-  const [pesquisa, setPesquisa] = useState('');
+  const [pesquisa, setPesquisa] = useState("");
+  const [bairro, setBairro] = useState("");
 
-  const handleInputChange = (e) => setPesquisa(e.target.value);
+  const locaisCulturais = [
+  { nome: "Centro Cultural São Paulo", bairro: "Liberdade" },
+  { nome: "Museu do Ipiranga", bairro: "Ipiranga" },
+  { nome: "Biblioteca Mário de Andrade", bairro: "República" },
+  { nome: "Casa das Rosas", bairro: "Bela Vista" },
+  { nome: "Casa de Cultura do Butantã", bairro: "Butantã" },
+];
+
+
+
+  const handleInputChange = (e) => {
+    setPesquisa(e.target.value);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(`Texto pesquisado: ${pesquisa}`);
+    console.log("Pesquisa enviada:", pesquisa);
+    setPesquisa("");
   };
+
+
 
   return (
     <><div className='container-lazer'>
@@ -170,27 +186,26 @@ export default function Lazer() {
                          <h2>Veja locais próximos de você</h2>
                          <div className="containerPesquisaMapa">
                            <section className="pesquisaCulturaMapa">
+                               <BuscaCEPLazer onEnderecoEncontrado={(bairroEncontrado) => setBairro(bairroEncontrado)} />
                             
-                             <BuscaCEP onEnderecoEncontrado={(bairroEncontrado) => setBairro(bairroEncontrado)} />
-               
-               {bairro && (
-                 <div className="resultado-bairro">
-                  
-                   <ul>
-                     {locaisCulturais
-                       .filter((local) =>
-                         local.bairro.toLowerCase() === bairro.toLowerCase()
-                       )
-                       .map((local) => (
-                         <li key={local.nome}>{local.nome}</li>
-                       ))}
-                   </ul>
-               
-                  
-                 </div>
-               )}
-               
-                           </section>
+                            {bairro && (
+                              <div className="resultado-bairro">
+                               
+                                <ul>
+                                  {locaisCulturais
+                                    .filter((local) =>
+                                      local.bairro.toLowerCase() === bairro.toLowerCase()
+                                    )
+                                    .map((local) => (
+                                      <li key={local.nome}>{local.nome}</li>
+                                    ))}
+                                </ul>
+                            
+                               
+                              </div>
+                            )}
+                            
+                                                   </section>
                          </div>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.385218520387!2d-46.6623393850227!3d-23.590475184667895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c2d6a9b6bb%3A0x67b198b8f4cdbb!2sAvenida%20Paulista!5e0!3m2!1spt-BR!2sbr!4v1234567890"

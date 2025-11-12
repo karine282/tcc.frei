@@ -3,22 +3,34 @@ import './Esporte.scss';
 import { Link } from "react-router-dom";
 import { CiSearch } from "react-icons/ci";
 import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
+import BuscaCEPEsporte from '../../components/BuscaCEPEsporte';
 
 
 export default function Esporte() {
-  const [pesquisa, setPesquisa] = useState('');
-  const [cep, setCep] = useState(''); 
+  const [pesquisa, setPesquisa] = useState("");
+  const [bairro, setBairro] = useState("");
 
-  const handleInputChange = (e) => setPesquisa(e.target.value);
-  const handleCepChange = (e) => setCep(e.target.value); 
+  const locaisCulturais = [
+  { nome: "Centro Cultural São Paulo", bairro: "Liberdade" },
+  { nome: "Museu do Ipiranga", bairro: "Ipiranga" },
+  { nome: "Biblioteca Mário de Andrade", bairro: "República" },
+  { nome: "Casa das Rosas", bairro: "Bela Vista" },
+  { nome: "Casa de Cultura do Butantã", bairro: "Butantã" },
+];
+
+
+
+  const handleInputChange = (e) => {
+    setPesquisa(e.target.value);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(`Texto pesquisado: ${pesquisa}`);
+    console.log("Pesquisa enviada:", pesquisa);
+    setPesquisa("");
   };
-  const handleCepSubmit = (e) => {
-    e.preventDefault();
-    console.log(`CEP pesquisado: ${cep}`);
-  };
+
+
 
   return (
     <div className='container-esporte'>
@@ -175,6 +187,24 @@ export default function Esporte() {
                   <h2>Veja locais próximos de você</h2>
                   <div className="containerPesquisaMapa">
                     <section className="pesquisaCulturaMapa">
+                             <BuscaCEPEsporte onEnderecoEncontrado={(bairroEncontrado) => setBairro(bairroEncontrado)} />
+                      
+                      {bairro && (
+                        <div className="resultado-bairro">
+                         
+                          <ul>
+                            {locaisCulturais
+                              .filter((local) =>
+                                local.bairro.toLowerCase() === bairro.toLowerCase()
+                              )
+                              .map((local) => (
+                                <li key={local.nome}>{local.nome}</li>
+                              ))}
+                          </ul>
+                      
+                         
+                        </div>
+                      )}
                 
         
                     </section>

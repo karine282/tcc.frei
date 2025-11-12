@@ -125,8 +125,10 @@ function Cultura() {
             <article className="cartao">
               <a href='https://pinacoteca.org.br/' className='link-categorias'>
                 <img src="assets/images/pinaco.jfif" />
-                <h3>parque ecologico tiete</h3>
-                <p>  Trilhas, ciclovia, quadras, campos, pedalinho, playgrounds, lanchonetes, CRAS e museu .</p>
+                <h3>Pinacoteca do Estado</h3>
+                <p>Localização:Praça da Luz, 2.
+                  Sábados para todos; segundo domingo do mês.
+                </p>
               </a>
             </article>
 
