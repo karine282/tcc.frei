@@ -2,10 +2,8 @@ import { useState } from 'react';
 import './Esporte.scss';
 import { Link } from "react-router-dom";
 import { CiSearch } from "react-icons/ci";
-import Mapa from '../../components/Mapa.jsx';
 import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
-import Pesquisa from '../../components/Pesquisa.jsx';
-
+import BuscaCEPEsporte from '../../components/BuscaCEPEsporte';
 
 
 export default function Esporte() {
@@ -64,6 +62,8 @@ export default function Esporte() {
     e.preventDefault();
     console.log(`CEP pesquisado: ${cep}`);
   };
+
+
 
   return (
     <div className='container-esporte'>
@@ -243,25 +243,32 @@ export default function Esporte() {
       </section>
 
       <main>
-        <section className="containerPesquisaMapa">
-          <h2>Veja locais próximos de você</h2>
-          <div className='containerPesquisaMapa'>
-            <section className="pesquisaEsporteMapa">
-              <form onSubmit={handleCepSubmit} className="searchForm">
-                <input
-                  type="text"
-                  placeholder="Digite seu CEP"
-                  value={cep}
-                  onChange={handleCepChange}
-                  className="searchInput"
-                />
-                <button type="submit" className="searchButton">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-                <Mapa />
-              </form>
-            </section>
-          </div>
+         <section className="containerPesquisaMapa">
+                  <h2>Veja locais próximos de você</h2>
+                  <div className="containerPesquisaMapa">
+                    <section className="pesquisaCulturaMapa">
+                             <BuscaCEPEsporte onEnderecoEncontrado={(bairroEncontrado) => setBairro(bairroEncontrado)} />
+                      
+                      {bairro && (
+                        <div className="resultado-bairro">
+                         
+                          <ul>
+                            {locaisCulturais
+                              .filter((local) =>
+                                local.bairro.toLowerCase() === bairro.toLowerCase()
+                              )
+                              .map((local) => (
+                                <li key={local.nome}>{local.nome}</li>
+                              ))}
+                          </ul>
+                      
+                         
+                        </div>
+                      )}
+                
+        
+                    </section>
+                  </div>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.385218520387!2d-46.6623393850227!3d-23.590475184667895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c2d6a9b6bb%3A0x67b198b8f4cdbb!2sAvenida%20Paulista!5e0!3m2!1spt-BR!2sbr!4v1234567890"
             width="100%"

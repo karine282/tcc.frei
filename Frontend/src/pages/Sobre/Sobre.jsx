@@ -48,7 +48,7 @@ function Sobre() {
           <div className="sectionsobre">
             <h2><span>Nossa História</span></h2>
             <p>
-              Fundado em <span>2020</span> por um grupo de entusiastas da <span>cultura paulistana</span>, o
+              Fundado em <span>2025</span> por um grupo da <span>cidade paulistana</span>, o
               <span> LocalizaLivreSP</span> nasceu da necessidade de <span>democratizar o acesso</span> às atividades gratuitas da cidade.
               Inspirados pelas <span>ruas vibrantes</span> de São Paulo e pela <span>diversidade cultural</span>,
               criamos uma plataforma que conecta <span>moradores e visitantes</span> às riquezas culturais,
@@ -65,8 +65,7 @@ function Sobre() {
               jornalistas culturais, educadores físicos e desenvolvedores tecnológicos. Cada membro traz
               uma <span>perspectiva única</span>, garantindo que a plataforma seja
               <span> inclusiva</span> e <span>acessível</span>. <br />
-              Entre eles, destacam-se <span>Ana Silva</span> (conteúdo), <span>Carlos Mendes</span> (esportes)
-              e <span>João Pereira</span> (desenvolvimento), todos comprometidos em tornar a navegação
+              todos comprometidos em tornar a navegação
               <span> simples, rápida e envolvente</span>.
             </p>
           </div>
