@@ -139,7 +139,7 @@
   }
 
   .searchButton {
-    background-color: #0080ff;
+    background-color: #2db81b;
     border: none;
     color: #fff;
     padding: 0.8rem 1rem;
@@ -148,7 +148,7 @@
     transition: all 0.3s ease;
 
     &:hover {
-      background-color: #0066cc;
+      background-color: #0a470a;
       transform: scale(1.05);
     }
   }
@@ -185,7 +185,6 @@
       }
     }
 
-    // Mensagens de carregamento/erro
     p {
       font-size: 1rem;
       color: #555;
@@ -218,7 +217,7 @@
       color: #333;
 
       span {
-        color: #0080ff;
+        color: #2ea111;
         font-weight: 700;
       }
     }
@@ -248,7 +247,7 @@
 
     h5 {
       font-size: 1.1rem;
-      color: #0080ff;
+      color: #34be19;
       margin-bottom: 0.5rem;
     }
 
@@ -349,7 +348,6 @@
   }
 
 
-  /* Mapa */
   .containerPesquisaMapa {
     padding: 40px 20px;
     text-align: center;
@@ -367,7 +365,6 @@
     justify-content: center;
   }
 
-  /* Clubes */
   .areaClubes {
     padding: 40px;
     background-color: #73a942;

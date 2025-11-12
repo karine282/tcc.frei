@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Cultura.scss";
 import { useState } from "react";
-import BuscaCEP from "../../components/BuscaCEPCultura.jsx";
+import BuscaCEPCultura from "../../components/BuscaCEPCultura.jsx";
 
 
 
@@ -87,7 +87,6 @@ function Cultura() {
         />
       </section>
 
-      {/* Seção de Pesquisa */}
       <section className="pesquisaCultura">
         <form onSubmit={handleSubmit} className="searchForm">
           <input
@@ -139,7 +138,7 @@ function Cultura() {
             <a href='https://www.masp.com.br/' className='link-categorias'>
               <img src="assets/images/masp.webp" />
               <h3> Museu de Arte de SP </h3>
-              <p>Localização: Av. Paulista, 1578 - Bela Vista, São Paulo, SP.
+              <p>Localização: Av. Paulista, 1578 – Bela Vista, São Paulo, SP.
                 Verifique os dias de gratuidade.</p>
             </a>
           </article>
@@ -267,25 +266,32 @@ function Cultura() {
         </div>
       </section>
       <main>
-        <section className="containerPesquisaMapa">
-          <h2>Veja locais próximos de você</h2>
-          <div className="containerPesquisaMapa">
-            <section className="pesquisaCulturaMapa">
-              <BuscaCEP onEnderecoEncontrado={(bairroEncontrado) => setBairro(bairroEncontrado)} />
-
-              {bairro && (
-                <div className="resultado-bairro">
-                  <ul>
-                    {locaisCulturais
-                      .filter((local) => local.bairro.toLowerCase() === bairro.toLowerCase())
-                      .map((local) => (
-                        <li key={local.nome}>{local.nome}</li>
-                      ))}
-                  </ul>
-                </div>
-              )}
-            </section>
-          </div>
+       <section className="containerPesquisaMapa">
+                       <h2>Veja locais próximos de você</h2>
+                       <div className="containerPesquisaMapa">
+                         <section className="pesquisaCulturaMapa">
+                                  <BuscaCEPCultura onEnderecoEncontrado={(bairroEncontrado) => setBairro(bairroEncontrado)} />
+                           
+                           {bairro && (
+                             <div className="resultado-bairro">
+                              
+                               <ul>
+                                 {locaisCulturais
+                                   .filter((local) =>
+                                     local.bairro.toLowerCase() === bairro.toLowerCase()
+                                   )
+                                   .map((local) => (
+                                     <li key={local.nome}>{local.nome}</li>
+                                   ))}
+                               </ul>
+                           
+                              
+                             </div>
+                           )}
+                     
+             
+                         </section>
+                       </div>
 
           <br />
           <br />

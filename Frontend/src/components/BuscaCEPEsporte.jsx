@@ -197,7 +197,7 @@ export default function BuscaCEPEsporte() {
         <form onSubmit={handleSubmit} className="searchForm">
           <input
             type="text"
-            placeholder="Digite o CEP (ex: 01001000)"
+            placeholder="Digite o CEP (ex: 04119000)"
             value={cep}
             onChange={(e) => setCep(e.target.value)}
             className="searchInput"

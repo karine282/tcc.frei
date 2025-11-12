@@ -145,11 +145,10 @@
       outline: none;
       box-shadow: 0 0 6px rgba(0, 128, 255, 0.3);
     }
-
   }
 
   .searchButton {
-    background-color: #0080ff;
+    background-color: #205866;;
     border: none;
     color: #fff;
     padding: 0.8rem 1rem;
@@ -188,6 +187,7 @@
         font-weight: 700;
       }
     }
+
   }
 
   .cards-container {
@@ -214,7 +214,7 @@
 
     h5 {
       font-size: 1.1rem;
-      color: #0080ff;
+      color:#205866;
       margin-bottom: 0.5rem;
     }
 
@@ -222,7 +222,6 @@
       font-size: 0.9rem;
       color: #666;
     }
-
   }
 
   .nenhumLocal {
@@ -242,6 +241,8 @@
       transform: translateY(0);
     }
   }
+
+
 
 
   .populares {
