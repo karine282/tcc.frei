@@ -1,5 +1,5 @@
-import { Link, useNavigate } from "react-router-dom";
 import "./Login.scss";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import api from "../../api";
 
@@ -28,7 +28,7 @@ export default function Login() {
         token: resposta.data.token,
       }));
 
-      navigate("/conta"); 
+      navigate("/"); 
 
     } catch (erro) {
       console.error("Erro ao logar:", erro.response?.data || erro.message);

@@ -1,34 +1,53 @@
 import { Link } from "react-router-dom";
 import "./Cultura.scss";
 import { useState } from "react";
-import { CiSearch } from "react-icons/ci";
 import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
 import BuscaCEP from "../../components/BuscaCEP.jsx";
 
-
-
 function Cultura() {
   const [pesquisa, setPesquisa] = useState("");
+  const [resultados, setResultados] = useState([]);
+  const [carregando, setCarregando] = useState(false);
+  const [erro, setErro] = useState("");
   const [bairro, setBairro] = useState("");
-
-  const locaisCulturais = [
-  { nome: "Centro Cultural São Paulo", bairro: "Liberdade" },
-  { nome: "Museu do Ipiranga", bairro: "Ipiranga" },
-  { nome: "Biblioteca Mário de Andrade", bairro: "República" },
-  { nome: "Casa das Rosas", bairro: "Bela Vista" },
-  { nome: "Casa de Cultura do Butantã", bairro: "Butantã" },
-];
-
-
 
   const handleInputChange = (e) => {
     setPesquisa(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Pesquisa enviada:", pesquisa);
-    setPesquisa("");
+
+    if (!pesquisa.trim()) {
+      setErro("Digite algo para pesquisar.");
+      setResultados([]);
+      return;
+    }
+
+    setCarregando(true);
+    setErro("");
+    setResultados([]);
+
+    try {
+      const response = await fetch(`http://localhost:5010/api/cultura?nome=${encodeURIComponent(pesquisa)}`);
+      const data = await response.json();
+      console.log("Data recebida:", data);
+
+
+      if (response.ok) {
+        setResultados(data.resultados);
+        if (!data || data.resultados.length === 0) {
+          setErro("Nenhum local cultural encontrado.");
+        }
+      } else {
+        setErro(data.erro || "Erro ao buscar locais culturais.");
+      }
+    } catch (error) {
+      console.error(error);
+      setErro("Erro ao conectar com o servidor.");
+    } finally {
+      setCarregando(false);
+    }
   };
 
   return (
@@ -36,7 +55,7 @@ function Cultura() {
       <header className="topo">
         <div className="logo">
           <Link to='/' className="Link">
-          Localiza<span>LivreSP</span>
+            Localiza<span>LivreSP</span>
           </Link>
         </div>
         <nav>
@@ -67,66 +86,85 @@ function Cultura() {
         />
       </section>
 
-    <section className="pesquisaCultura">
-  <form onSubmit={handleSubmit} className="searchForm">
-    <input
-      type="text"
-      placeholder="Buscar por nome, categoria, bairro ou atividade..."
-      value={pesquisa}
-      onChange={handleInputChange}
-      className="searchInput"
-      aria-label="Campo de busca por locais culturais"
-    />
-    <button type="submit" className="searchButton">
-      <i className="fa-solid fa-magnifying-glass"></i>
-    </button>
-  </form>
+      {/* Seção de Pesquisa */}
+      <section className="pesquisaCultura">
+        <form onSubmit={handleSubmit} className="searchForm">
+          <input
+            type="text"
+            placeholder="Buscar por nome"
+            value={pesquisa}
+            onChange={handleInputChange}
+            className="searchInput"
+            aria-label="Campo de busca por locais culturais"
+          />
+          <button type="submit" className="searchButton">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
 
+        {carregando && <p>Buscando locais culturais...</p>}
+        {erro && <p style={{ color: "red" }}>{erro}</p>}
 
-</section>
-
-
-   <section className="parques">
-         
-          <div className="cartoes">
-            <article className="cartao">
-              <a href='https://www.parquedoibirapuera.org/' className='link-categorias'>
-                <img src="https://i.pinimg.com/736x/b1/58/46/b1584660ec016e5fbad337b0061b9b39.jpg" alt="Parque 1" />
-                <h3>Parque do Ibirapuera</h3>
-                <p>Ótimo para caminhadas e piqueniques. Entrada gratuita.</p>
-              </a>
-            </article>
-
-            <article className="cartao">
-              <a href='https://prefeitura.sp.gov.br/web/meio_ambiente/w/parques/regiao_sul/5747' className='link-categorias'>
-
-                <img src="https://i.pinimg.com/1200x/bc/6b/11/bc6b1167e29bbf927e5a380c8a4113b0.jpg" alt="Parque 2" />
-                <h3>Parque  Indepencia</h3>
-                <p>Eventos culturais, exposições e muito espaço para atividades.</p>
-              </a>
-            </article>
-
-            <article className="cartao">
-              <a href='https://parquevillalobos.com.br/' className='link-categorias'>
-
-                <img src="https://i.pinimg.com/1200x/17/7a/bc/177abc0fd9ecac38ac42937f7d2dbb29.jpg" alt="Parque 3" />
-                <h3>Parque Villa-Lobos</h3>
-                <p>Área esportiva e pistas de corrida — ideal para famílias.</p>
-              </a>
-            </article>
-
-            <article className="cartao">
-              <a href='https://www.parqueecologicodotiete.com.br/' className='link-categorias'>
-                <img src="https://www.parqueecologicodotiete.com.br/content-wp/uploads/2017/08/parque-ecologico-tiete-peda.jpg" alt="Parque 4" />
-                <h3>parque ecologico tiete</h3>
-                <p>  Trilhas, ciclovia, quadras, campos, pedalinho, playgrounds, lanchonetes, CRAS e museu .</p>
-              </a>
-            </article>
-
+        {resultados.length > 0 && (
+          <div className="resultados-cultura">
+            {resultados.map((local, index) => {
+              const mapsLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(local.nome + " " + local.bairro)}`;
+              return (
+                <div key={index} className="cartao-resultado">
+                  <h3>{local.nome}</h3>
+                  <p>Bairro: {local.bairro}</p>
+                  <a
+                    href={mapsLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="maps-link"
+                    aria-label={`Abrir ${local.nome} no Google Maps`}
+                  >
+                    Ver no Google Maps
+                  </a>
+                </div>
+              );
+            })}
           </div>
-        </section>
+        )}
+      </section>
 
+      {/* Seções existentes de parques e espaços culturais */}
+      <section className="parques">
+        <div className="cartoes">
+          <article className="cartao">
+            <a href='https://www.parquedoibirapuera.org/' className='link-categorias'>
+              <img src="https://i.pinimg.com/736x/b1/58/46/b1584660ec016e5fbad337b0061b9b39.jpg" alt="Parque 1" />
+              <h3>Parque do Ibirapuera</h3>
+              <p>Ótimo para caminhadas e piqueniques. Entrada gratuita.</p>
+            </a>
+          </article>
 
+          <article className="cartao">
+            <a href='https://prefeitura.sp.gov.br/web/meio_ambiente/w/parques/regiao_sul/5747' className='link-categorias'>
+              <img src="https://i.pinimg.com/1200x/bc/6b/11/bc6b1167e29bbf927e5a380c8a4113b0.jpg" alt="Parque 2" />
+              <h3>Parque  Independencia</h3>
+              <p>Eventos culturais, exposições e muito espaço para atividades.</p>
+            </a>
+          </article>
+
+          <article className="cartao">
+            <a href='https://parquevillalobos.com.br/' className='link-categorias'>
+              <img src="https://i.pinimg.com/1200x/17/7a/bc/177abc0fd9ecac38ac42937f7d2dbb29.jpg" alt="Parque 3" />
+              <h3>Parque Villa-Lobos</h3>
+              <p>Área esportiva e pistas de corrida — ideal para famílias.</p>
+            </a>
+          </article>
+
+          <article className="cartao">
+            <a href='https://www.parqueecologicodotiete.com.br/' className='link-categorias'>
+              <img src="https://www.parqueecologicodotiete.com.br/content-wp/uploads/2017/08/parque-ecologico-tiete-peda.jpg" alt="Parque 4" />
+              <h3>Parque Ecológico Tietê</h3>
+              <p>Trilhas, ciclovia, quadras, campos, pedalinho, playgrounds, lanchonetes, CRAS e museu.</p>
+            </a>
+          </article>
+        </div>
+      </section>
 
       <section className="areaCultura">
         <h2>Espaços Culturais</h2>
@@ -212,32 +250,24 @@ function Cultura() {
           </div>
         </div>
       </section>
-
       <main>
         <section className="containerPesquisaMapa">
           <h2>Veja locais próximos de você</h2>
           <div className="containerPesquisaMapa">
             <section className="pesquisaCulturaMapa">
-             
               <BuscaCEP onEnderecoEncontrado={(bairroEncontrado) => setBairro(bairroEncontrado)} />
 
-{bairro && (
-  <div className="resultado-bairro">
-   
-    <ul>
-      {locaisCulturais
-        .filter((local) =>
-          local.bairro.toLowerCase() === bairro.toLowerCase()
-        )
-        .map((local) => (
-          <li key={local.nome}>{local.nome}</li>
-        ))}
-    </ul>
-
-   
-  </div>
-)}
-
+              {bairro && (
+                <div className="resultado-bairro">
+                  <ul>
+                    {locaisCulturais
+                      .filter((local) => local.bairro.toLowerCase() === bairro.toLowerCase())
+                      .map((local) => (
+                        <li key={local.nome}>{local.nome}</li>
+                      ))}
+                  </ul>
+                </div>
+              )}
             </section>
           </div>
 
@@ -254,45 +284,30 @@ function Cultura() {
           ></iframe>
         </section>
       </main>
-<br /><br /><br /> 
+
       <footer className="rodapeC">
-  <div className="container-roda">
-    <div className="logo-roda">
-      Localiza<span>LivreSP</span>
-    </div>
+        <div className="container-roda">
+          <div className="logo-roda">
+            Localiza<span>LivreSP</span>
+          </div>
 
-  <div className="descricaoo">
-  <h4>Descubra cultura, lazer e esportes gratuitos em São Paulo</h4>
-</div>
+          <div className="descricaoo">
+            <h4>Descubra cultura, lazer e esportes gratuitos em São Paulo</h4>
+          </div>
 
-    <div className="redes-sociaiss">
-      <a
-        href="https://www.instagram.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="icone"
-      >
-        <FaInstagram />
-      </a>
-      <a
-        href="https://www.facebook.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="icone"
-      >
-        <FaFacebook />
-      </a>
-      <a
-        href="https://www.tiktok.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="icone"
-      >
-        <FaTiktok />
-      </a>
-    </div>
+          <div className="redes-sociaiss">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="icone">
+              <FaInstagram />
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="icone">
+              <FaFacebook />
+            </a>
+            <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" className="icone">
+              <FaTiktok />
+            </a>
+          </div>
 
-    <div className="button-container">
+          <div className="button-container">
             <Link to="/login-administrativo">
               <button className="col">Painel administrativo</button>
             </Link>
@@ -301,12 +316,11 @@ function Cultura() {
             </Link>
           </div>
 
- 
-
-    <p className="copys">© {new Date().getFullYear()} LocalizaLivreSP — Conectando a cidade. — Todos os direitos reservados.</p>
-  </div>
-</footer>
-
+          <p className="copys">
+            © {new Date().getFullYear()} LocalizaLivreSP — Conectando a cidade. — Todos os direitos reservados.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }

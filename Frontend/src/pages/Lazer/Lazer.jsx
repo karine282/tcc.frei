@@ -7,12 +7,55 @@ import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
 
 export default function Lazer() {
   const [pesquisa, setPesquisa] = useState('');
+  const [resultados, setResultados] = useState([]);
+  const [carregando, setCarregando] = useState(false);
+  const [erro, setErro] = useState("");
+  const [bairro, setBairro] = useState("");
+  
+    const handleInputChange = (e) => {
+    setPesquisa(e.target.value);
+  };
 
-  const handleInputChange = (e) => setPesquisa(e.target.value);
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(`Texto pesquisado: ${pesquisa}`);
-  };
+
+    if (!pesquisa.trim()) {
+      setErro("Digite algo para pesquisar.");
+      setResultados([]);
+      return;
+    }
+
+    setCarregando(true);
+    setErro("");
+    setResultados([]);
+
+    try {
+      const response = await fetch(`http://localhost:5010/api/lazer?nome=${encodeURIComponent(pesquisa)}`);
+      const data = await response.json();
+      console.log("Data recebida:", data);
+
+
+      if (response.ok) {
+        setResultados(data.resultados);
+        if (!data || data.resultados.length === 0) {
+          setErro("Nenhum local cultural encontrado.");
+        }
+      } else {
+        setErro(data.erro || "Erro ao buscar locais culturais.");
+      }
+    } catch (error) {
+      console.error(error);
+      setErro("Erro ao conectar com o servidor.");
+    } finally {
+      setCarregando(false);
+    }
+    
+
+  const handleCepChange = (e) => setCep(e.target.value);
+
+}
+
 
   return (
     <><div className='container-lazer'>
@@ -49,20 +92,47 @@ export default function Lazer() {
         />
       </section>
 
-      <div className='containerPesquisa'>
-        <section className="pesquisaEsporte">
+     <div className='containerPesquisa'>
+        <section className="pesquisaLazer">
           <form onSubmit={handleSubmit} className="searchForm">
             <input
               type="text"
-              placeholder="Buscar por nome, categoria, bairro ou atividade..."
+              placeholder="Buscar por nome"
               value={pesquisa}
               onChange={handleInputChange}
               className="searchInput"
-              />
+              aria-label="Campo de busca por locais de lazer"
+            />
             <button type="submit" className="searchButton">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
           </form>
+
+          {carregando && <p>Buscando locais de lazer...</p>}
+          {erro && <p style={{ color: "red" }}>{erro}</p>}
+
+          {resultados.length > 0 && (
+            <div className="resultados-cultura">
+              {resultados.map((local, index) => {
+                const mapsLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(local.nome + " " + local.bairro)}`;
+                return (
+                  <div key={index} className="cartao-resultado">
+                    <h3>{local.nome}</h3>
+                    <p>Bairro: {local.bairro}</p>
+                    <a
+                      href={mapsLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="maps-link"
+                      aria-label={`Abrir ${local.nome} no Google Maps`}
+                    >
+                      Ver no Google Maps
+                    </a>
+                  </div>
+                );
+              })}
+            </div>
+          )}
         </section>
       </div>
 
