@@ -1,7 +1,6 @@
 import con from "./Conection.js";
 
 class LazerRepository {
-  // Busca locais de lazer por nome ou bairro (usando LIKE)
   async buscarLocaisPorNomeOuBairro(termoBusca) {
     try {
       const query = `

@@ -1,23 +1,22 @@
-import con from "../Repository/Conection.js";  
-import express from 'express';
+import express from "express";
+import cepRepository from "../Repository/CepCulturaRepository.js";
 
+const router = express.Router();
 
-
-export async function listarCultura(req, res) {
+router.get("/cep/:cep", async (req, res) => {
   try {
-    const [rows] = await con.query("SELECT * FROM cultura");
-    res.json(rows);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-}
+    const { cep } = req.params;
 
-export async function buscarPorBairro(req, res) {
-  try {
-    const bairro = req.params.bairro;
-    const [rows] = await con.query("SELECT * FROM cultura WHERE bairro LIKE ?", [`%${bairro}%`]);
-    res.json(rows);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
+    if (!/^\d{8}$/.test(cep)) {
+      return res.status(400).json({ erro: "CEP inválido. Use 8 números." });
+    }
+
+    const endereco = await cepRepository.buscarPorCep(cep);
+    res.status(200).json({ resultado: endereco });
+  } catch (erro) {
+    console.error("Erro ao buscar CEP:", erro);
+    res.status(500).json({ erro: erro.message || "Erro ao buscar CEP." });
   }
-}
+});
+
+export default router;

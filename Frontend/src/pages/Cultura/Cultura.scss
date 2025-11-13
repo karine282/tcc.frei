@@ -110,139 +110,119 @@
     }
   }
 
-  .containerPesquisa {
+.containerPesquisaMapa {
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 900px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #333;
+  }
+
+  .pesquisaCulturaMapa {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2rem auto;
-    width: 90%;
-    max-width: 800px;
-  }
+    margin-bottom: 30px;
 
-  .pesquisaCep {
-    width: 100%;
-    text-align: center;
-  }
+    .busca-cep {
+      display: flex;
+      width: 100%;
+      max-width: 500px;
+      margin-bottom: 20px;
 
-  .searchForm {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
-  }
+      input.inputCep {
+        flex: 1;
+        padding: 10px 15px;
+        border-radius: 8px 0 0 8px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+        outline: none;
+        transition: border-color 0.3s;
 
-  .searchInput {
-    width: 70%;
-    padding: 0.8rem 1rem;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
+        &:focus {
+          border-color: #007bff;
+        }
+      }
 
-    .searchInput:focus {
-      border-color: #0080ff;
-      outline: none;
-      box-shadow: 0 0 6px rgba(0, 128, 255, 0.3);
-    }
-  }
+      button.btnCep {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        font-size: 1rem;
+        border: none;
+        border-radius: 0 8px 8px 0;
+        cursor: pointer;
+        transition: background-color 0.3s;
 
-  .searchButton {
-    background-color: #205866;;
-    border: none;
-    color: #fff;
-    padding: 0.8rem 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-
-    &:hover {
-      background-color: #0066cc;
-      transform: scale(1.05);
-    }
-  }
-
-  .erro {
-    color: #d9534f;
-    font-weight: 600;
-    margin-top: 0.8rem;
-  }
-
-  .locaisProximos {
-    background-color: #f9f9f9;
-    padding: 2rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    text-align: center;
-    animation: fadeIn 0.6s ease;
-
-    h4 {
-      font-size: 1.4rem;
-      margin-bottom: 1.5rem;
-      color: #333;
-
-      span {
-        color: #0080ff;
-        font-weight: 700;
+        &:hover {
+          background-color: #0056b3;
+        }
       }
     }
 
-  }
+    .resultadoCep {
+      text-align: center;
+      background-color: #e6f7ff;
+      padding: 15px 20px;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 
-  .cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.2rem;
-  }
+      h3 {
+        margin-bottom: 8px;
+        color: #007bff;
+      }
 
-  .local-card {
-    background-color: #fff;
-    border-radius: 12px;
-    padding: 1.2rem;
-    text-decoration: none;
-    color: #333;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-    border: 1px solid #eee;
-
-    &:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 6px 18px rgba(0, 128, 255, 0.2);
-      border-color: #0080ff;
-    }
-
-    h5 {
-      font-size: 1.1rem;
-      color:#205866;
-      margin-bottom: 0.5rem;
+      p {
+        margin: 0;
+        font-weight: 500;
+      }
     }
 
     p {
-      font-size: 0.9rem;
-      color: #666;
+      color: red;
+      margin-top: 5px;
+      font-weight: 500;
     }
   }
 
-  .nenhumLocal {
-    font-size: 1rem;
-    color: #777;
-    margin-top: 1rem;
+  iframe {
+    width: 100%;
+    border-radius: 12px;
+    min-height: 350px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
+}
 
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
+@media (max-width: 600px) {
+  .containerPesquisaMapa {
+    padding: 15px;
 
-    to {
-      opacity: 1;
-      transform: translateY(0);
+    .pesquisaCulturaMapa {
+      .busca-cep {
+        flex-direction: column;
+
+        input.inputCep,
+        button.btnCep {
+          width: 100%;
+          border-radius: 8px;
+        }
+
+        button.btnCep {
+          margin-top: 10px;
+        }
+      }
     }
   }
-
-
+}
 
 
   .populares {
@@ -306,6 +286,7 @@
 
   }
 
+  
 
 
   .areaCultura {

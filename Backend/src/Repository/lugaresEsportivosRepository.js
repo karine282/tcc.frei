@@ -1,7 +1,6 @@
 import con from "./Conection.js";
 
 class EsportesRepository {
-  // Busca locais esportivos por nome ou bairro (usando LIKE)
   async buscarLocaisPorNomeOuBairro(termoBusca) {
     try {
       const query = `
@@ -12,7 +11,7 @@ class EsportesRepository {
       `;
       const busca = `%${termoBusca}%`;
       const [rows] = await con.execute(query, [busca, busca]);
-      return rows;  // Retorna os resultados ou um array vazio
+      return rows; 
     } catch (erro) {
       console.error("Erro ao buscar locais esportivos:", erro);
       throw new Error("Erro ao acessar o banco de dados.");
@@ -20,4 +19,4 @@ class EsportesRepository {
   }
 }
 
-export default new EsportesRepository();  // Exporta uma instância singleton
+export default new EsportesRepository(); 
