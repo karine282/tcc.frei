@@ -28,16 +28,7 @@ export default function Desenvolvedores() {
     <div className="container-desenvolvedores">
 
       <div className="container-sobre">
-        <header className="inicio">
-          <div className="container-comeco">
-            <Link to='/' className='Link'>
-              <div className="logo">Localiza<span>LivreSP</span></div>
-            </Link>
-            <nav className="nave">
-              <Link to="/Conta"><i className="fa-solid fa-circle-user"></i></Link>
-            </nav>
-          </div>
-        </header>
+       
         <div className="headerr">
           <video
             className="video-fundo"
@@ -48,7 +39,7 @@ export default function Desenvolvedores() {
             playsInline
           ></video>
           <h1 className="empresa">
-            Localiza<span className="typing">LivreSP</span>
+            Dev<span className="typing">Paulista</span>
           </h1>
         </div>
 

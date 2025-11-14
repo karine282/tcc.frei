@@ -9,7 +9,7 @@ const servidor = express();
 
 servidor.post("/cadastro", async (req, res) => {
   try {
-    console.log(" Dados recebidos:", req.body);
+    console.log(" dados recebidos:", req.body);
 
     const { nome, email, genero, cep, senha } = req.body;
 
@@ -18,14 +18,14 @@ servidor.post("/cadastro", async (req, res) => {
     await validarUsuarioDuplicado(con, email);  
 
     const senhaHash = await bcrypt.hash(senha, 10);
-    console.log(" Senha criptografada gerada com sucesso");
+    console.log(" senha criptografada gerada com sucesso");
 
     await cadastroRepository.inserirUsuario({ nome, email, genero, cep, senhaHash });
 
-    res.status(201).json({ mensagem: "Usuário cadastrado com sucesso!" });
+    res.status(201).json({ mensagem: "usuário cadastrado com sucesso!" });
 
   } catch (err) {
-    console.error(" Erro no cadastro:", err.message);
+    console.error(" erro no cadastro:", err.message);
 
     if (
       err.message === "Preencha todos os campos" ||
@@ -38,7 +38,7 @@ servidor.post("/cadastro", async (req, res) => {
       return res.status(400).json({ erro: err.message });
     }
 
-    res.status(500).json({ erro: "Erro ao cadastrar usuário" });
+    res.status(500).json({ erro: "erro ao cadastrar usuário" });
   }
 });
 
@@ -48,12 +48,12 @@ servidor.get("/cadastro/:id", async (req, res) => {
     const usuario = await cadastroRepository.buscarCadastroPorId(id);
 
     if (!usuario)
-      return res.status(404).json({ erro: "Usuário não encontrado" });
+      return res.status(404).json({ erro: "usuário não encontrado" });
 
     res.status(200).json(usuario);
   } catch (err) {
-    console.error("Erro ao buscar usuário:", err.message);
-    res.status(500).json({ erro: "Erro interno ao buscar usuário" });
+    console.error("erro ao buscar usuário:", err.message);
+    res.status(500).json({ erro: "erro interno ao buscar usuário" });
   }
 });
 
@@ -62,8 +62,8 @@ servidor.get("/admin/usuarios", async (req, res) => {
     const usuarios = await cadastroRepository.listarUsuarios();
     res.status(200).json(usuarios);
   } catch (err) {
-    console.error("Erro ao buscar usuários:", err.message);
-    res.status(500).json({ erro: "Erro ao buscar usuários" });
+    console.error("erro ao buscar usuários:", err.message);
+    res.status(500).json({ erro: "erro ao buscar usuários" });
   }
 });
 

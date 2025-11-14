@@ -27,7 +27,7 @@ servidor.post("/login", async (req, res) => {
         );
 
         res.json({
-            mensagem: "Login realizado com sucesso!",
+            mensagem: "login realizado com sucesso!",
             id: usuario.id_cadastro,
             nome: usuario.nm_usuario,
             email: usuario.email_usuario,
@@ -40,9 +40,9 @@ servidor.post("/login", async (req, res) => {
         console.error(err.message);
 
         if (
-            err.message === "Preencha todos os campos" ||
-            err.message === "Usuário não encontrado" ||
-            err.message === "Senha incorreta"
+            err.message === "preencha todos os campos" ||
+            err.message === "usuário não encontrado" ||
+            err.message === "senha incorreta"
         ) {
             return res.status(400).json({ erro: err.message });
         }

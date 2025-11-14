@@ -36,7 +36,7 @@ function Sobre() {
               <li><strong>Eventos Culturais:</strong> Exposições, shows, teatros e muito mais em espaços públicos.</li>
               <li><strong>Atividades Esportivas:</strong> Quadras, pistas e eventos para todas as idades.</li>
               <li><strong>Lazer ao Ar Livre:</strong> Parques, feiras e passeios familiares.</li>
-              <li><strong>Informações Atualizadas:</strong> Dados precisos sobre horários, locais e acessibilidade.</li>
+             
             </ul>
             <p>
               A cidade de <span>São Paulo</span> oferece uma <span>infinidade de oportunidades</span> para se

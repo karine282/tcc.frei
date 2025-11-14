@@ -1,7 +1,6 @@
 import con from "./Conection.js";
 
-class CadastroRepository {
-  // Busca usuário por ID 
+export default class CadastroRepository {
   async buscarCadastroPorId(id) {
     try {
       const [rows] = await con.query("SELECT * FROM tb_cadastro WHERE id_usuario = ?", [id]);
@@ -12,7 +11,6 @@ class CadastroRepository {
     }
   }
 
-  //  Inserir usuário
   async inserirUsuario(dados) {
     try {
       const { nome, email, genero, cep, senhaHash } = dados;
@@ -27,7 +25,6 @@ class CadastroRepository {
     }
   }
 
-  //  Listar usuários (para admin)
   async listarUsuarios() {
     try {
       const [rows] = await con.query(`
@@ -48,4 +45,3 @@ class CadastroRepository {
   }
 }
 
-export default new CadastroRepository();

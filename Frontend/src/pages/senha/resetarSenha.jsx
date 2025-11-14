@@ -5,7 +5,7 @@ import "./senha.scss";
 
 export default function ResetarSenha() {
   const [searchParams] = useSearchParams();
-  const token = searchParams.get("token"); // Lê o token da URL
+  const token = searchParams.get("token"); 
   const [novaSenha, setNovaSenha] = useState("");
   const [mensagem, setMensagem] = useState("");
 

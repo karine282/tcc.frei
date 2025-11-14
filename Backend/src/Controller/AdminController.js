@@ -16,21 +16,21 @@ router.post("/loginAdm", async (req, res) => {
     const { email, senha } = req.body;
 
     if (!email || !senha) {
-      return res.status(400).json({ erro: "Preencha todos os campos." });
+      return res.status(400).json({ erro: "preencha todos os campos." });
     }
 
     const usuario = await admRepository.buscarUsuarioPorEmail(email);
     if (!usuario) {
-      return res.status(404).json({ erro: "Usuário não encontrado." });
+      return res.status(404).json({ erro: "usuário não encontrado." });
     }
 
     if (!admRepository.verificarSeEhAdmin(usuario)) {
-      return res.status(403).json({ erro: "Acesso negado. Usuário não é administrador." });
+      return res.status(403).json({ erro: "acesso negado. usuário não é administrador." });
     }
 
     const senhaValida = await bcrypt.compare(senha, usuario.senha);
     if (!senhaValida) {
-      return res.status(401).json({ erro: "Senha incorreta." });
+      return res.status(401).json({ erro: "senha incorreta." });
     }
 
     const token = jwt.sign(
@@ -40,7 +40,7 @@ router.post("/loginAdm", async (req, res) => {
     );
 
     res.status(200).json({
-      mensagem: "Login realizado com sucesso!",
+      mensagem: "login realizado com sucesso!",
       usuario: {
         nome: usuario.nm_usuario,
         email: usuario.email_usuario,
@@ -48,8 +48,8 @@ router.post("/loginAdm", async (req, res) => {
       token,
     });
   } catch (erro) {
-    console.error("Erro ao fazer login:", erro);
-    res.status(500).json({ erro: "Erro interno do servidor." });
+    console.error("erro ao fazer login:", erro);
+    res.status(500).json({ erro: "erro interno do servidor." });
   }
 });
 

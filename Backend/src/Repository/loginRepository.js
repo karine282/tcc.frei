@@ -1,7 +1,6 @@
 import con from "./Conection.js";
 
 class LoginRepository {
-  // Busca um usuário pelo email
   async buscarUsuarioPorEmail(email) {
     try {
       const [rows] = await con.query(

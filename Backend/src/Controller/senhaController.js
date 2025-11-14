@@ -38,7 +38,6 @@ servidor.post("/recuperar-senha", async (req, res) => {
     const { email } = req.body;
     if (!email) throw new Error("Informe o e-mail");
 
-    // Busca o usuário
     const [usuarios] = await con.query(
       `SELECT id_usuario, nm_usuario FROM tb_cadastro 
       WHERE email_usuario = ?`,
