@@ -477,6 +477,22 @@ p.subtitulo {
     line-height: 1.6;
     color: #ccc;
   }
+  .redes-sociaiss {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+
+    .icones {
+      font-size: 1.8rem;
+      color: #fdfdfd;
+      transition: transform 0.3s, color 0.3s;
+      &:hover {
+        transform: scale(1.2);
+        color: #09b46a;
+      }
+    }
+  }
 
   .links-rodape {
     display: flex;

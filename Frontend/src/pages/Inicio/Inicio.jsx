@@ -189,6 +189,19 @@ function Inicio() {
           <p className="descricaoo">
             <h4>Descubra cultura, lazer e esportes gratuitos em São Paulo</h4></p>
 
+            <div className="redes-sociaiss">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="icones">
+              <FaInstagram />
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="icones">
+              <FaFacebook />
+            </a>
+            <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" className="icones">
+              <FaTiktok />
+            </a>
+          </div>
+
+
           <div className="button-container">
             <Link to="/login-administrativo">
               <button className="col">Painel administrativo</button>

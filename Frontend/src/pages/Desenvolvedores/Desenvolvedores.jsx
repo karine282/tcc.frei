@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import "./Desenvolvedores.scss";
 import React, { useState } from "react";
 import api from "../../api";
+import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
+
 
 export default function Desenvolvedores() {
 
@@ -238,19 +240,29 @@ export default function Desenvolvedores() {
         <footer className="rodapee">
           <div className="container-rodape">
             <div className="logo-rodape">
-              Localiza<span>LivreSP</span>
+              Dev<span>Paulista</span>
             </div>
 
             <p className="descricao">
               Criando Sites e Designs para o seu Negócio — descubra o seu melhor
               com desenvolvimento web da DevPaulista.
             </p>
-            <div className="button-container">
-              <Link to="/login-administrativo">
-                <button className="col">Painel administrativo</button>
-              </Link>
+            <div className="redes-sociaiss">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="icones">
+              <FaInstagram />
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="icones">
+              <FaFacebook />
+            </a>
+            <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" className="icones">
+              <FaTiktok />
+            </a>
+          </div>
 
-            </div>
+         
+            
+
+           
 
             <p className="copy">
               © {new Date().getFullYear()} LocalizaLivreSp — Todos os direitos
