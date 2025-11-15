@@ -1,0 +1,89 @@
+.pagina-ceus {
+  width: 100%;
+  padding: 40px;
+  background-color: #f5f7f5;
+  font-family: poppins, sans-serif;
+
+  h1 {
+    text-align: center;
+    font-size: 2.4em;
+    font-weight: 800;
+    color: #0a3220;
+  }
+
+  .subtitulo {
+    text-align: center;
+    color: #444;
+    margin-top: 8px;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+  }
+
+span{
+  color: #06361f;
+  font-weight: 800;
+}
+
+ .lista-ceus {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.card-ceu {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0px 6px 14px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .info {
+    padding: 16px;
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+
+    h3 {
+      font-size: 1.3em;
+      font-weight: 700;
+      color: #08351f;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #333;
+      margin-bottom: 6px;
+    }
+
+    .btn-mapa {
+      display: block;
+      text-align: center;
+      background-color: #0e5d3c;
+      color: white;
+      padding: 10px 12px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      margin: 12px auto 0;
+      width: fit-content; 
+      &:hover {
+        background-color: #06361f;
+      }
+    }
+  }
+}
+}

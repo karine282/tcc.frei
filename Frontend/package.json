@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "axios": "^1.13.0",
+    "axios": "^1.13.2",
     "fuse.js": "^7.1.0",
     "mapbox-gl": "^3.16.0",
     "maplibre-gl": "^5.11.0",

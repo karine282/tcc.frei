@@ -137,36 +137,36 @@ export default function Lazer() {
 
         <div className="cartoes">
           <article className="cartao">
-            <a href='https://www.parquedoibirapuera.org/' className='link-categorias'>
-              <img src="https://i.pinimg.com/736x/b1/58/46/b1584660ec016e5fbad337b0061b9b39.jpg" alt="Parque 1" />
-              <h3>Parque do Ibirapuera</h3>
-              <p>Ótimo para caminhadas e piqueniques. Entrada gratuita.</p>
+            <a href='https://www.circuitospcine.com.br/' className='link-categorias'>
+              <img src="https://spcine.com.br/wp-content/uploads/butantc3a3-10.jpg" alt="Parque 1" />
+              <h3>circuito spcine  </h3>
+              <p> rede de salas de cinema públicas,acesso gratuito ao cinema: 27 CEUS e 5 Centros Culturais.</p>
             </a>
           </article>
 
           <article className="cartao">
-            <a href='https://prefeitura.sp.gov.br/web/meio_ambiente/w/parques/regiao_sul/5747' className='link-categorias'>
+            <a href='https://www.mercadomunicipalsp.com/' className='link-categorias'>
 
-              <img src="https://i.pinimg.com/1200x/bc/6b/11/bc6b1167e29bbf927e5a380c8a4113b0.jpg" alt="Parque 2" />
-              <h3>Parque  Indepencia</h3>
-              <p>Eventos culturais, exposições e muito espaço para atividades.</p>
+              <img src="https://www.mercadomunicipalsp.com/wp-content/uploads/2016/12/mercadaosp.jpg" alt="Parque 2" />
+              <h3>Mercado Municipal de São Paulo  </h3>
+              <p>Endereço: R. da Cantareira, 306 - Centro Histórico de São Paulo, São Paulo - SP, 01024-900.</p>
             </a>
           </article>
 
           <article className="cartao">
-            <a href='https://parquevillalobos.com.br/' className='link-categorias'>
+            <a href='https://minhasinscricoes.com.br/evento/vamostrilhar2025' className='link-categorias'>
 
-              <img src="https://i.pinimg.com/1200x/17/7a/bc/177abc0fd9ecac38ac42937f7d2dbb29.jpg" alt="Parque 3" />
-              <h3>Parque Villa-Lobos</h3>
-              <p>Área esportiva e pistas de corrida — ideal para famílias.</p>
+              <img src="https://offloadmedia.feverup.com/saopaulosecreto.com/wp-content/uploads/2025/02/25174720/vamos-trilhar-sp-1024x683.jpeg" alt="Parque 3" />
+              <h3> Vamos Trilhar</h3>
+              <p>depende da trilha específica que você escolher, pois os pontos de embarque e os parques são diferentes.  </p>
             </a>
           </article>
 
           <article className="cartao">
             <a href='https://www.parqueecologicodotiete.com.br/' className='link-categorias'>
-              <img src="https://www.parqueecologicodotiete.com.br/content-wp/uploads/2017/08/parque-ecologico-tiete-peda.jpg" alt="Parque 4" />
-              <h3>parque ecologico tiete</h3>
-              <p>  Trilhas, ciclovia, quadras, campos, pedalinho, playgrounds, lanchonetes, CRAS e museu .</p>
+              <img src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxpZP2x9ZWAUldYj5RL1XG-FeQ6slf5xr4U808dzWF6vdxWw2WQX_bksxi_AzKKW8XRk1GBROWqno_OmfOmqWbDIcKuB9_MvcNG-d0pGSU6tCo3B8kyFuDHKQKhl3KTWKW7IlQ=s680-w680-h510-rw" alt="Parque 4" />
+              <h3>Beco do Batman</h3>
+              <p> Endereço: R. Medeiros de Albuquerque, 82-154 - Jardim das Bandeiras, São Paulo - SP, 05436-060</p>
             </a>
           </article>
 
@@ -230,6 +230,7 @@ export default function Lazer() {
               </a>
             </div>
           </div>
+
         </div>
       </section>
 

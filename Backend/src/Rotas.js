@@ -9,6 +9,7 @@ import lugaresLazerController from './Controller/lugaresLazerController.js';
 import admController from './Controller/AdminController.js';
 import CepCultura from './Controller/CepCultura.js';
 
+
 export default function adicionarRotas(servidor) {
   servidor.use(cadastradoController);
   servidor.use(loginController);
@@ -20,7 +21,6 @@ export default function adicionarRotas(servidor) {
   servidor.use('/api', lugaresLazerController);
   servidor.use(admController);
   servidor.use('/api', CepCultura);
-
 
  
 }

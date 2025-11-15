@@ -295,16 +295,14 @@
   padding: 26px;
   display: flex;
   flex-direction: column;
-  width: 20%;
-  height: 290px;
+  width: 100%;    
+  height: auto;    
   gap: 14px;
-  justify-content: center;
-  margin-top: 20px;
+  justify-content: flex-start;
+  margin-top: -60px;
 
   p {
     margin-bottom: 8px;
-    width: 2;
-
   }
 
   h2 {
@@ -316,7 +314,9 @@
     border-radius: 10px;
     text-align: center;
   }
-
+}
+.btn-ceus{
+  text-align: center;
 }
 
 h1 {

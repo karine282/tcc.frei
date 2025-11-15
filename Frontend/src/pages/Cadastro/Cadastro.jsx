@@ -92,7 +92,8 @@ export default function Cadastro() {
                 <p>crie uma conta para melhor experiência</p>
                 <br />
                 <button className="entrar"><Link to='/' className="link">Entrar sem cadastro</Link></button>
-
+              
+              
             </div>
         </div>
     );

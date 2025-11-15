@@ -112,7 +112,7 @@ function Inicio() {
           <img src="" alt="" />
           <p className=''>Centros educacionais unificados</p>
           <p>
-            Os CEUs foram construídos com o objetivo de promover uma educação à população de maneira integral, democrática, emancipatória, humanizadora e com qualidade social. Juntando não somente educação, mas também, a cultura, o esporte, lazer e recreação, possibilitando o desenvolvimento do ser humano como um todo, como pessoa de direitos e deveres e dono de sua história.
+            Os CEUs foram construídos com o objetivo de promover uma educação à população de maneira integral, democrática, emancipatória, humanizadora e com qualidade social. Juntando não somente educação, mas também, a cultura, o esporte, lazer ,recreação e cinema gratuito , possibilitando o desenvolvimento do ser humano como um todo, como pessoa de direitos e deveres e dono de sua história.
           </p>
           <Link className='btn btn-ceus' to='/UnidadesCeus'>Encontrar Unidades</Link>
         </div>
