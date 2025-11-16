@@ -176,6 +176,14 @@ function Inicio() {
               <a href="https://catracalivre.com.br/" target="_blank"><img src="/assets/images/catacra.png" /></a>
               <h3>Catraca Livre</h3>
             </div>
+               <div className="parceria">
+              <a href="https://www.circuitospcine.com.br/" target="_blank"><img src="/assets/images/spcine.jpg" /></a>
+              <h3>Circuito Spcine</h3>
+            </div>
+
+<br />
+<br />
+<br />
 
           </div>
         </div>

@@ -7,6 +7,7 @@ class AdmRepository {
         "SELECT * FROM tb_cadastro WHERE email_usuario = ?",
         [email]
       );
+
       return rows.length > 0 ? rows[0] : null;
     } catch (erro) {
       console.error("Erro ao buscar usuário por email:", erro);
@@ -19,4 +20,4 @@ class AdmRepository {
   }
 }
 
-export default new AdmRepository();  
+export default new AdmRepository();

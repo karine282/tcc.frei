@@ -7,8 +7,6 @@
     import CepCultura from "./Controller/CepCultura.js";
 
 
-
-
     const servidor = express();
     servidor.use(cors());
     servidor.use(express.json());

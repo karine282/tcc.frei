@@ -1,10 +1,10 @@
 import con from "./Conection.js";
 
-export default class CadastroRepository {
+class CadastroRepository {
   async buscarCadastroPorId(id) {
     try {
-      const [rows] = await con.query("SELECT * FROM tb_cadastro WHERE id_usuario = ?", [id]);
-      return rows.length > 0 ? rows[0] : null;
+      const [info] = await con.query("SELECT * FROM tb_cadastro WHERE id_usuario = ?", [id]);
+      return info.length > 0 ? info[0] : null;
     } catch (erro) {
       console.error("Erro ao buscar usuário por ID:", erro);
       throw new Error("Erro ao acessar o banco de dados.");
@@ -27,7 +27,7 @@ export default class CadastroRepository {
 
   async listarUsuarios() {
     try {
-      const [rows] = await con.query(`
+      const [info] = await con.query(`
         SELECT 
           id_usuario AS id,
           nm_usuario AS nome,
@@ -37,7 +37,7 @@ export default class CadastroRepository {
         FROM tb_cadastro
         ORDER BY id_usuario DESC
       `);
-      return rows;
+      return info;
     } catch (erro) {
       console.error("Erro ao listar usuários:", erro);
       throw new Error("Erro ao buscar usuários no banco.");
@@ -45,3 +45,4 @@ export default class CadastroRepository {
   }
 }
 
+export default new CadastroRepository(); 

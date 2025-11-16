@@ -5,6 +5,7 @@ import cadastroRepository from "../Repository/cadastroRepository.js";
 import con from "../Repository/Conection.js";  
 
 
+
 const servidor = express();
 
 servidor.post("/cadastro", async (req, res) => {

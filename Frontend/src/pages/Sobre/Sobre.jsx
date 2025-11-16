@@ -30,6 +30,32 @@ function Sobre() {
             </p>
           </div>
 
+ <div className="sectionsobre">
+            <h2><span>Nossa visao</span></h2>
+            <p>
+               Nosso compromisso é <span>promover inclusão, fortalecer a participação social</span> e 
+    permitir que qualquer pessoa encontre opções de diversão, educação e bem-estar perto de casa,
+    tornando os espaços públicos mais acessíveis para todos.
+    <br /><br />
+    Nossa <span>visão</span> é <span>expandir continuamente o projeto</span>, alcançando 
+    <span> todas as zonas do estado — Norte, Sul, Leste, Oeste e Centro —</span> para garantir que 
+    <span> toda a população paulistana</span>, independentemente do bairro onde vive, tenha acesso igualitário 
+    a eventos comunitários, atividades gratuitas e experiências que enriquecem o dia a dia.
+              </p>
+          </div>
+
+
+           <div className="sectionsobre">
+  <h2><span>Nossos valores</span></h2>
+  <p>
+    Nosso compromisso é <span>promover inclusão, incentivar a participação social</span> e 
+    permitir que qualquer pessoa encontre opções de diversão e aprendizado perto de casa, 
+    fortalecendo a conexão entre a população e os espaços públicos.
+  </p>
+</div>
+
+
+
           <div className="sectionsobre">
             <h2><span>O que Oferecemos</span></h2>
             <ul>

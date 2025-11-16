@@ -164,7 +164,7 @@ export default function Lazer() {
 
           <article className="cartao">
             <a href='https://www.parqueecologicodotiete.com.br/' className='link-categorias'>
-              <img src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxpZP2x9ZWAUldYj5RL1XG-FeQ6slf5xr4U808dzWF6vdxWw2WQX_bksxi_AzKKW8XRk1GBROWqno_OmfOmqWbDIcKuB9_MvcNG-d0pGSU6tCo3B8kyFuDHKQKhl3KTWKW7IlQ=s680-w680-h510-rw" alt="Parque 4" />
+              <img src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxZtr-jOvHm4I2yEDU7TBSPyNye_rFouply8WDAVqfieXHwxPJaumtf3i63CuzKMepAYSSnPrFVcM9beqwk3kvB7DH_cOIlgcLB5ZYdlTgELYjHN139mnYz_pgyGU06BKD-E6Q=s680-w680-h510-rw" alt="Parque 4" />
               <h3>Beco do Batman</h3>
               <p> Endereço: R. Medeiros de Albuquerque, 82-154 - Jardim das Bandeiras, São Paulo - SP, 05436-060</p>
             </a>
