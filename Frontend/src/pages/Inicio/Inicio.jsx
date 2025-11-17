@@ -109,7 +109,7 @@ function Inicio() {
       <section className="container2">
         <div className="p2">
           <h2 >Programação ceu's</h2>
-          <img src="" alt="" />
+         
           <p className=''>Centros educacionais unificados</p>
           <p>
             Os CEUs foram construídos com o objetivo de promover uma educação à população de maneira integral, democrática, emancipatória, humanizadora e com qualidade social. Juntando não somente educação, mas também, a cultura, o esporte, lazer ,recreação e cinema gratuito , possibilitando o desenvolvimento do ser humano como um todo, como pessoa de direitos e deveres e dono de sua história.
@@ -181,6 +181,8 @@ function Inicio() {
               <h3>Circuito Spcine</h3>
             </div>
 
+<br />
+<br />
 <br />
 <br />
 <br />

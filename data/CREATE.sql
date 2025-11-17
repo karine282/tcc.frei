@@ -140,29 +140,15 @@ INSERT INTO locais_lazer (nome, endereco, bairro) VALUES
 ('Theatro Municipal de São Paulo', 'Praça Ramos de Azevedo s/n', 'Centro'), 
 ('Pátio do Colégio', 'Largo Pateo do Collegio 2', 'Centro');
 
-CREATE TABLE ceus (
-  id INT PRIMARY KEY AUTO_INCREMENT,
-  nome VARCHAR(100) NOT NULL,
-  bairro VARCHAR(100) NOT NULL,
-  endereco VARCHAR(200) NOT NULL,
-  imagem VARCHAR(300)
+
+
+create table contato (
+    id int auto_increment primary key,
+    nome varchar(150) not null,
+    email varchar(150) not null,
+    mensagem text not null,
+    data_envio timestamp default current_timestamp
 );
-
-
-INSERT INTO ceus (nome, bairro, endereco, imagem) VALUES
-('CEU Jaçanã', 'Jardim Guapira', 'R. Francisca Espósito Tonetti, 105, São Paulo', 'https://www.google.com/maps/search/?api=1&query=R.+Francisca+Esp%C3%B3sito+Tonetti+105+S%C3%A3o+Paulo'),
-('CEU Capão Redondo', 'Capão Redondo', 'Rua Daniel Gran, s/nº, São Paulo', 'https://www.google.com/maps/search/?api=1&query=Rua+Daniel+Gran+Cap%C3%A3o+Redondo+S%C3%A3o+Paulo'),
-('CEU Formosa', 'Vila Formosa / Parque Santo Antônio', 'Rua Sargento Claudiner Evaristo Dias, 10, São Paulo', 'https://www.google.com/maps/search/?api=1&query=Rua+Sargento+Claudiner+Evaristo+Dias+10+S%C3%A3o+Paulo'),
-('CEU Guarapiranga', 'Jardim Kagohara', 'Estrada da Baronesa, 1.120, São Paulo', 'https://www.google.com/maps/search/?api=1&query=Estrada+da+Baronesa+1120+S%C3%A3o+Paulo'),
-('CEU Heliópolis', 'São João Clímaco', 'Estrada da L%C3%A1grimas, 2385, São Paulo', 'https://www.google.com/maps/search/?api=1&query=Estrada+da+L%C3%A1grimas+2385+S%C3%A3o+Paulo'),
-('CEU São Miguel – Luiz Melodia', 'Jardim São Vicente', 'R. José Ferreira Crespo, 475, São Paulo', 'https://www.google.com/maps/search/?api=1&query=Rua+Jos%C3%A9+Ferreira+Crespo+475+S%C3%A3o+Paulo'),
-('CEU Vila Alpina – Virgínia Leone Bicudo', 'Vila Prudente', 'Rua João Pedro Lecor, 141, São Paulo', 'https://www.google.com/maps/search/?api=1&query=Rua+Jo%C3%A3o+Pedro+Lecor+141+S%C3%A3o+Paulo'),
-('CEU Rei Pelé', 'Cidade Líder', 'Avenida Francisco Falconi, 83, São Paulo', 'https://www.google.com/maps/search/?api=1&query=Avenida+Francisco+Falconi+83+S%C3%A3o+Paulo'),
-('CEU Água Azul', 'Cidade Tiradentes', 'Av. dos Metalúrgicos, 1.262, São Paulo', 'https://www.google.com/maps/search/?api=1&query=Av.+dos+Metal%C3%BArgicos+1262+S%C3%A3o+Paulo'),
-('CEU Alto Alegre', 'Jardim Laranjeira ‒ Iguatemi', 'Rua Bento Guelfi, 1802, São Paulo', 'https://www.google.com/maps/search/?api=1&query=Rua+Bento+Guelfi+1802+S%C3%A3o+Paulo'),
-('CEU Alvarenga', 'Pedreira', 'Estrada do Alvarenga, 3.752, São Paulo', 'https://www.google.com/maps/search/?api=1&query=Estrada+do+Alvarenga+3752+S%C3%A3o+Paulo'),
-('CEU Aricanduva', 'Jardim Santa Terezinha', 'Rua Olga Fadel Abarca, s/n, São Paulo', 'https://www.google.com/maps/search/?api=1&query=Rua+Olga+Fadel+Abarca+S%C3%A3o+Paulo'),
-('CEU Azul da Cor do Mar', 'Cidade AE Carvalho', 'Av. Ernesto de Souza Cruz, 2.171, São Paulo', 'https://www.google.com/maps/search/?api=1&query=Av.+Ernesto+de+Souza+Cruz+2171+S%C3%A3o+Paulo');
 
 
 select * from tb_cadastro;

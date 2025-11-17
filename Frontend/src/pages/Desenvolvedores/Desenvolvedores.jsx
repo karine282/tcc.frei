@@ -84,6 +84,7 @@ export default function Desenvolvedores() {
               <p>
                 Iniciante em frontend e backend, procurando aprimoração na área.
               </p>
+              <br />
               <a href="https://www.linkedin.com/in/karine-cavalcante-leal-36316b2b7/?trk=opento_sprofile_details">
                 <button>Linkedin</button>
               </a>
@@ -97,6 +98,7 @@ export default function Desenvolvedores() {
                 Iniciante na área de frontend, criando interfaces e integrando
                 banco de dados.
               </p>
+              <br />
               <a href="https://media.discordapp.net/attachments/1354419042978496666/1433400250923618354/IMG-20251030-WA0006.jpg">
                 <button>Linkedin</button>
               </a>
@@ -107,6 +109,7 @@ export default function Desenvolvedores() {
               <h3>Jennifer Berto</h3>
               <p>Dev frontend</p>
               <p>Iniciante em frontend e criação de interfaces com Design.</p>
+              <br />
               <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_pro">
                 <button>Linkedin</button>
               </a>
