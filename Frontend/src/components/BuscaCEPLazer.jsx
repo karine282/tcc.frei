@@ -147,43 +147,7 @@ export default function BuscaCEPLazer() {
         endereco: "Lagoa de Interlagos, Interlagos, SP",
         link: "https://www.google.com/maps/dir/?api=1&destination=Lagoa+de+Interlagos,+São+Paulo"
       }
-    ], "Grajaú": [
-      {
-        nome: "Parque Linear Cantinho do Céu",
-        endereco: "R. Nossa Sra. de Fátima, 405 – Jardim Gaivotas, Grajaú, SP",
-        link: "https://www.google.com/maps/dir/?api=1&destination=R.+Nossa+Sra.+de+F%C3%A1tima,+405+-+Jardim+Gaivotas,+S%C3%A3o+Paulo"
-      },
-      {
-        nome: "Decks e áreas de contemplação do Cantinho do Céu",
-        endereco: "Rua das Andorinhas Brasileiras, Grajaú, SP",
-        link: "https://www.google.com/maps/dir/?api=1&destination=R.+das+Andorinhas+Brasileiras,+S%C3%A3o+Paulo"
-      },
-      {
-        nome: "Teia Grajaú (espaço cultural comunitário)",
-        endereco: "R. Maria Moassab Barbour, Grajaú, SP",
-        link: "https://www.google.com/maps/dir/?api=1&destination=R.+Maria+Moassab+Barbour,+S%C3%A3o+Paulo"
-      },
-      {
-        nome: "CEU Três Lagos",
-        endereco: "R. Nereu Bertini Magalhães, 302 – Jardim Três Corações, Grajaú, SP",
-        link: "https://www.google.com/maps/dir/?api=1&destination=R.+Nereu+Bertini+Magalh%C3%A3es,+302,+S%C3%A3o+Paulo"
-      },
-      {
-        nome: "Parque Linear Aristocrata",
-        endereco: "Rua Pamela Barton x Rua Cultura Popular, altura Av. Dona Belmira Marin, Grajaú, SP",
-        link: "https://www.google.com/maps/dir/?api=1&destination=Rua+Pamela+Barton,+%26+Cultura+Popular,+Graja%C3%BA,+S%C3%A3o+Paulo"
-      },
-      {
-        nome: "Calçadão Cultural do Grajaú",
-        endereco: "Travessa de ruas públicas que interliga a comunidade (Grajaú, SP)",
-        link: "https://www.google.com/maps/dir/?api=1&destination=Graja%C3%BA,+S%C3%A3o+Paulo"
-      },
-      {
-        nome: "Pista de Skate – Parque Linear Cantinho do Céu (Lago Azul)",
-        endereco: "R. João Bernardo Mendonça, 222 – Grajaú, SP",
-        link: "https://www.google.com/maps/dir/?api=1&destination=R.+Jo%C3%A3o+Bernardo+Mendon%C3%A7a,+222,+S%C3%A3o+Paulo"
-      }
-    ],
+    ], 
     "Varginha": [
       {
         nome: "Parque Linear Varginha (Área Verde do Terminal)",
@@ -383,14 +347,7 @@ export default function BuscaCEPLazer() {
       { nome: "Praça Alfred Nobel", endereco: "Jardins, SP", link: "https://www.google.com/maps/dir/?api=1&destination=Jardins,+São+Paulo" },
       { nome: "Galerias de Arte do Jardins", endereco: "Jardins, SP", link: "https://www.google.com/maps/dir/?api=1&destination=Jardins,+São+Paulo" }
     ],
-    "Vila Madalena": [
-      { nome: "Beco do Batman", endereco: "R. Gonçalo Afonso, 200 - Vila Madalena, SP", link: "https://www.google.com/maps/dir/?api=1&destination=R.+Gonçalo+Afonso,+200+-+Vila+Madalena,+São+Paulo" },
-      { nome: "Praça do Pôr do Sol", endereco: "Vila Madalena - SP", link: "https://www.google.com/maps/dir/?api=1&destination=Vila+Madalena,+São+Paulo" },
-      { nome: "Centro Cultural Vila Madalena", endereco: "Vila Madalena - SP", link: "https://www.google.com/maps/dir/?api=1&destination=Vila+Madalena,+São+Paulo" },
-      { nome: "Feira de Artes e Artesanato", endereco: "Vila Madalena - SP", link: "https://www.google.com/maps/dir/?api=1&destination=Vila+Madalena,+São+Paulo" },
-      { nome: "Galerias de Arte de Rua", endereco: "Vila Madalena - SP", link: "https://www.google.com/maps/dir/?api=1&destination=Vila+Madalena,+São+Paulo" }
-    ],
-
+   
     "Mooca": [
       { nome: "Museu da Mooca (área externa)", endereco: "R. da Mooca, 100 - Mooca, SP", link: "https://www.google.com/maps/dir/?api=1&destination=R.+da+Mooca,+100+-+Mooca,+São+Paulo" },
       { nome: "Parque da Mooca", endereco: "Mooca - SP", link: "https://www.google.com/maps/dir/?api=1&destination=Mooca,+São+Paulo" },

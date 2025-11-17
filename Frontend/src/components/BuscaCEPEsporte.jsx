@@ -21,26 +21,28 @@ export default function BuscaCEPEsporte() {
       const response = await fetch(`https://viacep.com.br/ws/${cepLimpo}/json/`);
       const data = await response.json();
 
-      const bairrosPorPrefixo = [
-        { prefixo: "010", bairro: "Sé" },
-        { prefixo: "013", bairro: "Bela Vista" },
-        { prefixo: "015", bairro: "Cambuci" },
-        { prefixo: "020", bairro: "Santana" },
-        { prefixo: "030", bairro: "Brás" },
-        { prefixo: "031", bairro: "Mooca" },
-        { prefixo: "033", bairro: "Tatuapé" },
-        { prefixo: "035", bairro: "Vila Matilde" },
-        { prefixo: "040", bairro: "Vila Mariana" },
-        { prefixo: "043", bairro: "Jabaquara" },
-        { prefixo: "045", bairro: "Itaim Bibi" },
-        { prefixo: "050", bairro: "Perdizes" },
-        { prefixo: "054", bairro: "Pinheiros" },
-        { prefixo: "056", bairro: "Morumbi" },
-        { prefixo: "058", bairro: "Campo Limpo" },
-        { prefixo: "080", bairro: "Itaquera" },
-        { prefixo: "082", bairro: "São Mateus" },
-        { prefixo: "084", bairro: "Guaianases" },
-      ];
+    const bairrosPorPrefixo = [
+    { prefixo: "010", bairro: "Sé" },
+    { prefixo: "013", bairro: "Bela Vista" },
+    { prefixo: "015", bairro: "Cambuci" },
+    { prefixo: "020", bairro: "Santana" },
+    { prefixo: "030", bairro: "Brás" },
+    { prefixo: "031", bairro: "Mooca" },
+    { prefixo: "033", bairro: "Tatuapé" },
+    { prefixo: "035", bairro: "Vila Matilde" },
+    { prefixo: "040", bairro: "Vila Mariana" },
+    { prefixo: "043", bairro: "Jabaquara" },
+    { prefixo: "045", bairro: "Itaim Bibi" },
+    { prefixo: "050", bairro: "Perdizes" },
+    { prefixo: "054", bairro: "Pinheiros" },
+    { prefixo: "056", bairro: "Morumbi" },
+    { prefixo: "058", bairro: "Campo Limpo" },
+    { prefixo: "080", bairro: "Itaquera" },
+    { prefixo: "082", bairro: "São Mateus" },
+    { prefixo: "084", bairro: "Guaianases" },
+    { prefixo: "048", bairro: "Grajaú" },
+    { prefixo: "048", bairro: "Cidade Dutra" }
+];
 
       const prefixo = cepLimpo.substring(0, 3);
       const bairroFallback =
@@ -88,6 +90,50 @@ export default function BuscaCEPEsporte() {
     { nome: "Ginásio Poliesportivo Dom Pedro II", endereco: "R. Direita, s/n – Sé, SP", link: "https://www.google.com/maps/dir/?api=1&destination=R.+Direita,+São+Paulo" }
   ],
 
+  "Grajaú": [
+    { "nome": "Parque Linear Cantinho do Céu", "endereco": "R. Maria Moassab Barbour - Grajaú, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=R.+Maria+Moassab+Barbour,+São+Paulo" },
+    { "nome": "Campo de Futebol Comunitário Grajaú", "endereco": "04890-000 - Grajaú, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=04890-000,+São+Paulo" },
+    { "nome": "Praça Professora Guiomar de Freitas", "endereco": "R. M. F. de Oliveira - Grajaú, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=R.+M.+F.+de+Oliveira,+São+Paulo" },
+    { "nome": "Centro Esportivo Grajaú", "endereco": "R. Antônio de Barros - Grajaú, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=R.+Antônio+de+Barros,+São+Paulo" },
+    { "nome": "Quadra Poliesportiva Praça da Bíblia", "endereco": "R. José de Anchieta - Grajaú, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=R.+José+de+Anchieta,+São+Paulo" }
+  ],
+  "Jardim Apurá": [
+    { "nome": "Parque Linear Ribeirão Cocaia", "endereco": "Av. Paulo Guilguer Reimberg – Jardim Apurá, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=Av.+Paulo+Guilguer+Reimberg,+São+Paulo" },
+    { "nome": "Praça João Rodrigues", "endereco": "R. Giovanni Carnovali – Jardim Apurá, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=R.+Giovanni+Carnovali,+São+Paulo" },
+    { "nome": "CEU Vila Rubi / Apurá", "endereco": "Av. Ragueb Chohfi, 5.171 – Jardim Apurá, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=Av.+Ragueb+Chohfi,+5171,+São+Paulo" },
+    { "nome": "Campo Comunitário Apurá", "endereco": "R. Paulo de Tarso – Jardim Apurá, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=R.+Paulo+de+Tarso,+São+Paulo" },
+    { "nome": "Praça Central Apurá", "endereco": "R. José Augusto da Silva – Jardim Apurá, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=R.+José+Augusto+da+Silva,+São+Paulo" }
+  ],
+  "Jardim Noronha": [
+    { "nome": "Parque Linear Cantinho do Céu (trecho Noronha)", "endereco": "Av. Senador Teotônio Vilela – Noronha, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=Av.+Senador+Teotônio+Vilela,+São+Paulo" },
+    { "nome": "Orla da Represa Billings – Noronha", "endereco": "Rua Agú – Jardim Noronha, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=Rua+Agú,+São+Paulo" },
+    { "nome": "Quadra Poliesportiva Noronha", "endereco": "R. Noronha – Jardim Noronha, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=R.+Noronha,+São+Paulo" },
+    { "nome": "Praça do Bosque Noronha", "endereco": "R. José Martins – Jardim Noronha, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=R.+José+Martins,+São+Paulo" },
+    { "nome": "Campo Comunitário Noronha", "endereco": "Av. Noronha – Jardim Noronha, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=Av.+Noronha,+São+Paulo" }
+  ],
+  "Parque Residencial Cocaia": [
+    { "nome": "Parque Linear do Ribeirão Cocaia", "endereco": "Av. Paulo Guilguer Reimberg – Cocaia, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=Av.+Paulo+Guilguer+Reimberg,+São+Paulo" },
+    { "nome": "Praça Anália Maria Weber", "endereco": "R. José Daís – Jardim Cocaia, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=R.+José+Daís,+São+Paulo" },
+    { "nome": "Campo Comunitário Cocaia", "endereco": "R. Paulo – Parque Residencial Cocaia, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=R.+Paulo,+São+Paulo" },
+    { "nome": "Quadra Poliesportiva Cocaia", "endereco": "R. Francisco – Parque Residencial Cocaia, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=R.+Francisco,+São+Paulo" },
+    { "nome": "Praça Recreativa Cocaia", "endereco": "Av. Cocaia – Parque Residencial Cocaia, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=Av.+Cocaia,+São+Paulo" }
+  ],
+  "Jardim Gaivotas": [
+    { "nome": "Praça das Gaivotas", "endereco": "R. Benedito Alves de Almeida – Gaivotas, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=R.+Benedito+Alves+de+Almeida,+São+Paulo" },
+    { "nome": "Área Verde da Represa Billings", "endereco": "Rua Avaré – Jardim Gaivotas, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=Rua+Avaré,+São+Paulo" },
+    { "nome": "Quadra Poliesportiva Gaivotas", "endereco": "R. Gaivotas – Jardim Gaivotas, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=R.+Gaivotas,+São+Paulo" },
+    { "nome": "Campo Comunitário Gaivotas", "endereco": "R. Maricá – Jardim Gaivotas, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=R.+Maricá,+São+Paulo" },
+    { "nome": "Praça Esportiva Gaivotas", "endereco": "Av. Gaivotas – Jardim Gaivotas, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=Av.+Gaivotas,+São+Paulo" }
+  ],
+  "Interlagos": [
+    { "nome": "Parque Comandante Jacques Cousteau", "endereco": "R. Catanumi, 60 - Interlagos, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=R.+Catanumi,+60+-+Interlagos,+São+Paulo" },
+    { "nome": "Trilha da Mata no Parque Jacques Cousteau", "endereco": "R. Norman Prochet / R. Catanumi – Interlagos, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=R.+Norman+Prochet,+São+Paulo" },
+    { "nome": "Parque Ecológico do Guarapiranga", "endereco": "Estrada de Guarapiranga, 575 - M’Boi Mirim, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=Estrada+de+Guarapiranga,+575,+São+Paulo" },
+    { "nome": "Lagoa Interlagos (trilha ao redor)", "endereco": "Lagoa de Interlagos, Interlagos, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=Lagoa+de+Interlagos,+São+Paulo" },
+    { "nome": "Campo de Futebol Comunitário Interlagos", "endereco": "R. Interlagos, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=R.+Interlagos,+São+Paulo" }
+  ],
+
+
   "Bela Vista": [
     { nome: "Parque Minhocão – Corrida e alongamento", endereco: "Av. São João, s/n – Bela Vista, SP", link: "https://www.google.com/maps/dir/?api=1&destination=Av.+São+João,+São+Paulo" },
     { nome: "Ginásio Poliesportivo Wlamir Marques", endereco: "R. Comendador Elias Zarzur, 30 – Bela Vista, SP", link: "https://www.google.com/maps/dir/?api=1&destination=R.+Comendador+Elias+Zarzur,+30,+São+Paulo" },
@@ -115,7 +161,13 @@ export default function BuscaCEPEsporte() {
     { nome: "Praça Gaivota - Academia ao ar livre", endereco: "R. Gaivota, s/n - Moema, SP", link: "https://www.google.com/maps/dir/?api=1&destination=Praça+Gaivota,+Moema,+SP" },
     { nome: "Ginásio Municipal de Moema", endereco: "Av. Ibirapuera, 2500 - Moema, SP", link: "https://www.google.com/maps/dir/?api=1&destination=Ginásio+Municipal+de+Moema,+SP" }
   ],
-
+ "Cidade Dutra": [
+    { "nome": "Praça Antonio Machado", "endereco": "R. Antonio Machado – Cidade Dutra, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=R.+Antonio+Machado,+São+Paulo" },
+    { "nome": "Quadra Poliesportiva Cidade Dutra", "endereco": "R. da Paz – Cidade Dutra, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=R.+da+Paz,+São+Paulo" },
+    { "nome": "Parque Ecológico Cidade Dutra", "endereco": "Av. das Nações Unidas – Cidade Dutra, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=Av.+das+Nações+Unidas,+São+Paulo" },
+    { "nome": "Campo Comunitário Cidade Dutra", "endereco": "R. Maracá – Cidade Dutra, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=R.+Maracá,+São+Paulo" },
+    { "nome": "Praça Esportiva Cidade Dutra", "endereco": "R. Joaquim Nabuco – Cidade Dutra, SP", "link": "https://www.google.com/maps/dir/?api=1&destination=R.+Joaquim+Nabuco,+São+Paulo" }
+  ],
   "Pinheiros": [
     { nome: "Praça Panamericana - Quadra", endereco: "Av. Pedroso de Moraes, 1000 - Pinheiros, SP", link: "https://www.google.com/maps/dir/?api=1&destination=Praça+Panamericana,+Pinheiros,+SP" },
     { nome: "Escola de Esportes Pinheiros - Pista e quadras", endereco: "R. Henrique Schaumann, 28 - Pinheiros, SP", link: "https://www.google.com/maps/dir/?api=1&destination=Escola+de+Esportes+Pinheiros,+SP" },
